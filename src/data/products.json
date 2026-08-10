@@ -1,0 +1,47 @@
+[
+  {
+    "id": "1",
+    "slug": "sorrel-drink",
+    "name": "Sorrel Drink",
+    "price": 3.00,
+    "description": "Natural Jamaican-inspired sorrel drink.",
+    "sizes": ["500ml"],
+    "image": "/sorrel-drink.png"
+  },
+  {
+    "id": "2",
+    "slug": "irish-moss-soursop",
+    "name": "Irish Moss & Soursop",
+    "price": 3.50,
+    "description": "Natural Irish Moss & Soursop blend.",
+    "sizes": ["500ml"],
+    "image": "/irish-moss-soursop.png"
+  },
+  {
+    "id": "3",
+    "slug": "ginger-shot",
+    "name": "Ginger Shot",
+    "price": 3.00,
+    "description": "Zesty ginger shot for a natural energy boost.",
+    "sizes": ["100ml"],
+    "image": "/ginger-shot.png"
+  },
+  {
+    "id": "4",
+    "slug": "irish-moss-pineapple",
+    "name": "Irish Moss & Pineapple",
+    "price": 3.50,
+    "description": "Natural Irish Moss blended with sweet pineapple.",
+    "sizes": ["500ml"],
+    "image": "/irish-moss-pineapple.png"
+  },
+  {
+    "id": "5",
+    "slug": "irish-moss-guava-banana",
+    "name": "Irish Moss, Guava & Banana",
+    "price": 3.50,
+    "description": "Rich Irish Moss combined with tropical guava and sweet banana.",
+    "sizes": ["500ml"],
+    "image": "/irish-moss-guava-banana.png"
+  }
+]
