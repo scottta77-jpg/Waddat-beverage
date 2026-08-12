@@ -46,6 +46,38 @@
       integrity="sha384-DPvNGY1YwXHHZR3t6/Ws2fReMF9N66cw7vk/Ki1N0b5FH4fu+/Ejyoq4ZqL79p1r"
       crossorigin="anonymous"
     />
+    <style>
+      .hero-section {
+        background-color: #A0D8F1 !important;
+      }
+      .faq-section {
+        background-color: #EFE4CD !important;
+      }
+      .promo-section {
+        background-color: #EFE4CD !important;
+      }
+      .where-section {
+        background-image: url(/objects-beige.svg) !important;
+      }
+      .product-picture {
+        max-width: 15rem !important;
+        width: 100% !important;
+        height: auto !important;
+        transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), filter 0.4s ease;
+        will-change: transform;
+      }
+      .product-card:hover .product-picture,
+      .product-link-wrapper:hover .product-picture {
+        transform: scale(1.1) translateY(-6px) rotate(-1.5deg);
+        filter: drop-shadow(0 10px 15px rgba(0,0,0,0.15));
+      }
+      .product-picture-wrapper {
+        transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+      }
+      .product-card:hover .product-picture-wrapper {
+        transform: translateY(-4px);
+      }
+    </style>
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link
       href="https://fonts.gstatic.com"
@@ -280,7 +312,7 @@
               class="orange-wrapper"
             >
               <img
-                src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680aaf755a50165e7dbc06e9_orange.webp"
+                src="/fruits/soursop_hero_fruit.png"
                 loading="lazy"
                 width="256"
                 style="
@@ -293,11 +325,7 @@
                   transform: translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0)
                     rotateY(0) rotateZ(-120deg) skew(0, 0);
                 "
-                alt=""
-                srcset="
-                  https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680aaf755a50165e7dbc06e9_orange-p-500.webp 500w,
-                  https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680aaf755a50165e7dbc06e9_orange.webp       512w
-                "
+                alt="Soursop Fruit"
                 sizes="(max-width: 479px) 100vw, 256px"
                 class="orange"
               /><img
@@ -308,7 +336,7 @@
               />
             </div>
             <img
-              src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680ab15b200d59b9d63f76bc_slice.webp"
+              src="/fruits/pineapple_slice.png"
               loading="eager"
               style="
                 -webkit-transform: translate3d(240px, null, 0)
@@ -322,7 +350,7 @@
                   rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
                 opacity: 0.2;
               "
-              alt=""
+              alt="Pineapple Slice"
               class="slice"
             />
           </div>
@@ -361,7 +389,7 @@
                         class="product-link-wrapper w-inline-block"
                         ><div
                           style="
-                            background-image: url(&quot;https://cdn.prod.website-files.com/680e93e75b46e544921f08dc/680e95e7138b8d02bcda5aaf_680bddd939da468d698c9d37_background-shape.webp&quot;);
+                            background-image: url(&quot;/sorrel-background-2.jpeg&quot;);
                             background-color: #5541ba;
                           "
                           class="product-picture-wrapper"
@@ -500,7 +528,7 @@
                         class="product-link-wrapper w-inline-block"
                         ><div
                           style="
-                            background-image: url(&quot;https://cdn.prod.website-files.com/680e93e75b46e544921f08dc/680e95e7138b8d02bcda5aaf_680bddd939da468d698c9d37_background-shape.webp&quot;);
+                            background-image: url(&quot;/irish-moss-soursop-background-2.jpeg&quot;);
                             background-color: #f6ede4;
                           "
                           class="product-picture-wrapper"
@@ -639,7 +667,7 @@
                         class="product-link-wrapper w-inline-block"
                         ><div
                           style="
-                            background-image: url(&quot;https://cdn.prod.website-files.com/680e93e75b46e544921f08dc/680e95e7138b8d02bcda5aaf_680bddd939da468d698c9d37_background-shape.webp&quot;);
+                            background-image: url(&quot;/ginger-shot-background-2.jpeg&quot;);
                             background-color: #e1f532;
                           "
                           class="product-picture-wrapper"
@@ -842,15 +870,15 @@
                       alt=""
                       class="bottle-stand"
                     /><img
-                      src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680ab15b200d59b9d63f76bc_slice.webp"
+                      src="/fruits/guava_slice.png"
                       loading="lazy"
-                      alt=""
+                      alt="Guava Slice"
                       class="slice2"
                     /><img
-                      src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680bd774ae0c8e396ffc6e1d_lemon.webp"
+                      src="/fruits/ginger_root.png"
                       loading="lazy"
                       data-w-id="b023508f-90e0-90cc-9da0-f1d76f03fce0"
-                      alt=""
+                      alt="Ginger Root"
                       class="lemon"
                     />
                   </div>
@@ -903,7 +931,14 @@
             <div class="container-large">
               <div class="w-layout-grid benefits-section_wrapper">
                 <div class="z-index-1">
-                  <div class="shaped-image_wrapper">
+                  <div
+                    class="shaped-image_wrapper"
+                    style="
+                      background-image: url(&quot;/irish-moss-pineapple-background-2.png&quot;);
+                      background-size: cover;
+                      background-position: center;
+                    "
+                  >
                     <img
                       src="/irish-moss-pineapple.png"
                       loading="lazy"
@@ -914,17 +949,11 @@
                     />
                     <div class="background-image-wrapper">
                       <img
-                        src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680bdf2353f53c30a5845aaa_strawberry.webp"
+                        src="/fruits/sorrel_calyx.png"
                         loading="lazy"
                         width="800"
                         sizes="(max-width: 991px) 100vw, 800px"
-                        alt=""
-                        srcset="
-                          https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680bdf2353f53c30a5845aaa_strawberry-p-500.webp   500w,
-                          https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680bdf2353f53c30a5845aaa_strawberry-p-800.webp   800w,
-                          https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680bdf2353f53c30a5845aaa_strawberry-p-1080.webp 1080w,
-                          https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680bdf2353f53c30a5845aaa_strawberry.webp        1600w
-                        "
+                        alt="Sorrel Calyx"
                         class="strawberry"
                       />
                     </div>
@@ -974,15 +1003,11 @@
                   </div>
                 </div>
                 <img
-                  src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680be13ec5133f4cfe244cea_blueberries.webp"
+                  src="/fruits/yellow_banana.png"
                   loading="lazy"
                   width="313"
                   data-w-id="93cc1182-621d-e104-e9e6-d7d6ded2b133"
-                  alt=""
-                  srcset="
-                    https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680be13ec5133f4cfe244cea_blueberries-p-500.webp 500w,
-                    https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680be13ec5133f4cfe244cea_blueberries.webp       626w
-                  "
+                  alt="Yellow Banana"
                   sizes="(max-width: 479px) 100vw, 313px"
                   class="blueberries"
                 />
@@ -1029,143 +1054,17 @@
                   alt=""
                   class="orange-blob"
                 /><img
-                  src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680be90e8b0d2a49ccca42ea_salad%20bowl.webp"
+                  src="/waddat-fruit-bowl.png"
                   loading="lazy"
-                  alt=""
+                  alt="Waddat tropical fruit bowl"
                   class="salad-bowl"
+                  style="transform: translate(30px, -150px) !important;"
                 />
               </div>
             </div>
           </div>
         </div>
-        <div class="new-collection-section">
-          <div class="padding-global padding-section-medium">
-            <div class="container-large">
-              <div class="w-layout-grid new-collection_wrapper">
-                <div class="new-collecton_content">
-                  <h2
-                    data-w-id="b26d0b6f-5df5-cc85-b1fd-26342524cc7b"
-                    style="
-                      -webkit-transform: translate3d(0, 20px, 0)
-                        scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0)
-                        skew(0, 0);
-                      -moz-transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
-                        rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                      -ms-transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
-                        rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                      transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
-                        rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                      opacity: 0;
-                    "
-                    class="heading-style-h1 text-style-allcaps z-index-1"
-                  >
-                    Try the entire
-                    <span class="text-color-white">Waddat</span> line!
-                  </h2>
-                  <div class="align-block-left">
-                    <p>
-                      Want to experience the variety of flavors and benefits of
-                      our natural drinks? Our tasting kit is the perfect choice for those
-                      who want to familiarize themselves with the Waddat range.
-                    </p>
-                    <div class="spacer-large"></div>
-                    <div
-                      data-w-id="7b220531-08c4-3b85-35be-2a01d959d852"
-                      style="
-                        -webkit-transform: translate3d(0, 20px, 0)
-                          scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0)
-                          skew(0, 0);
-                        -moz-transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
-                          rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                        -ms-transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
-                          rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                        transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
-                          rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                        opacity: 0;
-                      "
-                      class="icons-wrapper"
-                    >
-                      <div class="icon-wrapper">
-                        <img
-                          src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680bdaddd2398e525d20b0f6_Improved%20digestion.svg"
-                          loading="lazy"
-                          alt=""
-                          class="icon-1x1-large"
-                        />
-                        <div>Improved digestion</div>
-                      </div>
-                      <div class="icon-wrapper">
-                        <img
-                          src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680bdc381b1c18f2a7bdcf93_Immunity%20%20boosting.svg"
-                          loading="lazy"
-                          alt=""
-                          class="icon-1x1-large"
-                        />
-                        <div>Immunity boosting</div>
-                      </div>
-                      <div class="icon-wrapper">
-                        <img
-                          src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680bdc94722187480f31de1a_Natural%20source%20of%20probiotics.png"
-                          loading="lazy"
-                          alt=""
-                          class="icon-1x1-large"
-                        />
-                        <div>Natural Probiotics</div>
-                      </div>
-                    </div>
-                  </div>
-                  <img
-                    src="/irish-moss-guava-banana.png"
-                    loading="lazy"
-                    width="195"
-                    data-w-id="fc82f741-ad1c-561c-c413-3daef324eb4f"
-                    alt="Irish Moss, Guava & Banana Bottle"
-                    class="new-collection_piture"
-                  />
-                </div>
-                <div
-                  data-w-id="2a68c1c8-84fc-d8bd-5f70-57d1ffecacbc"
-                  style="
-                    -webkit-transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
-                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                    -moz-transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
-                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                    -ms-transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
-                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                    transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
-                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                    opacity: 0;
-                  "
-                  class="shaped-image-wrapper-2"
-                >
-                  <div class="zoomed-in-animation-trigger">
-                    <img
-                      src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680d0d43c5490e510005f01c_box.webp"
-                      loading="lazy"
-                      width="512"
-                      sizes="(max-width: 767px) 100vw, 512px"
-                      alt=""
-                      srcset="
-                        https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680d0d43c5490e510005f01c_box-p-500.webp  500w,
-                        https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680d0d43c5490e510005f01c_box-p-800.webp  800w,
-                        https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680d0d43c5490e510005f01c_box.webp       1024w
-                      "
-                      class="zoomed-in-image"
-                    />
-                  </div>
-                  <div class="background-image-wrapper">
-                    <img
-                      src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680d0f10ce9dda385ea82a64_yellow%20shape.svg"
-                      loading="lazy"
-                      alt=""
-                      class="yellow-shape-top"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+
         <div id="reviews" class="testimonials-section">
           <div class="padding-global padding-section-medium">
             <div class="container-large">
@@ -1411,10 +1310,10 @@
             </div>
           </div>
           <img
-            src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680bd774ae0c8e396ffc6e1d_lemon.webp"
+            src="/fruits/ginger_slice.png"
             loading="lazy"
             data-w-id="d3437c44-1a6c-9718-c508-e975dac4ccaf"
-            alt=""
+            alt="Ginger Slice"
             class="side-lemon"
           />
         </div>
@@ -1451,16 +1350,19 @@
                   </p>
                   <div class="spacer-large"></div>
                   <div
-                    class="map w-widget w-widget-map"
-                    data-widget-style="roadmap"
-                    data-widget-latlng=""
-                    data-enable-scroll="true"
-                    role="region"
-                    title=""
-                    data-enable-touch="true"
-                    data-widget-zoom="12"
-                    data-widget-tooltip=""
-                  ></div>
+                    class="map"
+                    style="overflow: hidden; height: 400px; display: flex;"
+                  >
+                    <iframe 
+                      src="https://maps.google.com/maps?q=51.7723,0.4735+(Waddat+Beverage,+Essex,+UK)&t=&z=7&ie=UTF8&iwloc=&output=embed" 
+                      width="100%" 
+                      height="400" 
+                      style="border:0; flex: 1;" 
+                      allowfullscreen="" 
+                      loading="lazy"
+                      title="Waddat Locations in Essex"
+                    ></iframe>
+                  </div>
                 </div>
                 <div class="text-align-center">
                   <h3 class="text-color-purple">ORDER ONLINE</h3>
@@ -1502,25 +1404,21 @@
                 </div>
                 <div class="background-image-wrapper">
                   <img
-                    src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680d443414e9b0b83ce3b410_kiwi.webp"
+                    src="/fruits/soursop_slice.png"
                     loading="lazy"
                     width="375"
                     data-w-id="6b10c753-6de2-cc99-e8b7-d3b3f8a2146f"
-                    alt=""
-                    srcset="
-                      https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680d443414e9b0b83ce3b410_kiwi-p-500.webp 500w,
-                      https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680d443414e9b0b83ce3b410_kiwi.webp       750w
-                    "
+                    alt="Soursop Slice"
                     sizes="(max-width: 479px) 100vw, 375px"
                     class="kiwi"
                   /><img
-                    src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680ab15b200d59b9d63f76bc_slice.webp"
+                    src="/fruits/guava_slice.png"
                     loading="lazy"
                     width="169.5"
-                    alt=""
+                    alt="Guava Slice"
                     class="orange-slice"
                   /><img
-                    src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680d457dbee7dc598e6624c2_white%20shape.svg"
+                    src="/yellow-shape.svg"
                     loading="lazy"
                     width="166.5"
                     alt=""
@@ -1749,7 +1647,7 @@
             </div>
           </div>
         </div>
-        <div id="wholesale" class="wholesale-section" style="background-color: var(--black); padding-top: 4rem;">
+        <div id="wholesale" class="wholesale-section" style="background-color: #5541ba; padding-top: 4rem;">
           <div class="padding-global padding-section-medium">
             <div class="container-medium">
               <div class="text-align-center text-style-allcaps">
@@ -2344,16 +2242,8 @@
                   href="/"
                   aria-current="page"
                   class="footer-logo w-inline-block w--current"
-                  ><img
-                    src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680d52b534808eee316c791f_zo%20oo%20om.svg"
-                    loading="lazy"
-                    alt=""
-                    class="hide-tablet" /><img
-                    src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680d591c52c03b07f7bf0971_Logo.svg"
-                    loading="lazy"
-                    alt=""
-                    class="hide-desktop"
-                /></a>
+                  style="font-family: 'Londrina Solid', sans-serif; font-size: 32px; font-weight: 700; color: #111; text-decoration: none;"
+                  >WADDAT</a>
                 <div class="footer-nav-links">
                   <div class="footer-column">
                     <a
@@ -2373,17 +2263,19 @@
                 </div>
                 <div class="social-media">
                   <div class="join-us">JOIN US ON SOCIAL MEDIA!</div>
-                  <div class="icons-wrapper _2-columns">
+                  <div class="icons-wrapper" style="display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 0.5rem;">
                     <a
                       href="https://instagram.com"
                       target="_blank"
-                      class="social-media-link"
-                      >insta</a
+                      class="social-media-link w-inline-block"
+                      style="display: flex; align-items: center; justify-content: center;"
+                      ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a
                     ><a
-                      href="https://x.com"
+                      href="https://www.tiktok.com/@waddatbevarage"
                       target="_blank"
-                      class="social-media-link"
-                      >twitter(x)</a
+                      class="social-media-link w-inline-block"
+                      style="display: flex; align-items: center; justify-content: center;"
+                      ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z"/></svg></a
                     >
                   </div>
                 </div>
@@ -2395,6 +2287,8 @@
                   href="#"
                   class="text-size-small text-color-black"
                   >© 2026 Waddat Beverage</a
+                ><span class="text-size-small text-color-black" style="margin: 0 10px;"
+                  >Built by <a href="https://conerstonedg.com" target="_blank" rel="noopener noreferrer" class="text-color-black">Cornerstone Digital</a></span
                 ><a
                   id="w-node-a7653a49-4a9d-79dd-55f0-a1310ea95bb3-0f3e225c"
                   href="mailto:hello@waddat.com"

@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import productsData from '../data/products.json';
+import { useCart } from '../context/CartContext';
 
 export default function ProductDetail() {
   const { slug } = useParams();
   const product = productsData.find((p) => p.slug === slug);
   const [selectedSize, setSelectedSize] = useState(product ? product.sizes[0] : '');
+  const [added, setAdded] = useState(false);
+  const { addToCart } = useCart();
 
   if (!product) {
     return (
@@ -17,6 +20,12 @@ export default function ProductDetail() {
     );
   }
 
+  const handleAddToCart = () => {
+    addToCart(product, selectedSize);
+    setAdded(true);
+    setTimeout(() => setAdded(false), 1500);
+  };
+
   return (
     <main className="product-detail-page">
       <div className="product-detail-container">
@@ -27,12 +36,12 @@ export default function ProductDetail() {
           <h1>{product.name}</h1>
           <p className="price">${product.price.toFixed(2)} USD</p>
           <p className="description">{product.description}</p>
-          
+
           <div className="size-selector">
             <label htmlFor="size">Size:</label>
-            <select 
-              id="size" 
-              value={selectedSize} 
+            <select
+              id="size"
+              value={selectedSize}
               onChange={(e) => setSelectedSize(e.target.value)}
             >
               {product.sizes.map((size) => (
@@ -40,8 +49,10 @@ export default function ProductDetail() {
               ))}
             </select>
           </div>
-          
-          <button className="btn-primary add-to-cart">Add to Cart</button>
+
+          <button type="button" className="btn-primary add-to-cart" onClick={handleAddToCart}>
+            {added ? '✓ Added!' : 'Add to Cart'}
+          </button>
         </div>
       </div>
     </main>

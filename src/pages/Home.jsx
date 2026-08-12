@@ -1,11 +1,20 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import productsData from '../data/products.json';
+import { useCart } from '../context/CartContext';
 
 export default function Home() {
   const [activeFaq, setActiveFaq] = useState(null);
   const [currentReview, setCurrentReview] = useState(0);
   const [email, setEmail] = useState('');
+  const [addedIds, setAddedIds] = useState({});
+  const { addToCart } = useCart();
+
+  const handleAddToCart = (product) => {
+    addToCart(product, product.sizes[0]);
+    setAddedIds((prev) => ({ ...prev, [product.id]: true }));
+    setTimeout(() => setAddedIds((prev) => ({ ...prev, [product.id]: false })), 1500);
+  };
 
   const faqs = [
     { question: 'What makes Zoooom special?', answer: 'Zoooom is made with organic ingredients, naturally fermented, and packed with probiotics. No artificial flavors, no compromises—just pure goodness in every sip!' },
@@ -57,7 +66,9 @@ export default function Home() {
                 <div className="product-card-content">
                   <h3><Link to={`/product/${product.slug}`}>{product.name}</Link></h3>
                   <p>${product.price.toFixed(2)} USD</p>
-                  <Link to={`/product/${product.slug}`} className="btn-secondary">Buy now</Link>
+                  <button type="button" className="btn-secondary" onClick={() => handleAddToCart(product)}>
+                    {addedIds[product.id] ? '✓ Added!' : 'Add to Cart'}
+                  </button>
                 </div>
               </div>
             ))}
@@ -148,16 +159,26 @@ export default function Home() {
       {/* Where to find */}
       <section id="map" className="where-to-find-section">
         <div className="container">
-          <h2>Where to find <span>Zoooom</span></h2>
+          <h2>WHERE TO FIND <span>WADDAT</span></h2>
           <div className="find-options">
             <div className="find-option">
               <h3>IN STORES</h3>
-              <p>Find Zoooom at selected organic shops, cafes, and supermarkets near you</p>
-              <div className="map-placeholder"></div>
+              <p>FIND WADDAT AT SELECTED ORGANIC SHOPS, CAFES, AND SUPERMARKETS NEAR YOU</p>
+              <div className="map-placeholder" style={{ backgroundColor: 'transparent', padding: 0, overflow: 'hidden' }}>
+                <iframe 
+                  src="https://maps.google.com/maps?q=Essex,+UK&t=&z=9&ie=UTF8&iwloc=&output=embed" 
+                  width="100%" 
+                  height="100%" 
+                  style={{border:0, minHeight: '300px'}} 
+                  allowFullScreen="" 
+                  loading="lazy"
+                  title="Waddat Locations in Essex"
+                ></iframe>
+              </div>
             </div>
             <div className="find-option">
               <h3>ORDER ONLINE</h3>
-              <p>Shop our full range and enjoy fresh kombucha whenever you want</p>
+              <p>SHOP OUR FULL RANGE AND ENJOY FRESH DRINKS WHENEVER YOU WANT</p>
               <Link to="/products" className="btn-primary" style={{marginTop: '20px'}}>Order now</Link>
             </div>
           </div>
