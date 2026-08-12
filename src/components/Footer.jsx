@@ -21,6 +21,11 @@ export default function Footer() {
           <a href="https://x.com" target="_blank" rel="noopener noreferrer">Twitter(X)</a>
         </div>
       </div>
+      <div className="footer-bottom">
+        <span>© 2026 Waddat Beverage</span>
+        <span>hello@waddat.com</span>
+        <span>Built by <a href="https://conerstonedg.com" target="_blank" rel="noopener noreferrer">Cornerstone Digital</a></span>
+      </div>
     </footer>
   );
 }
