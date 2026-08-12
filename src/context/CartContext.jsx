@@ -10,17 +10,30 @@ export function CartProvider({ children }) {
   const closeCart = useCallback(() => setIsCartOpen(false), []);
 
   const addToCart = (product, size) => {
-    setItems((prev) => {
-      const existing = prev.find((i) => i.id === product.id && i.size === size);
-      if (existing) {
-        return prev.map((i) =>
-          i.id === product.id && i.size === size
-            ? { ...i, quantity: i.quantity + 1 }
-            : i
-        );
+    setItems((prevItems) => {
+      // Create a fresh array to ensure React sees the state change
+      const newItems = [...(prevItems || [])];
+      
+      const existingIndex = newItems.findIndex(
+        (i) => String(i.id) === String(product.id) && String(i.size) === String(size)
+      );
+
+      if (existingIndex >= 0) {
+        newItems[existingIndex] = {
+          ...newItems[existingIndex],
+          quantity: newItems[existingIndex].quantity + 1
+        };
+      } else {
+        newItems.push({
+          ...product,
+          size: size || (product.sizes && product.sizes[0]) || 'Standard',
+          quantity: 1
+        });
       }
-      return [...prev, { ...product, size, quantity: 1 }];
+      
+      return newItems;
     });
+    
     setIsCartOpen(true);
   };
 

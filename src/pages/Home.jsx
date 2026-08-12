@@ -17,17 +17,17 @@ export default function Home() {
   };
 
   const faqs = [
-    { question: 'What makes Zoooom special?', answer: 'Zoooom is made with organic ingredients, naturally fermented, and packed with probiotics. No artificial flavors, no compromises—just pure goodness in every sip!' },
-    { question: 'Is there caffeine in Zoooom?', answer: 'Since we brew our kombucha with organic tea, it contains a small amount of natural caffeine. It’s just enough to give you a gentle energy boost—without the jitters!' },
-    { question: 'How much sugar is in Zoooom?', answer: 'Most of the sugar added during brewing is consumed by healthy bacteria in the fermentation process. The final product has just a touch of natural sweetness.' },
-    { question: 'Can kids drink Zoooom?', answer: 'Absolutely! Our kombucha is a great alternative to sugary sodas. However, since it contains a small amount of caffeine and is naturally fermented, we recommend consulting your pediatrician for younger children.' },
-    { question: 'How should I store Zoooom?', answer: 'Keep it chilled! Our kombucha is alive with probiotics, so refrigeration helps maintain its freshness and benefits.' },
-    { question: 'Can I drink Zoooom every day?', answer: 'Yes! Many of our fans enjoy a bottle daily as part of their healthy routine. Listen to your body and enjoy as much as you like!' }
+    { question: 'What makes Waddat special?', answer: 'Waddat Beverage is made with natural Jamaican-inspired ingredients, naturally crafted, and packed with flavor. No artificial flavors, no compromises—just pure goodness in every sip!' },
+    { question: 'Is there caffeine in Waddat drinks?', answer: 'Since we brew our drinks with natural ingredients, some may contain a small amount of natural caffeine. It’s just enough to give you a gentle energy boost—without the jitters!' },
+    { question: 'How much sugar is in Waddat drinks?', answer: 'We use natural sweeteners and minimal added sugar to maintain a perfect balance. The final product has just a touch of natural sweetness.' },
+    { question: 'Can kids drink Waddat?', answer: 'Absolutely! Our drinks are a great alternative to sugary sodas. However, for younger children, we always recommend consulting your pediatrician.' },
+    { question: 'How should I store my Waddat drinks?', answer: 'Keep it chilled! Our drinks are best enjoyed cold, so refrigeration helps maintain their freshness and vibrant taste.' },
+    { question: 'Can I drink Waddat every day?', answer: 'Yes! Many of our fans enjoy a bottle daily as part of their routine. Listen to your body and enjoy as much as you like!' }
   ];
 
   const reviews = [
     { text: 'I love how natural and refreshing it tastes. It’s not too sweet, just perfectly balanced! And I feel the difference in my digestion after just a few days.', author: 'Emma R.', role: 'nutritionist & wellness coach' },
-    { text: 'Zoooom gives me the perfect lift in the morning without relying on coffee. I love knowing that it’s packed with probiotics and actually good for me.', author: 'James L.', role: 'fitness trainer & entrepreneur' }
+    { text: 'Waddat gives me the perfect lift in the morning without relying on coffee. I love knowing that it’s packed with probiotics and actually good for me.', author: 'James L.', role: 'fitness trainer & entrepreneur' }
   ];
 
   const handleFaqToggle = (index) => {
@@ -80,7 +80,7 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className="about-section">
         <div className="container">
-          <h2><span>Zoooom</span> is a naturally fermented tea that fills you with energy and health.</h2>
+          <h2><span>Waddat</span> is a naturally fermented tea that fills you with energy and health.</h2>
           <div className="about-images" style={{height: '200px'}}>
              {/* Placeholder for floating images */}
           </div>
@@ -137,7 +137,7 @@ export default function Home() {
       {/* Reviews Section */}
       <section id="reviews" className="reviews-section">
         <div className="container">
-          <h2>What people say<br/>about <span>zoooom</span></h2>
+          <h2>What people say<br/>about <span>Waddat</span></h2>
           <div className="reviews-carousel">
             {reviews.map((review, i) => (
               <div key={i} className="review-card">
@@ -218,7 +218,7 @@ export default function Home() {
       {/* Newsletter */}
       <section className="newsletter-section">
         <div className="container" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-          <h2>TRY <span>zoooom</span></h2>
+          <h2>TRY <span>Waddat</span></h2>
           <h3 style={{textAlign: 'center'}}>SUBSCRIBE TO NEWSLETTER and get a bonus:<br/><span>10% off</span> your next order!</h3>
           <form onSubmit={handleNewsletterSubmit} className="newsletter-form">
             <input 
