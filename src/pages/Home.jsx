@@ -123,17 +123,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Tasting Kit Section */}
-      <section className="tasting-kit-section">
-        <div className="container">
-          <h2>Try the entire <span>Zoooom</span> line!</h2>
-          <p>Want to experience the variety of flavors and benefits of kombucha? Our tasting kit is the perfect choice for those who want to familiarize themselves with the Zoooom range.</p>
-          <div style={{display: 'flex', gap: '40px', justifyContent: 'center'}}>
-            {/* Box and bottles mock */}
-          </div>
-        </div>
-      </section>
-
       {/* Reviews Section */}
       <section id="reviews" className="reviews-section">
         <div className="container">
