@@ -3355,11 +3355,14 @@ figcaption {
   position: absolute;
   inset: 0% 0% auto auto;
 }
-.top-bottle {
-  z-index: 1;
+.top-bottle, .hero-bottle-img {
+  z-index: 2;
   position: absolute;
-  inset: -25vh -10vw auto auto;
-  transform: rotate(-91deg);
+  top: -60px;
+  right: -20px;
+  width: 270px;
+  transform: rotate(35deg) !important;
+  pointer-events: none;
 }
 .orange-wrapper {
   flex-flow: column;

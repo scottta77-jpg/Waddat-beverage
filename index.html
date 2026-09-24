@@ -52,6 +52,40 @@
       .hero-section {
         background-color: #A0D8F1 !important;
       }
+      .navbar {
+        z-index: 99 !important;
+      }
+      .top-bottle, .hero-bottle-img {
+        z-index: 1 !important;
+        position: absolute !important;
+        top: -150px !important;
+        right: -30px !important;
+        width: 600px !important;
+        max-width: none !important;
+        transform: rotate(-42deg) !important;
+        pointer-events: none !important;
+      }
+      @media screen and (max-width: 991px) {
+        .top-bottle, .hero-bottle-img {
+          width: 500px !important;
+          top: -130px !important;
+          right: -20px !important;
+        }
+      }
+      @media screen and (max-width: 767px) {
+        .top-bottle, .hero-bottle-img {
+          width: 380px !important;
+          top: -100px !important;
+          right: -15px !important;
+        }
+      }
+      @media screen and (max-width: 479px) {
+        .top-bottle, .hero-bottle-img {
+          width: 260px !important;
+          top: -60px !important;
+          right: -10px !important;
+        }
+      }
       .faq-section {
         background-color: #EFE4CD !important;
       }
@@ -78,6 +112,33 @@
       }
       .product-card:hover .product-picture-wrapper {
         transform: translateY(-4px);
+      }
+      .products-grid {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 2rem !important;
+      }
+      .products-grid .product-card {
+        flex: 0 0 calc(33.333% - 1.334rem) !important;
+        max-width: calc(33.333% - 1.334rem) !important;
+      }
+      @media screen and (max-width: 991px) {
+        .products-grid .product-card {
+          flex: 0 0 calc(50% - 1rem) !important;
+          max-width: calc(50% - 1rem) !important;
+        }
+      }
+      @media screen and (max-width: 479px) {
+        .products-grid {
+          flex-direction: column !important;
+          align-items: center !important;
+          flex-wrap: nowrap !important;
+        }
+        .products-grid .product-card {
+          flex: 0 0 auto !important;
+          max-width: none !important;
+        }
       }
       @media screen and (max-width: 767px) {
         .hero-heading.mobile-version {
@@ -321,7 +382,6 @@
             </div>
           </div>
           <div
-            data-w-id="77d891bd-edaf-7418-7c5b-d5fccae9b45e"
             class="hero-image-wrapper"
           >
             <img
@@ -343,21 +403,8 @@
             /><img
               src="/hero-soursop-bottle.png"
               loading="eager"
-              width="658"
-              style="
-                opacity: 0.2;
-                -webkit-transform: translate3d(0, -200px, 0)
-                  scale3d(0.5, 0.5, 1) rotateX(0) rotateY(0) rotateZ(-91deg)
-                  skew(0, 0);
-                -moz-transform: translate3d(0, -200px, 0) scale3d(0.5, 0.5, 1)
-                  rotateX(0) rotateY(0) rotateZ(-91deg) skew(0, 0);
-                -ms-transform: translate3d(0, -200px, 0) scale3d(0.5, 0.5, 1)
-                  rotateX(0) rotateY(0) rotateZ(-91deg) skew(0, 0);
-                transform: translate3d(0, -200px, 0) scale3d(0.5, 0.5, 1)
-                  rotateX(0) rotateY(0) rotateZ(-91deg) skew(0, 0);
-              "
               alt="Irish Moss & Soursop"
-              class="top-bottle"
+              class="hero-bottle-img"
             />
             <div
               style="
@@ -856,6 +903,106 @@
                             Product is not available in this quantity.
                           </div>
                         </div>
+                      </div>
+                    </div>
+                    <div
+                      data-w-id="77fab9e2-5af5-57c9-7d50-ee0f31ef93f0"
+                      role="listitem"
+                      class="product-card w-dyn-item"
+                    >
+                      <a
+                        title="Go to product"
+                        href="/product/irish-moss-guava-banana"
+                        class="product-link-wrapper w-inline-block"
+                        ><div
+                          style="
+                            background-image: url('/sea-moss-guava-banana-background.jpeg');
+                            background-color: #f7a072;
+                          "
+                          class="product-picture-wrapper"
+                        >
+                          <img
+                            loading="lazy"
+                            width="658"
+                            alt="Sea Moss, Guava & Banana"
+                            src="/irish-moss-guava-banana.png"
+                            class="product-picture"
+                            style="transform: rotate(-14deg);"
+                          /></div></a
+                      ><a
+                        href="/product/irish-moss-guava-banana"
+                        class="product-meta-wrapper w-inline-block"
+                        ><h3 class="product-name">Sea Moss, Guava &amp; Banana</h3>
+                        <div
+                          class="product-price"
+                        >
+                          £3.50 GBP
+                        </div></a
+                      >
+                      <div>
+                        <form
+                          data-node-type="commerce-add-to-cart-form"
+                          class="w-commerce-commerceaddtocartform default-state"
+                        >
+                          <input
+                            type="submit"
+                            data-node-type="commerce-add-to-cart-button"
+                            data-loading-text="Adding to cart..."
+                            aria-busy="false"
+                            class="w-commerce-commerceaddtocartbutton button is-secondary with-arrow"
+                            value="ADD TO CART"
+                          />
+                        </form>
+                      </div>
+                    </div>
+                    <div
+                      data-w-id="77fab9e2-5af5-57c9-7d50-ee0f31ef93f0"
+                      role="listitem"
+                      class="product-card w-dyn-item"
+                    >
+                      <a
+                        title="Go to product"
+                        href="/product/irish-moss-pineapple"
+                        class="product-link-wrapper w-inline-block"
+                        ><div
+                          style="
+                            background-image: url('/irish-moss-pineapple-background-2.png');
+                            background-color: #ffd700;
+                          "
+                          class="product-picture-wrapper"
+                        >
+                          <img
+                            loading="lazy"
+                            width="658"
+                            alt="Sea Moss & Pineapple"
+                            src="/irish-moss-pineapple.png"
+                            class="product-picture"
+                            style="transform: rotate(-14deg);"
+                          /></div></a
+                      ><a
+                        href="/product/irish-moss-pineapple"
+                        class="product-meta-wrapper w-inline-block"
+                        ><h3 class="product-name">Sea Moss &amp; Pineapple</h3>
+                        <div
+                          class="product-price"
+                        >
+                          £3.50 GBP
+                        </div></a
+                      >
+                      <div>
+                        <form
+                          data-node-type="commerce-add-to-cart-form"
+                          class="w-commerce-commerceaddtocartform default-state"
+                        >
+                          <input
+                            type="submit"
+                            data-node-type="commerce-add-to-cart-button"
+                            data-loading-text="Adding to cart..."
+                            aria-busy="false"
+                            class="w-commerce-commerceaddtocartbutton button is-secondary with-arrow"
+                            value="ADD TO CART"
+                          />
+                        </form>
                       </div>
                     </div>
                   </div>
@@ -1417,28 +1564,27 @@
                     style="overflow: hidden; height: 400px; display: flex;"
                   >
                     <iframe 
-                      src="https://maps.google.com/maps?q=51.7723,0.4735+(Waddat+Beverage,+Essex,+UK)&t=&z=7&ie=UTF8&iwloc=&output=embed" 
+                      src="https://maps.google.com/maps?q=373+Barking+Rd,+London+E13+8AL&t=&z=14&ie=UTF8&iwloc=&output=embed" 
                       width="100%" 
                       height="400" 
                       style="border:0; flex: 1;" 
                       allowfullscreen="" 
                       loading="lazy"
-                      title="Waddat Locations in Essex"
+                      title="Waddat Location"
                     ></iframe>
                   </div>
                 </div>
                 <div class="text-align-center">
-                  <h3 class="text-color-purple">ORDER ONLINE</h3>
+                  <h3 class="text-color-purple">COLLECTION ONLY</h3>
                   <div class="spacer-small"></div>
                   <p class="heading-style-h5 text-style-allcaps">
-                    Shop our full range and enjoy fresh drinks whenever you
-                    want
+                    Browse our full range of fresh drinks and collect them directly from our store.
                   </p>
                   <div class="spacer-large"></div>
                   <a
                     href="/category/drinks"
                     class="button-wrapper align-center w-inline-block"
-                    ><div class="button">Order now</div>
+                    ><div class="button">View Drinks</div>
                     <div class="button-shadow"></div
                   ></a>
                 </div>
