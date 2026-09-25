@@ -205,6 +205,26 @@
           transform: translateX(-50%) rotate(0deg) !important;
         }
       }
+      .products-grid {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+      }
+      .product-card {
+        width: calc(33.333% - 1.34rem) !important;
+      }
+      .product-picture-wrapper {
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-attachment: scroll !important;
+      }
+      @media screen and (max-width: 991px) {
+        .product-card { width: calc(50% - 1rem) !important; }
+      }
+      @media screen and (max-width: 767px) {
+        .product-card { width: 100% !important; }
+      }
     </style>
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link
@@ -916,11 +936,8 @@
                         class="product-link-wrapper w-inline-block"
                         ><div
                           style="
-                            background-image: url('/sea-moss-guava-banana-background.jpeg');
-                            background-color: #f7a072;
-                            background-size: cover;
-                            background-attachment: scroll;
-                            background-position: center;
+                            background-image: url('/sea-moss-guava-banana-background-2.jpeg');
+                            background-color: #215132;
                           "
                           class="product-picture-wrapper"
                         >
@@ -983,7 +1000,6 @@
                             alt="Sea Moss & Pineapple"
                             src="/irish-moss-pineapple.png"
                             class="product-picture"
-                            style="transform: rotate(-14deg);"
                           /></div></a
                       ><a
                         href="/product/irish-moss-pineapple"
@@ -1005,10 +1021,36 @@
                             data-node-type="commerce-add-to-cart-button"
                             data-loading-text="Adding to cart..."
                             aria-busy="false"
+                            aria-haspopup="dialog"
                             class="w-commerce-commerceaddtocartbutton button is-secondary with-arrow"
                             value="ENQUIRE NOW"
                           />
                         </form>
+                        <div
+                          style="display: none"
+                          class="w-commerce-commerceaddtocartoutofstock out-of-stock-state"
+                          tabindex="0"
+                        >
+                          <div>This product is out of stock.</div>
+                        </div>
+                        <div
+                          aria-live="assertive"
+                          data-node-type="commerce-add-to-cart-error"
+                          style="display: none"
+                          class="w-commerce-commerceaddtocarterror"
+                        >
+                          <div
+                            data-node-type="commerce-add-to-cart-error"
+                            data-w-add-to-cart-quantity-error="Product is not available in this quantity."
+                            data-w-add-to-cart-general-error="Something went wrong when adding this item to the cart."
+                            data-w-add-to-cart-mixed-cart-error="You can't purchase another product with a subscription."
+                            data-w-add-to-cart-buy-now-error="Something went wrong when trying to purchase this item."
+                            data-w-add-to-cart-checkout-disabled-error="Checkout is disabled on this site."
+                            data-w-add-to-cart-select-all-options-error="Please select an option in each set."
+                          >
+                            Product is not available in this quantity.
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
