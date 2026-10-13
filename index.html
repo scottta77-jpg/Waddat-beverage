@@ -230,6 +230,64 @@
       @media screen and (max-width: 767px) {
         .product-card { width: 100% !important; }
       }
+
+      /* FAQ Layout & Border Clipping Fix */
+      .faq-section-wrapper {
+        grid-column-gap: 3.5rem !important;
+        grid-row-gap: 2.5rem !important;
+        grid-template-columns: auto minmax(0, 1fr) !important;
+        align-items: start !important;
+        box-sizing: border-box !important;
+      }
+      @media screen and (max-width: 991px) {
+        .faq-section-wrapper {
+          grid-template-columns: 1fr !important;
+          display: flex !important;
+          flex-direction: column !important;
+        }
+      }
+      .faq-dropdown {
+        box-sizing: border-box !important;
+        width: 100% !important;
+        overflow: hidden !important;
+        background-color: var(--colors--cream) !important;
+      }
+      .question-wrapper {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        position: relative !important;
+        padding: 1rem 3.5rem 1rem 3.5rem !important;
+        white-space: normal !important;
+        box-sizing: border-box !important;
+        width: 100% !important;
+        background-color: transparent !important;
+      }
+      .question {
+        white-space: normal !important;
+        word-break: normal !important;
+        overflow-wrap: break-word !important;
+        text-align: center !important;
+        margin: 0 !important;
+      }
+      .plus-icon {
+        position: absolute !important;
+        right: 1.25rem !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        flex-shrink: 0 !important;
+        margin: 0 !important;
+      }
+      .answer-wrapper {
+        box-sizing: border-box !important;
+        width: 100% !important;
+        background-color: transparent !important;
+        border-radius: 0 0 28px 28px !important;
+      }
+      .answer-wrapper.w--open {
+        padding: 0 2rem 1.25rem !important;
+        background-color: transparent !important;
+      }
     </style>
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link
