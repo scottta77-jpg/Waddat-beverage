@@ -1,0 +1,2605 @@
+<!doctype html>
+<!-- This site was created in Webflow. https://webflow.com --><!-- Last Published: Sun Aug 09 2026 18:43:07 GMT+0000 (Coordinated Universal Time) -->
+<html
+  data-wf-domain="zoooooom.webflow.io"
+  data-wf-page="680aa12c0e13118b7b331d81"
+  data-wf-site="680aa12b0e13118b7b331d1d"
+  data-wf-status="1"
+  lang="en"
+>
+  <head>
+    <meta charset="utf-8" />
+    <link
+      href="https://cdn.prod.website-files.com"
+      rel="preconnect"
+      crossorigin="anonymous"
+    />
+    <title>Waddat Beverage - Natural Jamaican-inspired bottled drinks</title>
+    <meta
+      content="Waddat Beverage offers natural Jamaican-inspired bottled drinks, including Sorrel, Irish Moss varieties, and Ginger Shots."
+      name="description"
+    />
+    <meta
+      content="Waddat Beverage"
+      property="og:title"
+    />
+    <meta
+      content="Waddat Beverage offers natural Jamaican-inspired bottled drinks, including Sorrel, Irish Moss varieties, and Ginger Shots."
+      property="og:description"
+    />
+    <meta
+      content="Waddat Beverage"
+      name="twitter:title"
+    />
+    <meta
+      content="Waddat Beverage offers natural Jamaican-inspired bottled drinks, including Sorrel, Irish Moss varieties, and Ginger Shots."
+      name="twitter:description"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/og-preview.png" />
+    <meta name="twitter:image" content="/og-preview.png" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Webflow" name="generator" />
+    <link
+      href="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/css/zoooooom.webflow.shared.0cfbcd198.min.css"
+      rel="stylesheet"
+      type="text/css"
+      integrity="sha384-DPvNGY1YwXHHZR3t6/Ws2fReMF9N66cw7vk/Ki1N0b5FH4fu+/Ejyoq4ZqL79p1r"
+      crossorigin="anonymous"
+    />
+    <style>
+      .hero-section {
+        background-color: #A0D8F1 !important;
+      }
+      .navbar {
+        z-index: 99 !important;
+      }
+      .top-bottle, .hero-bottle-img {
+        z-index: 1 !important;
+        position: absolute !important;
+        top: -150px !important;
+        right: -30px !important;
+        width: 600px !important;
+        max-width: none !important;
+        transform: rotate(-42deg) !important;
+        pointer-events: none !important;
+      }
+      @media screen and (max-width: 991px) {
+        .top-bottle, .hero-bottle-img {
+          width: 500px !important;
+          top: -130px !important;
+          right: -20px !important;
+        }
+      }
+      @media screen and (max-width: 767px) {
+        .top-bottle, .hero-bottle-img {
+          width: 380px !important;
+          top: -100px !important;
+          right: -15px !important;
+        }
+      }
+      @media screen and (max-width: 479px) {
+        .top-bottle, .hero-bottle-img {
+          width: 260px !important;
+          top: -60px !important;
+          right: -10px !important;
+        }
+      }
+      .faq-section {
+        background-color: #EFE4CD !important;
+      }
+      .promo-section {
+        background-color: #EFE4CD !important;
+      }
+      .where-section {
+        background-image: url(/objects-beige.svg) !important;
+      }
+      .product-picture {
+        max-width: 15rem !important;
+        width: 100% !important;
+        height: auto !important;
+        transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), filter 0.4s ease;
+        will-change: transform;
+      }
+      .product-card:hover .product-picture,
+      .product-link-wrapper:hover .product-picture {
+        transform: scale(1.1) translateY(-6px) rotate(-1.5deg);
+        filter: drop-shadow(0 10px 15px rgba(0,0,0,0.15));
+      }
+      .product-picture-wrapper {
+        transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+      }
+      .product-card:hover .product-picture-wrapper {
+        transform: translateY(-4px);
+      }
+      .nav-link {
+        white-space: nowrap;
+      }
+      .products-grid {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 2rem !important;
+      }
+      .products-grid .product-card {
+        flex: 0 0 calc(33.333% - 1.334rem) !important;
+        max-width: calc(33.333% - 1.334rem) !important;
+      }
+      @media screen and (max-width: 991px) {
+        .products-grid .product-card {
+          flex: 0 0 calc(50% - 1rem) !important;
+          max-width: calc(50% - 1rem) !important;
+        }
+      }
+      @media screen and (max-width: 479px) {
+        .products-grid {
+          flex-direction: column !important;
+          align-items: center !important;
+          flex-wrap: nowrap !important;
+        }
+        .products-grid .product-card {
+          flex: 0 0 auto !important;
+          max-width: none !important;
+        }
+      }
+      @media screen and (max-width: 767px) {
+        .hero-heading.mobile-version {
+          line-height: 0.8 !important;
+          padding-top: 55px !important;
+          padding-bottom: 55px !important;
+          box-sizing: border-box !important;
+          display: block !important;
+        }
+        .hero-heading.mobile-version br {
+          display: none !important;
+        }
+        .hero-heading.mobile-version .waddat-span {
+          font-size: 150px !important;
+          line-height: 0.8 !important;
+          display: block !important;
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+        .hero-heading.mobile-version .beverage-span {
+          font-size: 112px !important;
+          line-height: 0.8 !important;
+          display: block !important;
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+        .top-bottle {
+          left: 50% !important;
+          right: auto !important;
+          top: 40px !important;
+          transform: translateX(-50%) rotate(0deg) !important;
+        }
+      }
+      @media screen and (max-width: 479px) {
+        .hero-heading.mobile-version {
+          line-height: 0.8 !important;
+          padding-top: 69px !important;
+          padding-bottom: 69px !important;
+          box-sizing: border-box !important;
+          display: block !important;
+        }
+        .hero-heading.mobile-version br {
+          display: none !important;
+        }
+        .hero-heading.mobile-version .waddat-span {
+          font-size: 96px !important;
+          line-height: 0.8 !important;
+          display: block !important;
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+        .hero-heading.mobile-version .beverage-span {
+          font-size: 72px !important;
+          line-height: 0.8 !important;
+          display: block !important;
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+        .top-bottle {
+          left: 50% !important;
+          right: auto !important;
+          top: 60px !important;
+          max-width: 14rem !important;
+          transform: translateX(-50%) rotate(0deg) !important;
+        }
+      }
+      .products-grid {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+      }
+      .product-card {
+        width: calc(33.333% - 1.34rem) !important;
+      }
+      .product-picture-wrapper {
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-attachment: scroll !important;
+        border-radius: 30px 30px 0 0 !important;
+        overflow: hidden !important;
+      }
+      @media screen and (max-width: 991px) {
+        .product-card { width: calc(50% - 1rem) !important; }
+      }
+      @media screen and (max-width: 767px) {
+        .product-card { width: 100% !important; }
+      }
+
+      /* FAQ Layout & Border Clipping Fix */
+      .faq-section-wrapper {
+        grid-column-gap: 3.5rem !important;
+        grid-row-gap: 2.5rem !important;
+        grid-template-columns: auto minmax(0, 1fr) !important;
+        align-items: start !important;
+        box-sizing: border-box !important;
+      }
+      @media screen and (max-width: 991px) {
+        .faq-section-wrapper {
+          grid-template-columns: 1fr !important;
+          display: flex !important;
+          flex-direction: column !important;
+        }
+      }
+      .faq-dropdown {
+        box-sizing: border-box !important;
+        width: 100% !important;
+        overflow: hidden !important;
+        background-color: var(--colors--cream) !important;
+      }
+      .question-wrapper {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        position: relative !important;
+        padding: 1rem 3.5rem 1rem 3.5rem !important;
+        white-space: normal !important;
+        box-sizing: border-box !important;
+        width: 100% !important;
+        background-color: transparent !important;
+      }
+      .question {
+        white-space: normal !important;
+        word-break: normal !important;
+        overflow-wrap: break-word !important;
+        text-align: center !important;
+        margin: 0 !important;
+      }
+      .plus-icon {
+        position: absolute !important;
+        right: 1.25rem !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        flex-shrink: 0 !important;
+        margin: 0 !important;
+      }
+      .answer-wrapper {
+        box-sizing: border-box !important;
+        width: 100% !important;
+        background-color: transparent !important;
+        border-radius: 0 0 28px 28px !important;
+      }
+      .answer-wrapper.w--open {
+        padding: 0 2rem 1.25rem !important;
+        background-color: transparent !important;
+      }
+    </style>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link
+      href="https://fonts.gstatic.com"
+      rel="preconnect"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"
+      type="text/javascript"
+    ></script>
+    <script type="text/javascript">
+      WebFont.load({
+        google: {
+          families: [
+            "Inter:300,400,500,600,700",
+            "Londrina Solid:300,400,500,600,700",
+          ],
+        },
+      });
+    </script>
+    <script type="text/javascript">
+      !(function (o, c) {
+        var n = c.documentElement,
+          t = " w-mod-";
+        ((n.className += t + "js"),
+          ("ontouchstart" in o ||
+            (o.DocumentTouch && c instanceof DocumentTouch)) &&
+            (n.className += t + "touch"));
+      })(window, document);
+    </script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <script type="text/javascript">
+      window.__WEBFLOW_CURRENCY_SETTINGS = {
+        currencyCode: "USD",
+        symbol: "$",
+        decimal: ".",
+        fractionDigits: 2,
+        group: ",",
+        template:
+          '{{wf {"path":"symbol","type":"PlainText"} }} {{wf {"path":"amount","type":"CommercePrice"} }} {{wf {"path":"currencyCode","type":"PlainText"} }}',
+        hideDecimalForWholeNumbers: false,
+      };
+    </script>
+    <style>
+      .w-webflow-badge {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <main class="main-wrapper">
+        <div
+          data-w-id="d5ed1d9f-67fc-abaf-dceb-d8a2817c17a7"
+          class="hero-section"
+        >
+          <div class="padding-global padding-section-large">
+            <div
+              data-w-id="7ff63783-38d7-a209-3135-0442324d2956"
+              data-animation="default"
+              data-collapse="medium"
+              data-duration="400"
+              data-easing="ease"
+              data-easing2="ease"
+              role="banner"
+              class="navbar w-nav"
+            >
+              <div class="padding-global">
+                <div class="nav-container">
+                  <div class="nav-wrapper">
+                    <a
+                      href="/"
+                      aria-current="page"
+                      class="brand w-nav-brand w--current"
+                      style="text-decoration: none;"
+                      >
+                      <img src="/waddat-nav-logo.png" alt="Waddat" style="height: 40px; width: auto; display: block;" />
+                    </a>
+                    <nav role="navigation" class="nav-menu w-nav-menu">
+                      <div class="menu-wrapper">
+                        <a href="#products" class="nav-link w-nav-link">OUR DRINKS</
+                        ><a href="#about" class="nav-link w-nav-link"
+                          >ABOUT</a
+                        ><a href="#wholesale" class="nav-link w-nav-link"
+                          >WHOLESALE</a
+                        ><a href="#faq" class="nav-link w-nav-link">FAQ</a
+                        ><a href="#wholesale" class="nav-link w-nav-link">CONTACT</
+                        ><a
+                          data-w-id="4fab8454-2460-543d-fa9a-058251a37004"
+                          href="#wholesale"
+                          class="button-wrapper hide-desktop w-inline-block"
+                          ><div class="button is-cta">STOCK NOW</div>
+                          <div class="button-shadow"></div
+                        ></a>
+                      </div>
+                    </nav>
+                    <a
+                      data-w-id="d5a2b38d-59eb-fe0c-870a-48efbe1898b1"
+                      href="#wholesale"
+                      class="button-wrapper hide-tablet w-inline-block"
+                      ><div class="button is-cta">STOCK NOW</div>
+                      <div class="button-shadow"></div
+                    ></a>
+                    <div class="menu-button w-nav-button">
+                      <div
+                        data-is-ix2-target="1"
+                        class="menu-bars"
+                        data-w-id="486bf92d-7ccf-2b86-c2f0-c3adf68f3199"
+                        data-animation-type="lottie"
+                        data-src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/68112ef7f148e769796d0a14_Animation%20-%201745956566908.lottie"
+                        data-loop="0"
+                        data-direction="1"
+                        data-autoplay="0"
+                        data-renderer="svg"
+                        data-default-duration="0"
+                        data-duration="3"
+                        data-loading="eager"
+                        data-ix2-initial-state="0"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container-large">
+              <div class="hero-section_wrapper">
+                <h1 class="hero-heading hide-mobile-landscape" style="font-size: 9vw;">Waddat<br/>Beverage</h1>
+                <h1 class="hero-heading mobile-version"><span class="waddat-span">WADDAT</span><br /><span class="beverage-span">BEVERAGE</span></h1>
+                <h2
+                  style="
+                    -webkit-transform: translate3d(0, -100px, 0)
+                      scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0)
+                      skew(0, 0);
+                    -moz-transform: translate3d(0, -100px, 0) scale3d(1, 1, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    -ms-transform: translate3d(0, -100px, 0) scale3d(1, 1, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    transform: translate3d(0, -100px, 0) scale3d(1, 1, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    opacity: 0;
+                  "
+                  class="hero-description"
+                  style="text-align: center;"
+                >
+                  Jamaican-inspired drinks <br />full of island flavour.
+                </h2>
+                <div class="spacer-tiny hide-mobile-landscape"></div>
+                <a
+                  data-w-id="5f3f1e57-4e65-d76c-9120-f1d514de822a"
+                  style="
+                    -webkit-transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    -moz-transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    -ms-transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    opacity: 0;
+                  "
+                  href="#products"
+                  class="button-wrapper w-inline-block"
+                  ><div class="button-shadow"></div>
+                  <div class="button is-secondary">Buy NOW</div></a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="hero-image-wrapper"
+          >
+            <img
+              src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680aacf0e9b1aa0154f88997_OBJECTS.svg"
+              loading="eager"
+              style="
+                opacity: 0.2;
+                -webkit-transform: translate3d(0, -150px, 0) scale3d(1, 1, 1)
+                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                -moz-transform: translate3d(0, -150px, 0) scale3d(1, 1, 1)
+                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                -ms-transform: translate3d(0, -150px, 0) scale3d(1, 1, 1)
+                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                transform: translate3d(0, -150px, 0) scale3d(1, 1, 1) rotateX(0)
+                  rotateY(0) rotateZ(0) skew(0, 0);
+              "
+              alt=""
+              class="top-shape"
+            /><img
+              src="/hero-soursop-bottle.png"
+              loading="eager"
+              alt="Sea Moss & Soursop"
+              class="hero-bottle-img"
+            />
+            <div
+              style="
+                opacity: 0.2;
+                -webkit-transform: translate3d(0, -200px, 0)
+                  scale3d(0.5, 0.5, 1) rotateX(0) rotateY(0) rotateZ(0)
+                  skew(0, 0);
+                -moz-transform: translate3d(0, -200px, 0) scale3d(0.5, 0.5, 1)
+                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                -ms-transform: translate3d(0, -200px, 0) scale3d(0.5, 0.5, 1)
+                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                transform: translate3d(0, -200px, 0) scale3d(0.5, 0.5, 1)
+                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+              "
+              class="orange-wrapper"
+            >
+              <img
+                src="/fruits/soursop_hero_fruit.png"
+                loading="lazy"
+                width="256"
+                style="
+                  -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
+                    rotateX(0) rotateY(0) rotateZ(-120deg) skew(0, 0);
+                  -moz-transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
+                    rotateX(0) rotateY(0) rotateZ(-120deg) skew(0, 0);
+                  -ms-transform: translate3d(0, 0, 0) scale3d(1, 1, 1)
+                    rotateX(0) rotateY(0) rotateZ(-120deg) skew(0, 0);
+                  transform: translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0)
+                    rotateY(0) rotateZ(-120deg) skew(0, 0);
+                "
+                alt="Soursop Fruit"
+                sizes="(max-width: 479px) 100vw, 256px"
+                class="orange"
+              /><img
+                src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680ab02eaf46dc17d4f00a62_leaf.svg"
+                loading="lazy"
+                alt=""
+                class="leaf"
+              />
+            </div>
+            <img
+              src="/fruits/pineapple_slice.png"
+              loading="eager"
+              style="
+                -webkit-transform: translate3d(240px, null, 0)
+                  scale3d(0.5, 0.5, 1) rotateX(0) rotateY(0) rotateZ(0)
+                  skew(0, 0);
+                -moz-transform: translate3d(240px, null, 0) scale3d(0.5, 0.5, 1)
+                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                -ms-transform: translate3d(240px, null, 0) scale3d(0.5, 0.5, 1)
+                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                transform: translate3d(240px, null, 0) scale3d(0.5, 0.5, 1)
+                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                opacity: 0.2;
+              "
+              alt="Pineapple Slice"
+              class="slice"
+            />
+          </div>
+        </div>
+        <div id="products" class="popular-products-section">
+          <div class="padding-global padding-section-medium">
+            <div class="container-large">
+              <div class="popular-products_wrapper">
+                <h2
+                  data-w-id="46b72e5e-e702-bbcc-0323-e26debf49da8"
+                  style="
+                    -webkit-transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    -moz-transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    -ms-transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    opacity: 0;
+                  "
+                  class="text-align-center text-color-white"
+                >
+                  <span class="text-color-yellow">MEET THE</span> DRINKS
+                </h2>
+                <div class="product-list-wrapper w-dyn-list">
+                  <div role="list" class="products-grid w-dyn-items">
+                    <div
+                      data-w-id="77fab9e2-5af5-57c9-7d50-ee0f31ef93f0"
+                      role="listitem"
+                      class="product-card w-dyn-item"
+                    >
+                      <a
+                        title="Go to product"
+                        href="/product/sorrel-drink"
+                        class="product-link-wrapper w-inline-block"
+                        ><div
+                          style="
+                            background-image: url('/sorrel-background-2.jpeg');
+                            background-color: #5541ba;
+                          "
+                          class="product-picture-wrapper"
+                        >
+                          <img
+                            loading="lazy"
+                            width="658"
+                            data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
+                            alt="Sorrel Drink"
+                            src="/sorrel-drink.png"
+                            class="product-picture"
+                          /></div></a
+                      ><a
+                        href="/product/sorrel-drink"
+                        class="product-meta-wrapper w-inline-block"
+                        ><h3 class="product-name">Sorrel Drink</h3>
+                        <div
+                          data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_price_%22%2C%22to%22%3A%22innerHTML%22%7D%5D"
+                          class="product-price"
+                        >
+                          £5.00 GBP
+                        </div></a
+                      >
+                      <div>
+                        <form
+                          data-node-type="commerce-add-to-cart-form"
+                          data-commerce-sku-id="680e98ea13f08e88ca669a02"
+                          data-commerce-product-id="680e98e97d3d4344d366626a"
+                          class="w-commerce-commerceaddtocartform default-state"
+                        >
+                          <div
+                            data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_sku_values_3dr%22%2C%22to%22%3A%22optionValues%22%7D%5D"
+                            data-commerce-product-sku-values="%7B%223932c28c9aa0de98b3d6e923cb3b0329%22%3A%22834885d12fbac4078645d28d30c07a8b%22%7D"
+                            data-node-type="commerce-add-to-cart-option-list"
+                            data-commerce-product-id="680e98e97d3d4344d366626a"
+                            data-preselect-default-variant="true"
+                            class="hide"
+                            role="group"
+                          >
+                            <div role="group">
+                              <label
+                                data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                >Size</label
+                              ><select
+                                id="option-set-3932c28c9aa0de98b3d6e923cb3b0329"
+                                data-node-type="commerce-add-to-cart-option-select"
+                                data-commerce-option-set-id="3932c28c9aa0de98b3d6e923cb3b0329"
+                                class="w-select"
+                                required=""
+                              >
+                                <option value="" selected="">
+                                  Select Size
+                                </option>
+                                <option
+                                  value="834885d12fbac4078645d28d30c07a8b"
+                                >
+                                  330ml
+                                </option>
+                                <option
+                                  value="a6276bfcd6952712d1c4203acbdaea8e"
+                                >
+                                  500ml
+                                </option>
+                                <option
+                                  value="f989d31337e1254be8666fafd90c7c60"
+                                >
+                                  1L
+                                </option>
+                              </select>
+                            </div>
+                          </div>
+                          <input
+                            type="number"
+                            pattern="^[0-9]+$"
+                            inputmode="numeric"
+                            id="quantity-937888f8040e8c12b34a2de4c2259010"
+                            name="commerce-add-to-cart-quantity-input"
+                            min="1"
+                            class="w-commerce-commerceaddtocartquantityinput hide"
+                            value="1"
+                          /><a
+                            href="#map"
+                            class="button is-secondary with-arrow"
+                            style="display:block; text-align:center; text-decoration:none;"
+                          >WHERE TO BUY</a><a
+                            data-node-type="commerce-buy-now-button"
+                            aria-busy="false"
+                            aria-haspopup="false"
+                            data-default-text="Buy now"
+                            data-subscription-text="Subscribe now"
+                            style="display: none"
+                            class="w-commerce-commercebuynowbutton"
+                            href="/checkout"
+                            >Buy now</a
+                          >
+                        </form>
+                        <div
+                          style="display: none"
+                          class="w-commerce-commerceaddtocartoutofstock out-of-stock-state"
+                          tabindex="0"
+                        >
+                          <div>This product is out of stock.</div>
+                        </div>
+                        <div
+                          aria-live="assertive"
+                          data-node-type="commerce-add-to-cart-error"
+                          style="display: none"
+                          class="w-commerce-commerceaddtocarterror"
+                        >
+                          <div
+                            data-node-type="commerce-add-to-cart-error"
+                            data-w-add-to-cart-quantity-error="Product is not available in this quantity."
+                            data-w-add-to-cart-general-error="Something went wrong when adding this item to the cart."
+                            data-w-add-to-cart-mixed-cart-error="You can’t purchase another product with a subscription."
+                            data-w-add-to-cart-buy-now-error="Something went wrong when trying to purchase this item."
+                            data-w-add-to-cart-checkout-disabled-error="Checkout is disabled on this site."
+                            data-w-add-to-cart-select-all-options-error="Please select an option in each set."
+                          >
+                            Product is not available in this quantity.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      data-w-id="77fab9e2-5af5-57c9-7d50-ee0f31ef93f0"
+                      role="listitem"
+                      class="product-card w-dyn-item"
+                    >
+                      <a
+                        title="Go to product"
+                        href="/product/irish-moss-soursop"
+                        class="product-link-wrapper w-inline-block"
+                        ><div
+                          style="
+                            background-image: url('/irish-moss-soursop-background-2.jpeg');
+                            background-color: #f6ede4;
+                          "
+                          class="product-picture-wrapper"
+                        >
+                          <img
+                            loading="lazy"
+                            width="658"
+                            data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
+                            alt="Irish Moss & Soursop"
+                            src="/irish-moss-soursop.png"
+                            class="product-picture"
+                          /></div></a
+                      ><a
+                        href="/product/irish-moss-soursop"
+                        class="product-meta-wrapper w-inline-block"
+                        ><h3 class="product-name">Sea Moss & Soursop</h3>
+                        <div
+                          data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_price_%22%2C%22to%22%3A%22innerHTML%22%7D%5D"
+                          class="product-price"
+                        >
+                          £6.00 GBP
+                        </div></a
+                      >
+                      <div>
+                        <form
+                          data-node-type="commerce-add-to-cart-form"
+                          data-commerce-sku-id="680e973072d2c51bf86e81a6"
+                          data-commerce-product-id="680e972f66f6511b23bfb88d"
+                          class="w-commerce-commerceaddtocartform default-state"
+                        >
+                          <div
+                            data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_sku_values_3dr%22%2C%22to%22%3A%22optionValues%22%7D%5D"
+                            data-commerce-product-sku-values="%7B%22a642ab2cb0d03be44e17c28eb02860bc%22%3A%22a9e2f96accdb724f594ff8147e410c92%22%7D"
+                            data-node-type="commerce-add-to-cart-option-list"
+                            data-commerce-product-id="680e972f66f6511b23bfb88d"
+                            data-preselect-default-variant="true"
+                            class="hide"
+                            role="group"
+                          >
+                            <div role="group">
+                              <label
+                                data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                >Size</label
+                              ><select
+                                id="option-set-a642ab2cb0d03be44e17c28eb02860bc"
+                                data-node-type="commerce-add-to-cart-option-select"
+                                data-commerce-option-set-id="a642ab2cb0d03be44e17c28eb02860bc"
+                                class="w-select"
+                                required=""
+                              >
+                                <option value="" selected="">
+                                  Select Size
+                                </option>
+                                <option
+                                  value="a9e2f96accdb724f594ff8147e410c92"
+                                >
+                                  330ml
+                                </option>
+                                <option
+                                  value="445e37b30e83e2cc6d0f33825ca68eae"
+                                >
+                                  500ml
+                                </option>
+                                <option
+                                  value="72eab75f3d017034c0438d974cefd306"
+                                >
+                                  1L
+                                </option>
+                              </select>
+                            </div>
+                          </div>
+                          <input
+                            type="number"
+                            pattern="^[0-9]+$"
+                            inputmode="numeric"
+                            id="quantity-937888f8040e8c12b34a2de4c2259010"
+                            name="commerce-add-to-cart-quantity-input"
+                            min="1"
+                            class="w-commerce-commerceaddtocartquantityinput hide"
+                            value="1"
+                          /><a
+                            href="#map"
+                            class="button is-secondary with-arrow"
+                            style="display:block; text-align:center; text-decoration:none;"
+                          >WHERE TO BUY</a><a
+                            data-node-type="commerce-buy-now-button"
+                            aria-busy="false"
+                            aria-haspopup="false"
+                            data-default-text="Buy now"
+                            data-subscription-text="Subscribe now"
+                            style="display: none"
+                            class="w-commerce-commercebuynowbutton"
+                            href="/checkout"
+                            >Buy now</a
+                          >
+                        </form>
+                        <div
+                          style="display: none"
+                          class="w-commerce-commerceaddtocartoutofstock out-of-stock-state"
+                          tabindex="0"
+                        >
+                          <div>This product is out of stock.</div>
+                        </div>
+                        <div
+                          aria-live="assertive"
+                          data-node-type="commerce-add-to-cart-error"
+                          style="display: none"
+                          class="w-commerce-commerceaddtocarterror"
+                        >
+                          <div
+                            data-node-type="commerce-add-to-cart-error"
+                            data-w-add-to-cart-quantity-error="Product is not available in this quantity."
+                            data-w-add-to-cart-general-error="Something went wrong when adding this item to the cart."
+                            data-w-add-to-cart-mixed-cart-error="You can’t purchase another product with a subscription."
+                            data-w-add-to-cart-buy-now-error="Something went wrong when trying to purchase this item."
+                            data-w-add-to-cart-checkout-disabled-error="Checkout is disabled on this site."
+                            data-w-add-to-cart-select-all-options-error="Please select an option in each set."
+                          >
+                            Product is not available in this quantity.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      data-w-id="77fab9e2-5af5-57c9-7d50-ee0f31ef93f0"
+                      role="listitem"
+                      class="product-card w-dyn-item"
+                    >
+                      <a
+                        title="Go to product"
+                        href="/product/ginger-shot"
+                        class="product-link-wrapper w-inline-block"
+                        ><div
+                          style="
+                            background-image: url('/ginger-shot-background-2.jpeg');
+                            background-color: #e1f532;
+                          "
+                          class="product-picture-wrapper"
+                        >
+                          <img
+                            loading="lazy"
+                            width="658"
+                            data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
+                            alt="Ginger Shot"
+                            src="/ginger-shot.png"
+                            class="product-picture"
+                          /></div></a
+                      ><a
+                        href="/product/ginger-shot"
+                        class="product-meta-wrapper w-inline-block"
+                        ><h3 class="product-name">Ginger Shot</h3>
+                        <div
+                          data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_price_%22%2C%22to%22%3A%22innerHTML%22%7D%5D"
+                          class="product-price"
+                        >
+                          £3.00 GBP
+                        </div></a
+                      >
+                      <div>
+                        <form
+                          data-node-type="commerce-add-to-cart-form"
+                          data-commerce-sku-id="680e94ec5fc6125472f1731e"
+                          data-commerce-product-id="680e94eb66f6511b23be9889"
+                          class="w-commerce-commerceaddtocartform default-state"
+                        >
+                          <div
+                            data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_sku_values_3dr%22%2C%22to%22%3A%22optionValues%22%7D%5D"
+                            data-commerce-product-sku-values="%7B%2257ee931f45fb71cae82dbb48a67ce406%22%3A%2227ec6d4520f5a3ec1a40d3e267b2c430%22%7D"
+                            data-node-type="commerce-add-to-cart-option-list"
+                            data-commerce-product-id="680e94eb66f6511b23be9889"
+                            data-preselect-default-variant="true"
+                            class="hide"
+                            role="group"
+                          >
+                            <div role="group">
+                              <label
+                                data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22name%22%7D%7D%5D"
+                                >Size</label
+                              ><select
+                                id="option-set-57ee931f45fb71cae82dbb48a67ce406"
+                                data-node-type="commerce-add-to-cart-option-select"
+                                data-commerce-option-set-id="57ee931f45fb71cae82dbb48a67ce406"
+                                class="w-select"
+                                required=""
+                              >
+                                <option value="" selected="">
+                                  Select Size
+                                </option>
+                                <option
+                                  value="27ec6d4520f5a3ec1a40d3e267b2c430"
+                                >
+                                  330ml
+                                </option>
+                                <option
+                                  value="f737fbebdf758788d77c04ee4547de5f"
+                                >
+                                  500ml
+                                </option>
+                                <option
+                                  value="8109cfaf1bb144d38ee8b6e6eb679dbc"
+                                >
+                                  1L
+                                </option>
+                              </select>
+                            </div>
+                          </div>
+                          <input
+                            type="number"
+                            pattern="^[0-9]+$"
+                            inputmode="numeric"
+                            id="quantity-937888f8040e8c12b34a2de4c2259010"
+                            name="commerce-add-to-cart-quantity-input"
+                            min="1"
+                            class="w-commerce-commerceaddtocartquantityinput hide"
+                            value="1"
+                          /><a
+                            href="#map"
+                            class="button is-secondary with-arrow"
+                            style="display:block; text-align:center; text-decoration:none;"
+                          >WHERE TO BUY</a><a
+                            data-node-type="commerce-buy-now-button"
+                            aria-busy="false"
+                            aria-haspopup="false"
+                            data-default-text="Buy now"
+                            data-subscription-text="Subscribe now"
+                            style="display: none"
+                            class="w-commerce-commercebuynowbutton"
+                            href="/checkout"
+                            >Buy now</a
+                          >
+                        </form>
+                        <div
+                          style="display: none"
+                          class="w-commerce-commerceaddtocartoutofstock out-of-stock-state"
+                          tabindex="0"
+                        >
+                          <div>This product is out of stock.</div>
+                        </div>
+                        <div
+                          aria-live="assertive"
+                          data-node-type="commerce-add-to-cart-error"
+                          style="display: none"
+                          class="w-commerce-commerceaddtocarterror"
+                        >
+                          <div
+                            data-node-type="commerce-add-to-cart-error"
+                            data-w-add-to-cart-quantity-error="Product is not available in this quantity."
+                            data-w-add-to-cart-general-error="Something went wrong when adding this item to the cart."
+                            data-w-add-to-cart-mixed-cart-error="You can’t purchase another product with a subscription."
+                            data-w-add-to-cart-buy-now-error="Something went wrong when trying to purchase this item."
+                            data-w-add-to-cart-checkout-disabled-error="Checkout is disabled on this site."
+                            data-w-add-to-cart-select-all-options-error="Please select an option in each set."
+                          >
+                            Product is not available in this quantity.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      data-w-id="77fab9e2-5af5-57c9-7d50-ee0f31ef93f0"
+                      role="listitem"
+                      class="product-card w-dyn-item"
+                    >
+                      <a
+                        title="Go to product"
+                        href="/product/irish-moss-guava-banana"
+                        class="product-link-wrapper w-inline-block"
+                        ><div
+                          style="
+                            background-image: url('/sea-moss-guava-banana-background-2.jpeg');
+                            background-color: #215132;
+                          "
+                          class="product-picture-wrapper"
+                        >
+                          <img
+                            loading="lazy"
+                            width="658"
+                            alt="Sea Moss, Guava & Banana"
+                            src="/irish-moss-guava-banana.png"
+                            class="product-picture"
+                            style="transform: rotate(-14deg);"
+                          /></div></a
+                      ><a
+                        href="/product/irish-moss-guava-banana"
+                        class="product-meta-wrapper w-inline-block"
+                        ><h3 class="product-name">Sea Moss, Guava &amp; Banana</h3>
+                        <div
+                          class="product-price"
+                        >
+                          £6.00 GBP
+                        </div></a
+                      >
+                      <div>
+                        <form
+                          data-node-type="commerce-add-to-cart-form"
+                          class="w-commerce-commerceaddtocartform default-state"
+                        >
+                          <a
+                            href="#map"
+                            class="button is-secondary with-arrow"
+                            style="display:block; text-align:center; text-decoration:none;"
+                          >WHERE TO BUY</a>
+                        </form>
+                      </div>
+                    </div>
+                    <div
+                      data-w-id="77fab9e2-5af5-57c9-7d50-ee0f31ef93f0"
+                      role="listitem"
+                      class="product-card w-dyn-item"
+                    >
+                      <a
+                        title="Go to product"
+                        href="/product/irish-moss-pineapple"
+                        class="product-link-wrapper w-inline-block"
+                        ><div
+                          style="
+                            background-image: url('/irish-moss-pineapple-background-2.png');
+                            background-color: #ffd700;
+                          "
+                          class="product-picture-wrapper"
+                        >
+                          <img
+                            loading="lazy"
+                            width="658"
+                            alt="Sea Moss & Pineapple"
+                            src="/irish-moss-pineapple.png"
+                            class="product-picture"
+                          /></div></a
+                      ><a
+                        href="/product/irish-moss-pineapple"
+                        class="product-meta-wrapper w-inline-block"
+                        ><h3 class="product-name">Sea Moss &amp; Pineapple</h3>
+                        <div
+                          class="product-price"
+                        >
+                          £6.00 GBP
+                        </div></a
+                      >
+                      <div>
+                        <form
+                          data-node-type="commerce-add-to-cart-form"
+                          class="w-commerce-commerceaddtocartform default-state"
+                        >
+                          <a
+                            href="#map"
+                            class="button is-secondary with-arrow"
+                            style="display:block; text-align:center; text-decoration:none;"
+                          >WHERE TO BUY</a>
+                        </form>
+                        <div
+                          style="display: none"
+                          class="w-commerce-commerceaddtocartoutofstock out-of-stock-state"
+                          tabindex="0"
+                        >
+                          <div>This product is out of stock.</div>
+                        </div>
+                        <div
+                          aria-live="assertive"
+                          data-node-type="commerce-add-to-cart-error"
+                          style="display: none"
+                          class="w-commerce-commerceaddtocarterror"
+                        >
+                          <div
+                            data-node-type="commerce-add-to-cart-error"
+                            data-w-add-to-cart-quantity-error="Product is not available in this quantity."
+                            data-w-add-to-cart-general-error="Something went wrong when adding this item to the cart."
+                            data-w-add-to-cart-mixed-cart-error="You can't purchase another product with a subscription."
+                            data-w-add-to-cart-buy-now-error="Something went wrong when trying to purchase this item."
+                            data-w-add-to-cart-checkout-disabled-error="Checkout is disabled on this site."
+                            data-w-add-to-cart-select-all-options-error="Please select an option in each set."
+                          >
+                            Product is not available in this quantity.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a
+                  data-w-id="749e3e5d-ed39-979f-46d3-e61341d6010f"
+                  style="
+                    -webkit-transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    -moz-transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    -ms-transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    opacity: 0;
+                  "
+                  href="/products"
+                  class="button-wrapper align-center w-inline-block"
+                  ><div class="button-shadow"></div>
+                  <div class="button">VIEW ALL PRODUCTS</div></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="about" class="about-section">
+          <div class="padding-global padding-section-medium">
+            <div class="container-large">
+              <div class="about-section_wrapper">
+                <h2
+                  data-w-id="7ac91915-bfad-b646-295d-95b719435307"
+                  style="
+                    -webkit-transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    -moz-transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    -ms-transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    opacity: 0;
+                  "
+                  class="heading-style-h3"
+                >
+                  <span class="text-color-yellow">Waddat Beverage</span> provides natural Jamaican-inspired drinks that fill you with energy and health.
+                </h2>
+                <div
+                  data-w-id="e2b3afe3-5ed8-db1e-8b7a-e6ea70a30e57"
+                  class="about_thumbnail-wrapper"
+                >
+                  <img
+                    src="/sorrel-drink.png"
+                    loading="lazy"
+                    style="
+                      -webkit-transform: translate3d(0, 20px, 0)
+                        scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0)
+                        skew(0, 0);
+                      -moz-transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
+                        rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                      -ms-transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
+                        rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                      transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
+                        rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                      opacity: 0;
+                    "
+                    data-w-id="3ba25109-6c63-1667-b1a1-6def56f2a990"
+                    alt="Sorrel Drink Bottle"
+                    class="about_thumbnail"
+                  />
+                  <div class="about-image-wrapper">
+                    <img
+                      src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680bcc0a7e4efa6b4ce8e493_bottle%20stand.svg"
+                      loading="lazy"
+                      alt=""
+                      class="bottle-stand"
+                    /><img
+                      src="/fruits/guava_slice.png"
+                      loading="lazy"
+                      alt="Guava Slice"
+                      class="slice2"
+                    /><img
+                      src="/fruits/ginger_root.png"
+                      loading="lazy"
+                      data-w-id="b023508f-90e0-90cc-9da0-f1d76f03fce0"
+                      alt="Ginger Root"
+                      class="lemon"
+                    />
+                  </div>
+                </div>
+                <h3
+                  data-w-id="6adf7715-308b-711d-6a65-537d9369dc83"
+                  style="
+                    -webkit-transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    -moz-transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    -ms-transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    opacity: 0;
+                  "
+                  class="heading-style-h4 z-index-1"
+                >
+                  Each sip brings the authentic taste of the Caribbean directly to you.
+                </h3>
+                <div class="button-group">
+                  <a
+                    id="how-it-works"
+                    data-w-id="b506a0f7-e726-3faf-daa3-e1eb059a365f"
+                    style="
+                      -webkit-transform: translate3d(0, 20px, 0)
+                        scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0)
+                        skew(0, 0);
+                      -moz-transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
+                        rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                      -ms-transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
+                        rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                      transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
+                        rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                      opacity: 0;
+                    "
+                    href="#benefits"
+                    class="button-wrapper align-center w-inline-block"
+                    ><div class="button">Learn ABOUT benefits</div>
+                    <div class="button-shadow"></div
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="benefits" class="benefits-section">
+          <div class="padding-global padding-section-large">
+            <div class="container-large">
+              <div class="w-layout-grid benefits-section_wrapper">
+                <div class="z-index-1">
+                  <div
+                    class="shaped-image_wrapper"
+                    style="
+                      background-image: url('/irish-moss-pineapple-background-2.png');
+                      background-size: cover;
+                      background-position: center;
+                    "
+                  >
+                    <img
+                      src="/irish-moss-pineapple.png"
+                      loading="lazy"
+                      width="658"
+                      data-w-id="582e3428-ba09-a4de-04a7-a1853a25be12"
+                      alt="Sea Moss & Pineapple"
+                      class="shaped-image_picture"
+                      style="max-width: 18rem;"
+                    />
+                    <div class="background-image-wrapper">
+                      <img
+                        src="/fruits/sorrel_calyx.png"
+                        loading="lazy"
+                        width="800"
+                        sizes="(max-width: 991px) 100vw, 800px"
+                        alt="Sorrel Calyx"
+                        class="strawberry"
+                      />
+                    </div>
+                  </div>
+                  <img
+                    src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680be00f241c3683093f9023_shape.svg"
+                    loading="lazy"
+                    alt=""
+                    class="orange-shape"
+                  />
+                </div>
+                <div class="benefits_content">
+                  <h2 class="heading-style-h3 text-style-allcaps">
+                    The incredible <br />‍<span class="text-color-orange"
+                      >benefits</span
+                    >
+                    <br />of our drinks
+                  </h2>
+                  <div class="icons-wrapper max-width-medium">
+                    <div class="icon-wrapper">
+                      <img
+                        src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680bdaddd2398e525d20b0f6_Improved%20digestion.svg"
+                        loading="lazy"
+                        alt=""
+                        class="icon-1x1-large"
+                      />
+                      <div>Improved digestion</div>
+                    </div>
+                    <div class="icon-wrapper">
+                      <img
+                        src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680bdc381b1c18f2a7bdcf93_Immunity%20%20boosting.svg"
+                        loading="lazy"
+                        alt=""
+                        class="icon-1x1-large"
+                      />
+                      <div>Immunity boosting</div>
+                    </div>
+                    <div class="icon-wrapper">
+                      <img
+                        src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680bdc94722187480f31de1a_Natural%20source%20of%20probiotics.png"
+                        loading="lazy"
+                        alt=""
+                        class="icon-1x1-large"
+                      />
+                      <div>Natural source of probiotics</div>
+                    </div>
+                  </div>
+                </div>
+                <img
+                  src="/fruits/yellow_banana.png"
+                  loading="lazy"
+                  width="313"
+                  data-w-id="93cc1182-621d-e104-e9e6-d7d6ded2b133"
+                  alt="Yellow Banana"
+                  sizes="(max-width: 479px) 100vw, 313px"
+                  class="blueberries"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="padding-global padding-section-small">
+            <div class="container-large">
+              <div class="ingridients-section_wrapper">
+                <div class="ingridients-content">
+                  <h3>
+                    Only <span class="text-color-orange">natural<br />‍</span
+                    ><span class="heading-style-h2">ingredients</span>
+                  </h3>
+                  <p class="text-size-large">
+                    Our drinks have simple and healthy ingredients:
+                  </p>
+                  <div class="small-cta-card">
+                    <img
+                      src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680be71f53afe6ceedc3f335_green.webp"
+                      loading="lazy"
+                      width="450"
+                      sizes="(max-width: 479px) 100vw, 450px"
+                      alt=""
+                      srcset="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680be71f53afe6ceedc3f335_green-p-500.webp 500w, https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680be71f53afe6ceedc3f335_green-p-800.webp 800w, https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680be71f53afe6ceedc3f335_green.webp 900w"
+                      class="small-cta-picture"
+                    />
+                    <div>Authentic Jamaican Recipes</div>
+                  </div>
+                </div>
+                <div class="note-cta">
+                  <h4 class="text-style-allcaps">Authentic Taste</h4>
+                  <p class="max-width-large">
+                    Our drinks are made following traditional Jamaican recipes, ensuring an authentic and natural flavor profile.
+                  </p>
+                </div>
+                <img
+                  src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/680be9977b1b2f49430ba399_orange%20shape.svg"
+                  loading="lazy"
+                  alt=""
+                  class="orange-blob"
+                /><img
+                  src="/waddat-fruit-bowl.png"
+                  loading="lazy"
+                  alt="Waddat tropical fruit bowl"
+                  class="salad-bowl"
+                  style="transform: translate(30px, -150px) !important;"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="reviews" class="testimonials-section">
+          <div class="padding-global padding-section-medium">
+            <div class="container-large">
+              <div
+                class="text-align-center text-style-allcaps text-color-white"
+              >
+                <h2 data-w-id="135a7a59-e84f-17eb-c6ff-0bffad7bce8a">
+                  <span class="heading-style-h3">What people say</span
+                  ><br /><span class="heading-style-h1">about</span>
+                  <span class="heading-style-h1 text-color-yellow">Waddat</span>
+                </h2>
+              </div>
+              <div class="spacer-huge"></div>
+              <div
+                data-delay="4000"
+                data-animation="slide"
+                class="testimonial-slider w-slider"
+                data-autoplay="false"
+                data-easing="ease"
+                data-hide-arrows="true"
+                data-disable-swipe="false"
+                data-autoplay-limit="0"
+                data-nav-spacing="3"
+                data-duration="500"
+                data-infinite="true"
+              >
+                <div class="slider-mask w-slider-mask">
+                  <div class="w-slide">
+                    <div class="testimonial-slide">
+                      <div class="testimonial-content">
+                        <h3 class="testimonial-title">
+                          The best drink I’ve ever tried!
+                        </h3>
+                        <div class="spacer-small"></div>
+                        <p>
+                          I love how natural and refreshing it tastes. It’s not
+                          too sweet, just perfectly balanced! And I feel the
+                          difference in my digestion after just a few days.
+                        </p>
+                      </div>
+                      <div class="testimonial-author-wrapper">
+                        <img
+                          src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/681e692cd6ec1fab99770ee8_Frame%204%20(1).png"
+                          loading="lazy"
+                          alt=""
+                          class="author-avatar"
+                        />
+                        <div class="text-style-italic">
+                          <h4 class="author-name">Emma R.</h4>
+                          <div class="text-size-small">
+                            nutritionist &amp; wellness coach
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-slide">
+                    <div class="testimonial-slide">
+                      <div class="testimonial-content">
+                        <h3 class="testimonial-title">
+                          Energy boost without the crash!
+                        </h3>
+                        <div class="spacer-small"></div>
+                        <p>
+                          Waddat gives me the perfect lift in the morning
+                          without relying on coffee. I love knowing that it’s
+                          packed with probiotics and actually good for me.
+                        </p>
+                      </div>
+                      <div class="testimonial-author-wrapper">
+                        <img
+                          src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/681e6966afceda5e1a4248b5_Frame%204%20(2).png"
+                          loading="lazy"
+                          alt=""
+                          class="author-avatar"
+                        />
+                        <div class="text-style-italic">
+                          <h4 class="author-name">James L.</h4>
+                          <div class="text-size-small">
+                            fitness trainer &amp; entrepreneur
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-slide">
+                    <div class="testimonial-slide">
+                      <div class="testimonial-content">
+                        <h3 class="testimonial-title">
+                          The best drink I’ve ever tried!
+                        </h3>
+                        <div class="spacer-small"></div>
+                        <p>
+                          I love how natural and refreshing it tastes. It’s not
+                          too sweet, just perfectly balanced! And I feel the
+                          difference in my digestion after just a few days.
+                        </p>
+                      </div>
+                      <div class="testimonial-author-wrapper">
+                        <img
+                          src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/681e692cd6ec1fab99770ee8_Frame%204%20(1).png"
+                          loading="lazy"
+                          alt=""
+                          class="author-avatar"
+                        />
+                        <div class="text-style-italic">
+                          <h4 class="author-name">Emma R.</h4>
+                          <div class="text-size-small">
+                            nutritionist &amp; wellness coach
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-slide">
+                    <div class="testimonial-slide">
+                      <div class="testimonial-content">
+                        <h3 class="testimonial-title">
+                          Energy boost without the crash!
+                        </h3>
+                        <div class="spacer-small"></div>
+                        <p>
+                          Waddat gives me the perfect lift in the morning
+                          without relying on coffee. I love knowing that it’s
+                          packed with probiotics and actually good for me.
+                        </p>
+                      </div>
+                      <div class="testimonial-author-wrapper">
+                        <img
+                          src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/681e6966afceda5e1a4248b5_Frame%204%20(2).png"
+                          loading="lazy"
+                          alt=""
+                          class="author-avatar"
+                        />
+                        <div class="text-style-italic">
+                          <h4 class="author-name">James L.</h4>
+                          <div class="text-size-small">
+                            fitness trainer &amp; entrepreneur
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="left-arrow w-slider-arrow-left">
+                  <div class="arrow-icon w-embed">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      aria-hidden="true"
+                      role="img"
+                      class="iconify iconify--iconoir"
+                      width="100%"
+                      height="100%"
+                      preserveAspectRatio="xMidYMid meet"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        d="M21 12H3m0 0l8.5-8.5M3 12l8.5 8.5"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="right-arrow w-slider-arrow-right">
+                  <div class="arrow-icon w-embed">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      aria-hidden="true"
+                      role="img"
+                      class="iconify iconify--iconoir"
+                      width="100%"
+                      height="100%"
+                      preserveAspectRatio="xMidYMid meet"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        d="M3 12h18m0 0l-8.5-8.5M21 12l-8.5 8.5"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="left-arrow inactive">
+                  <div class="arrow-icon w-embed">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      aria-hidden="true"
+                      role="img"
+                      class="iconify iconify--iconoir"
+                      width="100%"
+                      height="100%"
+                      preserveAspectRatio="xMidYMid meet"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        d="M21 12H3m0 0l8.5-8.5M3 12l8.5 8.5"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="right-arrow inactive">
+                  <div class="arrow-icon w-embed">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      aria-hidden="true"
+                      role="img"
+                      class="iconify iconify--iconoir"
+                      width="100%"
+                      height="100%"
+                      preserveAspectRatio="xMidYMid meet"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        d="M3 12h18m0 0l-8.5-8.5M21 12l-8.5 8.5"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="slide-nav w-slider-nav w-round"></div>
+              </div>
+            </div>
+          </div>
+          <img
+            src="/fruits/ginger_slice.png"
+            loading="lazy"
+            data-w-id="d3437c44-1a6c-9718-c508-e975dac4ccaf"
+            alt="Ginger Slice"
+            class="side-lemon"
+          />
+        </div>
+        <div id="map" class="where-section">
+          <div class="padding-global padding-section-medium">
+            <div class="container-large">
+              <div class="text-align-center text-style-allcaps">
+                <h2
+                  data-w-id="e087d5a2-3490-a7c2-10ea-8722c5de00b2"
+                  style="
+                    -webkit-transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    -moz-transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    -ms-transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    opacity: 0;
+                  "
+                  class="heading-style-h1"
+                >
+                  Where to find <span class="text-color-orange">Waddat</span>
+                </h2>
+              </div>
+              <div class="spacer-huge"></div>
+              <div class="w-layout-grid where-section_wrapper">
+                <div class="text-align-center">
+                  <h3 class="text-color-purple">IN STORES</h3>
+                  <div class="spacer-small"></div>
+                  <p class="heading-style-h5 text-style-allcaps">
+                    Find Waddat at selected organic shops, cafes, and
+                    supermarkets near you
+                  </p>
+                  <div class="spacer-large"></div>
+                  <div
+                    class="map"
+                    style="overflow: hidden; height: 400px; display: flex;"
+                  >
+                    <iframe 
+                      src="https://maps.google.com/maps?q=373+Barking+Rd,+London+E13+8AL&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                      width="100%" 
+                      height="400" 
+                      style="border:0; flex: 1;" 
+                      allowfullscreen="" 
+                      loading="lazy"
+                      title="Waddat Location"
+                    ></iframe>
+                  </div>
+                </div>
+                <div class="text-align-center">
+                  <div class="spacer-large"></div>
+                  <a
+                    href="#products"
+                    class="button-wrapper align-center w-inline-block"
+                    ><div class="button">View Drinks</div>
+                    <div class="button-shadow"></div
+                  ></a>
+                  <a
+                    href="#wholesale"
+                    class="button-wrapper align-center w-inline-block"
+                    style="margin-top: 5px;"
+                    ><div class="button">Become a stockist</div>
+                    <div class="button-shadow"></div
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="promo-section">
+          <div class="padding-global padding-section-large">
+            <div class="container-medium">
+              <div class="z-index-1">
+                <div class="cta">
+                  <h2 class="cta-heading">
+                    BRING WADDAT TO YOUR STORE: <br /><span
+                      class="text-color-yellow"
+                      >LET'S TALK WHOLESALE TODAY</span
+                    >
+                  </h2>
+                  <a
+                    href="#wholesale"
+                    class="button-wrapper align-center w-inline-block"
+                    ><div class="button">STOCK WADDAT</div>
+                    <div class="button-shadow"></div
+                  ></a>
+                </div>
+                <div class="background-image-wrapper">
+                  <img
+                    src="/fruits/soursop_slice.png"
+                    loading="lazy"
+                    width="375"
+                    data-w-id="6b10c753-6de2-cc99-e8b7-d3b3f8a2146f"
+                    alt="Soursop Slice"
+                    sizes="(max-width: 479px) 100vw, 375px"
+                    class="kiwi"
+                  /><img
+                    src="/fruits/guava_slice.png"
+                    loading="lazy"
+                    width="169.5"
+                    alt="Guava Slice"
+                    class="orange-slice"
+                  /><img
+                    src="/yellow-shape.svg"
+                    loading="lazy"
+                    width="166.5"
+                    alt=""
+                    class="white-shape"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="faq" class="faq-section">
+          <div class="padding-global padding-section-medium">
+            <div class="container-large">
+              <div class="faq-section-wrapper">
+                <h2 class="text-style-allcaps">
+                  You ask, <br />‍<span class="text-color-white"
+                    >we answer!</span
+                  >
+                </h2>
+                <div class="faq-wrapper">
+                  <div
+                    data-hover="false"
+                    data-delay="0"
+                    class="faq-dropdown w-dropdown"
+                  >
+                    <div class="question-wrapper w-dropdown-toggle">
+                      <div class="question">Where can I buy Waddat?</div>
+                      <div class="plus-icon w-embed">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          aria-hidden="true"
+                          role="img"
+                          class="iconify iconify--ic"
+                          width="100%"
+                          height="100%"
+                          preserveAspectRatio="xMidYMid meet"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M18 12.998h-5v5a1 1 0 0 1-2 0v-5H6a1 1 0 0 1 0-2h5v-5a1 1 0 0 1 2 0v5h5a1 1 0 0 1 0 2"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <nav class="answer-wrapper w-dropdown-list">
+                      <div>
+                        You can buy Waddat in person at our store and selected stockists. Visit our Where to Buy section for current locations.
+                      </div>
+                    </nav>
+                  </div>
+                  <div
+                    data-hover="false"
+                    data-delay="0"
+                    class="faq-dropdown w-dropdown"
+                  >
+                    <div class="question-wrapper w-dropdown-toggle">
+                      <div class="question">Can I order Waddat online?</div>
+                      <div class="plus-icon w-embed">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          aria-hidden="true"
+                          role="img"
+                          class="iconify iconify--ic"
+                          width="100%"
+                          height="100%"
+                          preserveAspectRatio="xMidYMid meet"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M18 12.998h-5v5a1 1 0 0 1-2 0v-5H6a1 1 0 0 1 0-2h5v-5a1 1 0 0 1 2 0v5h5a1 1 0 0 1 0 2"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <nav class="answer-wrapper w-dropdown-list">
+                      <div>
+                        We're not taking online orders at the moment. You can explore the drinks here, then visit our store or a participating stockist to buy them.
+                      </div>
+                    </nav>
+                  </div>
+                  <div
+                    data-hover="false"
+                    data-delay="0"
+                    class="faq-dropdown w-dropdown"
+                  >
+                    <div class="question-wrapper w-dropdown-toggle">
+                      <div class="question">Which drinks are available?</div>
+                      <div class="plus-icon w-embed">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          aria-hidden="true"
+                          role="img"
+                          class="iconify iconify--ic"
+                          width="100%"
+                          height="100%"
+                          preserveAspectRatio="xMidYMid meet"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M18 12.998h-5v5a1 1 0 0 1-2 0v-5H6a1 1 0 0 1 0-2h5v-5a1 1 0 0 1 2 0v5h5a1 1 0 0 1 0 2"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <nav class="answer-wrapper w-dropdown-list">
+                      <div>
+                        Our range includes Sorrel Drink, Ginger Shot, Sea Moss &amp; Soursop, Sea Moss &amp; Pineapple, and Sea Moss, Guava &amp; Banana. Availability may vary by location.
+                      </div>
+                    </nav>
+                  </div>
+                  <div
+                    data-hover="false"
+                    data-delay="0"
+                    class="faq-dropdown w-dropdown"
+                  >
+                    <div class="question-wrapper w-dropdown-toggle">
+                      <div class="question">Are Waddat drinks suitable for vegan and vegetarian diets?</div>
+                      <div class="plus-icon w-embed">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          aria-hidden="true"
+                          role="img"
+                          class="iconify iconify--ic"
+                          width="100%"
+                          height="100%"
+                          preserveAspectRatio="xMidYMid meet"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M18 12.998h-5v5a1 1 0 0 1-2 0v-5H6a1 1 0 0 1 0-2h5v-5a1 1 0 0 1 2 0v5h5a1 1 0 0 1 0 2"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <nav class="answer-wrapper w-dropdown-list">
+                      <div>
+                        Yes. All Waddat drinks are suitable for vegans and vegetarians.
+                      </div>
+                    </nav>
+                  </div>
+                  <div
+                    data-hover="false"
+                    data-delay="0"
+                    class="faq-dropdown w-dropdown"
+                  >
+                    <div class="question-wrapper w-dropdown-toggle">
+                      <div class="question">How should I store Waddat drinks?</div>
+                      <div class="plus-icon w-embed">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          aria-hidden="true"
+                          role="img"
+                          class="iconify iconify--ic"
+                          width="100%"
+                          height="100%"
+                          preserveAspectRatio="xMidYMid meet"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M18 12.998h-5v5a1 1 0 0 1-2 0v-5H6a1 1 0 0 1 0-2h5v-5a1 1 0 0 1 2 0v5h5a1 1 0 0 1 0 2"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <nav class="answer-wrapper w-dropdown-list">
+                      <div>
+                        Keep them chilled! Refrigeration helps maintain their
+                        freshness and authentic flavor profile over time.
+                      </div>
+                    </nav>
+                  </div>
+                  <div
+                    data-hover="false"
+                    data-delay="0"
+                    class="faq-dropdown w-dropdown"
+                  >
+                    <div class="question-wrapper w-dropdown-toggle">
+                      <div class="question">Can my business stock Waddat?</div>
+                      <div class="plus-icon w-embed">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          aria-hidden="true"
+                          role="img"
+                          class="iconify iconify--ic"
+                          width="100%"
+                          height="100%"
+                          preserveAspectRatio="xMidYMid meet"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M18 12.998h-5v5a1 1 0 0 1-2 0v-5H6a1 1 0 0 1 0-2h5v-5a1 1 0 0 1 2 0v5h5a1 1 0 0 1 0 2"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <nav class="answer-wrapper w-dropdown-list">
+                      <div>
+                        We'd love to hear from you. Complete the wholesale enquiry form below and tell us a little about your business.
+                      </div>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="wholesale" class="wholesale-section" style="background-color: #5541ba; padding-top: 4rem;">
+          <div class="padding-global padding-section-medium">
+            <div class="container-medium">
+              <div class="text-align-center text-style-allcaps">
+                <h2 class="heading-style-h1 text-color-white">
+                  <span class="text-color-yellow">Wholesale</span> ENQUIRIES
+                </h2>
+                <div class="spacer-medium"></div>
+                <h3 class="heading-style-h5 text-color-white">
+                  Interested in stocking Waddat Beverage? <br />
+                  <span class="text-color-yellow">Contact us</span> today!
+                </h3>
+              </div>
+              <div class="spacer-large"></div>
+              <div class="form_component max-width-large align-center w-form">
+                <form id="wf-form-Wholesale-Form" name="wf-form-Wholesale-Form" method="get" class="form_form">
+                  <div class="form_field-wrapper">
+                    <label for="Wholesale-Name" class="form_label">Business Name</label>
+                    <input class="form_input w-input" maxlength="256" name="Business Name" placeholder="Your Business Name" type="text" id="Wholesale-Name" required />
+                  </div>
+                  <div class="form_field-wrapper">
+                    <label for="Wholesale-Email" class="form_label">Email</label>
+                    <input class="form_input w-input" maxlength="256" name="Email" placeholder="Your Email" type="email" id="Wholesale-Email" required />
+                  </div>
+                  <div class="form_field-wrapper" id="contact">
+                    <label for="Wholesale-Message" class="form_label">Message</label>
+                    <textarea class="form_input w-input" maxlength="5000" name="Message" placeholder="How can we help you?" id="Wholesale-Message" required style="min-height: 120px;"></textarea>
+                  </div>
+                  <div class="button-group">
+                    <button type="submit" class="button-wrapper align-center w-inline-block" style="background: transparent; border: none; cursor: pointer; padding: 0;">
+                      <div class="button is-form-submit align-center">Submit</div>
+                      <div class="button-shadow"></div>
+                    </button>
+                  </div>
+                </form>
+                <div class="form_message-success w-form-done">
+                  <div>Thank you! Your submission has been received!</div>
+                </div>
+                <div class="form_message-error w-form-fail">
+                  <div>Oops! Something went wrong while submitting the form.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="newsletter-section">
+          <div class="padding-global padding-section-medium">
+            <div class="container-medium">
+              <div
+                data-w-id="70847ea9-5f15-9878-946d-3db5bb7ed2b4"
+                style="
+                  -webkit-transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
+                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                  -moz-transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
+                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                  -ms-transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
+                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                  transform: translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0)
+                    rotateY(0) rotateZ(0) skew(0, 0);
+                  opacity: 0;
+                "
+                class="text-align-center text-style-allcaps"
+              >
+                <h2 class="heading-style-h1 text-color-white">
+                  KEEP UP WITH <span class="text-color-yellow">WADDAT</span>
+                </h2>
+                <div class="spacer-medium"></div>
+                <h3 class="heading-style-h5 text-color-white">
+                  Sign up for updates on <span class="text-color-yellow">new flavours</span>, promotions and places to find Waddat.
+                </h3>
+              </div>
+              <div class="spacer-large"></div>
+              <div class="form_component max-width-large align-center w-form">
+                <form
+                  id="wf-form-Newsletter-Form"
+                  name="wf-form-Newsletter-Form"
+                  data-name="Newsletter Form"
+                  method="get"
+                  class="form_form"
+                  data-wf-page-id="680aa12c0e13118b7b331d81"
+                  data-wf-element-id="add526f6-cd2a-19fc-4f20-772af538eeac"
+                >
+                  <div class="form_field-wrapper">
+                    <label for="Name" class="form_label">Name</label
+                    ><input
+                      class="form_input w-input"
+                      maxlength="256"
+                      name="Name"
+                      data-name="Name"
+                      placeholder="Your Name"
+                      type="text"
+                      id="Name"
+                    />
+                  </div>
+                  <div class="form_field-wrapper">
+                    <label for="Email" class="form_label">Email</label
+                    ><input
+                      class="form_input w-input"
+                      maxlength="256"
+                      name="Email"
+                      data-name="Email"
+                      placeholder="Your Email"
+                      type="email"
+                      id="Email"
+                    />
+                  </div>
+                  <div class="form_field-wrapper">
+                    <label for="email" class="form_label">Radio button</label
+                    ><label class="form_radio w-radio"
+                      ><input
+                        type="radio"
+                        name="Radio"
+                        id="radio-2"
+                        data-name="Radio 2"
+                        class="w-form-formradioinput form_radio-icon w-radio-input"
+                        value="Radio"
+                        style="display: none;"
+                      /><span
+                        class="form_radio-label w-form-label"
+                        for="radio-2"
+                        style="text-align: center; display: block;">By signing up you agree to the terms and conditions of WADDAT. Please see our privacy policy for more details.</span
+                      ></label
+                    >
+                  </div>
+                  <div class="button-group">
+                    <a
+                      href="/category/drinks"
+                      class="button-wrapper align-center w-inline-block"
+                      ><div class="button is-form-submit align-center">
+                        Subscribe
+                      </div>
+                      <div class="button-shadow"></div
+                    ></a>
+                  </div>
+                </form>
+                <div class="form_message-success w-form-done">
+                  <div>Thank you! Your submission has been received!</div>
+                </div>
+                <div class="form_message-error w-form-fail">
+                  <div>
+                    Oops! Something went wrong while submitting the form.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="floating-cart-wrapper" style="display: none;">
+          <div
+            data-open-product=""
+            data-wf-cart-type="rightSidebar"
+            data-wf-cart-query="query Dynamo3 {
+  database {
+    id
+    commerceOrder {
+      comment
+      extraItems {
+        name
+        pluginId
+        pluginName
+        price {
+          decimalValue
+          string
+          unit
+          value
+        }
+      }
+      id
+      startedOn
+      statusFlags {
+        hasDownloads
+        hasSubscription
+        isFreeOrder
+        requiresShipping
+      }
+      subtotal {
+        decimalValue
+        string
+        unit
+        value
+      }
+      total {
+        decimalValue
+        string
+        unit
+        value
+      }
+      updatedOn
+      userItems {
+        count
+        id
+        price {
+          value
+          unit
+          decimalValue
+          string
+        }
+        product {
+          id
+          cmsLocaleId
+          draft
+          archived
+          f_ec_product_type_2dr10dr: productType {
+            id
+            name
+          }
+          f_name_: name
+          f_sku_properties_3dr: skuProperties {
+            id
+            name
+            enum {
+              id
+              name
+              slug
+            }
+          }
+          fullSlug
+        }
+        rowTotal {
+          decimalValue
+          string
+          unit
+          value
+        }
+        sku {
+          cmsLocaleId
+          draft
+          archived
+          f_main_image_4dr: mainImage {
+            url
+            file {
+              size
+              origFileName
+              createdOn
+              updatedOn
+              mimeType
+              width
+              height
+              variants {
+                origFileName
+                quality
+                height
+                width
+                s3Url
+                error
+                size
+              }
+            }
+            alt
+          }
+          f_sku_values_3dr: skuValues {
+            property {
+              id
+            }
+            value {
+              id
+            }
+          }
+          id
+        }
+        subscriptionFrequency
+        subscriptionInterval
+        subscriptionTrial
+      }
+      userItemsCount
+    }
+  }
+  site {
+    commerce {
+      id
+      businessAddress {
+        country
+      }
+      defaultCountry
+      defaultCurrency
+      quickCheckoutEnabled
+    }
+  }
+}"
+            data-wf-page-link-href-prefix=""
+            class="w-commerce-commercecartwrapper cart"
+            data-node-type="commerce-cart-wrapper"
+            style="display: none;"
+          >
+            <a
+              class="w-commerce-commercecartopenlink cart-button w-inline-block"
+              role="button"
+              aria-haspopup="dialog"
+              aria-label="Open cart"
+              data-node-type="commerce-cart-open-link"
+              href="#"
+              ><img
+                src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/681a6f76d9d10a16ba42a535_cart.svg"
+                loading="lazy"
+                width="32"
+                alt=""
+                class="cart-icon"
+              />
+              <div
+                data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22Number%22%2C%22filter%22%3A%7B%22type%22%3A%22numberPrecision%22%2C%22params%22%3A%5B%220%22%2C%22numberPrecision%22%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItemsCount%22%7D%7D%5D"
+                class="w-commerce-commercecartopenlinkcount cart-quantity"
+              >
+                0
+              </div></a
+            >
+            <div
+              style="display: none"
+              class="w-commerce-commercecartcontainerwrapper w-commerce-commercecartcontainerwrapper--cartType-rightSidebar"
+              data-node-type="commerce-cart-container-wrapper"
+            >
+              <div
+                data-node-type="commerce-cart-container"
+                role="dialog"
+                class="w-commerce-commercecartcontainer cart-container"
+              >
+                <div class="w-commerce-commercecartheader cart-header">
+                  <h5 class="w-commerce-commercecartheading">Shopping Bag</h5>
+                  <a
+                    class="w-commerce-commercecartcloselink close-button w-inline-block"
+                    role="button"
+                    aria-label="Close cart"
+                    data-node-type="commerce-cart-close-link"
+                    ><svg width="16px" height="16px" viewBox="0 0 16 16">
+                      <g
+                        stroke="none"
+                        stroke-width="1"
+                        fill="none"
+                        fill-rule="evenodd"
+                      >
+                        <g fill-rule="nonzero" fill="#333333">
+                          <polygon
+                            points="6.23223305 8 0.616116524 13.6161165 2.38388348 15.3838835 8 9.76776695 13.6161165 15.3838835 15.3838835 13.6161165 9.76776695 8 15.3838835 2.38388348 13.6161165 0.616116524 8 6.23223305 2.38388348 0.616116524 0.616116524 2.38388348 6.23223305 8"
+                          ></polygon>
+                        </g>
+                      </g></svg
+                  ></a>
+                </div>
+                <div class="w-commerce-commercecartformwrapper">
+                  <form
+                    style="display: none"
+                    class="w-commerce-commercecartform"
+                    data-node-type="commerce-cart-form"
+                  >
+                    <script
+                      type="text/x-wf-template"
+                      id="wf-template-0942e79a-fd9c-6b3d-0313-77966685b471"
+                    >
+                      %3Cdiv%20class%3D%22w-commerce-commercecartitem%20cart-item%22%3E%3Cimg%20data-wf-bindings%3D%22%255B%257B%2522src%2522%253A%257B%2522type%2522%253A%2522ImageRef%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522identity%2522%252C%2522params%2522%253A%255B%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.sku.f_main_image_4dr%2522%257D%257D%255D%22%20src%3D%22%22%20alt%3D%22%22%20class%3D%22w-commerce-commercecartitemimage%20product-card-image%20w-dyn-bind-empty%22%2F%3E%3Cdiv%20class%3D%22w-commerce-commercecartiteminfo%20cart-item-content%22%3E%3Ca%20data-wf-bindings%3D%22%255B%257B%2522dataWHref%2522%253A%257B%2522type%2522%253A%2522FullSlug%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522identity%2522%252C%2522params%2522%253A%255B%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.product.fullSlug%2522%257D%257D%255D%22%20href%3D%22%23%22%20class%3D%22w-inline-block%22%3E%3Cdiv%20data-wf-bindings%3D%22%255B%257B%2522innerHTML%2522%253A%257B%2522type%2522%253A%2522PlainText%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522identity%2522%252C%2522params%2522%253A%255B%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.product.f_name_%2522%257D%257D%255D%22%20class%3D%22w-commerce-commercecartproductname%20w-dyn-bind-empty%22%3E%3C%2Fdiv%3E%3C%2Fa%3E%3Cdiv%20data-wf-bindings%3D%22%255B%257B%2522innerHTML%2522%253A%257B%2522type%2522%253A%2522CommercePrice%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522price%2522%252C%2522params%2522%253A%255B%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.price%2522%257D%257D%255D%22%20class%3D%22price-tag%22%3E%24%C2%A00.00%C2%A0USD%3C%2Fdiv%3E%3Cscript%20type%3D%22text%2Fx-wf-template%22%20id%3D%22wf-template-0942e79a-fd9c-6b3d-0313-77966685b478%22%3E%253Cli%2520class%253D%2522option%2522%253E%253Cspan%2520data-wf-bindings%253D%2522%25255B%25257B%252522innerHTML%252522%25253A%25257B%252522type%252522%25253A%252522PlainText%252522%25252C%252522filter%252522%25253A%25257B%252522type%252522%25253A%252522identity%252522%25252C%252522params%252522%25253A%25255B%25255D%25257D%25252C%252522dataPath%252522%25253A%252522database.commerceOrder.userItems%25255B%25255D.product.f_sku_properties_3dr%25255B%25255D.name%252522%25257D%25257D%25255D%2522%2520class%253D%2522text-weight-bold%2520w-dyn-bind-empty%2522%253E%253C%252Fspan%253E%253Cspan%253E%253A%2520%253C%252Fspan%253E%253Cspan%2520data-wf-bindings%253D%2522%25255B%25257B%252522innerHTML%252522%25253A%25257B%252522type%252522%25253A%252522CommercePropValues%252522%25252C%252522filter%252522%25253A%25257B%252522type%252522%25253A%252522identity%252522%25252C%252522params%252522%25253A%25255B%25255D%25257D%25252C%252522dataPath%252522%25253A%252522database.commerceOrder.userItems%25255B%25255D.product.f_sku_properties_3dr%25255B%25255D%252522%25257D%25257D%25255D%2522%2520class%253D%2522w-dyn-bind-empty%2522%253E%253C%252Fspan%253E%253C%252Fli%253E%3C%2Fscript%3E%3Cul%20data-wf-bindings%3D%22%255B%257B%2522optionSets%2522%253A%257B%2522type%2522%253A%2522CommercePropTable%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522identity%2522%252C%2522params%2522%253A%255B%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.product.f_sku_properties_3dr%5B%5D%2522%257D%257D%252C%257B%2522optionValues%2522%253A%257B%2522type%2522%253A%2522CommercePropValues%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522identity%2522%252C%2522params%2522%253A%255B%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.sku.f_sku_values_3dr%2522%257D%257D%255D%22%20class%3D%22w-commerce-commercecartoptionlist%22%20data-wf-collection%3D%22database.commerceOrder.userItems%255B%255D.product.f_sku_properties_3dr%22%20data-wf-template-id%3D%22wf-template-0942e79a-fd9c-6b3d-0313-77966685b478%22%3E%3Cli%20class%3D%22option%22%3E%3Cspan%20data-wf-bindings%3D%22%255B%257B%2522innerHTML%2522%253A%257B%2522type%2522%253A%2522PlainText%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522identity%2522%252C%2522params%2522%253A%255B%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.product.f_sku_properties_3dr%255B%255D.name%2522%257D%257D%255D%22%20class%3D%22text-weight-bold%20w-dyn-bind-empty%22%3E%3C%2Fspan%3E%3Cspan%3E%3A%20%3C%2Fspan%3E%3Cspan%20data-wf-bindings%3D%22%255B%257B%2522innerHTML%2522%253A%257B%2522type%2522%253A%2522CommercePropValues%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522identity%2522%252C%2522params%2522%253A%255B%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.product.f_sku_properties_3dr%255B%255D%2522%257D%257D%255D%22%20class%3D%22w-dyn-bind-empty%22%3E%3C%2Fspan%3E%3C%2Fli%3E%3C%2Ful%3E%3Ca%20href%3D%22%23%22%20role%3D%22button%22%20data-wf-bindings%3D%22%255B%257B%2522data-commerce-sku-id%2522%253A%257B%2522type%2522%253A%2522ItemRef%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522identity%2522%252C%2522params%2522%253A%255B%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.sku.id%2522%257D%257D%255D%22%20class%3D%22remove-button%20w-inline-block%22%20data-wf-cart-action%3D%22remove-item%22%20data-commerce-sku-id%3D%22%22%20aria-label%3D%22Remove%20item%20from%20cart%22%3E%3Cdiv%3ERemove%3C%2Fdiv%3E%3C%2Fa%3E%3C%2Fdiv%3E%3Cinput%20aria-label%3D%22Update%20quantity%22%20data-wf-bindings%3D%22%255B%257B%2522value%2522%253A%257B%2522type%2522%253A%2522Number%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522numberPrecision%2522%252C%2522params%2522%253A%255B%25220%2522%252C%2522numberPrecision%2522%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.count%2522%257D%257D%252C%257B%2522data-commerce-sku-id%2522%253A%257B%2522type%2522%253A%2522ItemRef%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522identity%2522%252C%2522params%2522%253A%255B%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.sku.id%2522%257D%257D%255D%22%20data-wf-conditions%3D%22%257B%2522condition%2522%253A%257B%2522fields%2522%253A%257B%2522product%253Aec-product-type%2522%253A%257B%2522ne%2522%253A%2522e348fd487d0102946c9179d2a94bb613%2522%252C%2522type%2522%253A%2522Option%2522%257D%257D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D%2522%257D%22%20class%3D%22w-commerce-commercecartquantity%20cart-quantity-wrapper%22%20required%3D%22%22%20pattern%3D%22%5E%5B0-9%5D%2B%24%22%20inputMode%3D%22numeric%22%20type%3D%22number%22%20name%3D%22quantity%22%20autoComplete%3D%22off%22%20data-wf-cart-action%3D%22update-item-quantity%22%20data-commerce-sku-id%3D%22%22%20value%3D%221%22%2F%3E%3C%2Fdiv%3E
+                    </script>
+                    <div
+                      class="w-commerce-commercecartlist cart-list"
+                      data-wf-collection="database.commerceOrder.userItems"
+                      data-wf-template-id="wf-template-0942e79a-fd9c-6b3d-0313-77966685b471"
+                    >
+                      <div class="w-commerce-commercecartitem cart-item">
+                        <img
+                          data-wf-bindings="%5B%7B%22src%22%3A%7B%22type%22%3A%22ImageRef%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.sku.f_main_image_4dr%22%7D%7D%5D"
+                          src=""
+                          alt=""
+                          class="w-commerce-commercecartitemimage product-card-image w-dyn-bind-empty"
+                        />
+                        <div
+                          class="w-commerce-commercecartiteminfo cart-item-content"
+                        >
+                          <a
+                            data-wf-bindings="%5B%7B%22dataWHref%22%3A%7B%22type%22%3A%22FullSlug%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.product.fullSlug%22%7D%7D%5D"
+                            href="#"
+                            class="w-inline-block"
+                            ><div
+                              data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.product.f_name_%22%7D%7D%5D"
+                              class="w-commerce-commercecartproductname w-dyn-bind-empty"
+                            ></div
+                          ></a>
+                          <div
+                            data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22CommercePrice%22%2C%22filter%22%3A%7B%22type%22%3A%22price%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.price%22%7D%7D%5D"
+                            class="price-tag"
+                          >
+                            $ 0.00 USD
+                          </div>
+                          <script
+                            type="text/x-wf-template"
+                            id="wf-template-0942e79a-fd9c-6b3d-0313-77966685b478"
+                          >
+                            %3Cli%20class%3D%22option%22%3E%3Cspan%20data-wf-bindings%3D%22%255B%257B%2522innerHTML%2522%253A%257B%2522type%2522%253A%2522PlainText%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522identity%2522%252C%2522params%2522%253A%255B%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.product.f_sku_properties_3dr%255B%255D.name%2522%257D%257D%255D%22%20class%3D%22text-weight-bold%20w-dyn-bind-empty%22%3E%3C%2Fspan%3E%3Cspan%3E%3A%20%3C%2Fspan%3E%3Cspan%20data-wf-bindings%3D%22%255B%257B%2522innerHTML%2522%253A%257B%2522type%2522%253A%2522CommercePropValues%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522identity%2522%252C%2522params%2522%253A%255B%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.product.f_sku_properties_3dr%255B%255D%2522%257D%257D%255D%22%20class%3D%22w-dyn-bind-empty%22%3E%3C%2Fspan%3E%3C%2Fli%3E
+                          </script>
+                          <ul
+                            data-wf-bindings="%5B%7B%22optionSets%22%3A%7B%22type%22%3A%22CommercePropTable%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.product.f_sku_properties_3dr[]%22%7D%7D%2C%7B%22optionValues%22%3A%7B%22type%22%3A%22CommercePropValues%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.sku.f_sku_values_3dr%22%7D%7D%5D"
+                            class="w-commerce-commercecartoptionlist"
+                            data-wf-collection="database.commerceOrder.userItems%5B%5D.product.f_sku_properties_3dr"
+                            data-wf-template-id="wf-template-0942e79a-fd9c-6b3d-0313-77966685b478"
+                          >
+                            <li class="option">
+                              <span
+                                data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.product.f_sku_properties_3dr%5B%5D.name%22%7D%7D%5D"
+                                class="text-weight-bold w-dyn-bind-empty"
+                              ></span
+                              ><span>: </span
+                              ><span
+                                data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22CommercePropValues%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.product.f_sku_properties_3dr%5B%5D%22%7D%7D%5D"
+                                class="w-dyn-bind-empty"
+                              ></span>
+                            </li>
+                          </ul>
+                          <a
+                            href="#"
+                            role="button"
+                            data-wf-bindings="%5B%7B%22data-commerce-sku-id%22%3A%7B%22type%22%3A%22ItemRef%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.sku.id%22%7D%7D%5D"
+                            class="remove-button w-inline-block"
+                            data-wf-cart-action="remove-item"
+                            data-commerce-sku-id=""
+                            aria-label="Remove item from cart"
+                            ><div>Remove</div></a
+                          >
+                        </div>
+                        <input
+                          aria-label="Update quantity"
+                          data-wf-bindings="%5B%7B%22value%22%3A%7B%22type%22%3A%22Number%22%2C%22filter%22%3A%7B%22type%22%3A%22numberPrecision%22%2C%22params%22%3A%5B%220%22%2C%22numberPrecision%22%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.count%22%7D%7D%2C%7B%22data-commerce-sku-id%22%3A%7B%22type%22%3A%22ItemRef%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.sku.id%22%7D%7D%5D"
+                          data-wf-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22product%3Aec-product-type%22%3A%7B%22ne%22%3A%22e348fd487d0102946c9179d2a94bb613%22%2C%22type%22%3A%22Option%22%7D%7D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D%22%7D"
+                          class="w-commerce-commercecartquantity cart-quantity-wrapper"
+                          required=""
+                          pattern="^[0-9]+$"
+                          inputmode="numeric"
+                          type="number"
+                          name="quantity"
+                          autocomplete="off"
+                          data-wf-cart-action="update-item-quantity"
+                          data-commerce-sku-id=""
+                          value="1"
+                        />
+                      </div>
+                    </div>
+                    <div class="w-commerce-commercecartfooter">
+                      <div
+                        aria-atomic="true"
+                        aria-live="polite"
+                        class="w-commerce-commercecartlineitem"
+                      >
+                        <div class="heading-style-h5">Subtotal</div>
+                        <div
+                          data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22CommercePrice%22%2C%22filter%22%3A%7B%22type%22%3A%22price%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.subtotal%22%7D%7D%5D"
+                          class="w-commerce-commercecartordervalue heading-style-h5"
+                        ></div>
+                      </div>
+                      <div>
+                        <div
+                          data-node-type="commerce-cart-quick-checkout-actions"
+                          style="display: none"
+                        >
+                          <a
+                            data-node-type="commerce-cart-apple-pay-button"
+                            role="button"
+                            aria-label="Apple Pay"
+                            aria-haspopup="dialog"
+                            style="
+                              background-image: -webkit-named-image(
+                                apple-pay-logo-white
+                              );
+                              background-size: 100% 50%;
+                              background-position: 50% 50%;
+                              background-repeat: no-repeat;
+                            "
+                            class="w-commerce-commercecartapplepaybutton apple-pay"
+                            tabindex="0"
+                            ><div></div></a
+                          ><a
+                            data-node-type="commerce-cart-quick-checkout-button"
+                            role="button"
+                            tabindex="0"
+                            aria-haspopup="dialog"
+                            style="display: none"
+                            class="w-commerce-commercecartquickcheckoutbutton"
+                            ><svg
+                              class="w-commerce-commercequickcheckoutgoogleicon"
+                              xmlns="http://www.w3.org/2000/svg"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 16 16"
+                            >
+                              <defs>
+                                <polygon
+                                  id="google-mark-a"
+                                  points="0 .329 3.494 .329 3.494 7.649 0 7.649"
+                                ></polygon>
+                                <polygon
+                                  id="google-mark-c"
+                                  points=".894 0 13.169 0 13.169 6.443 .894 6.443"
+                                ></polygon>
+                              </defs>
+                              <g fill="none" fill-rule="evenodd">
+                                <path
+                                  fill="#4285F4"
+                                  d="M10.5967,12.0469 L10.5967,14.0649 L13.1167,14.0649 C14.6047,12.6759 15.4577,10.6209 15.4577,8.1779 C15.4577,7.6339 15.4137,7.0889 15.3257,6.5559 L7.8887,6.5559 L7.8887,9.6329 L12.1507,9.6329 C11.9767,10.6119 11.4147,11.4899 10.5967,12.0469"
+                                ></path>
+                                <path
+                                  fill="#34A853"
+                                  d="M7.8887,16 C10.0137,16 11.8107,15.289 13.1147,14.067 C13.1147,14.066 13.1157,14.065 13.1167,14.064 L10.5967,12.047 C10.5877,12.053 10.5807,12.061 10.5727,12.067 C9.8607,12.556 8.9507,12.833 7.8887,12.833 C5.8577,12.833 4.1387,11.457 3.4937,9.605 L0.8747,9.605 L0.8747,11.648 C2.2197,14.319 4.9287,16 7.8887,16"
+                                ></path>
+                                <g transform="translate(0 4)">
+                                  <mask id="google-mark-b" fill="#fff">
+                                    <use xlink:href="#google-mark-a"></use>
+                                  </mask>
+                                  <path
+                                    fill="#FBBC04"
+                                    d="M3.4639,5.5337 C3.1369,4.5477 3.1359,3.4727 3.4609,2.4757 L3.4639,2.4777 C3.4679,2.4657 3.4749,2.4547 3.4789,2.4427 L3.4939,0.3287 L0.8939,0.3287 C0.8799,0.3577 0.8599,0.3827 0.8459,0.4117 C-0.2821,2.6667 -0.2821,5.3337 0.8459,7.5887 L0.8459,7.5997 C0.8549,7.6167 0.8659,7.6317 0.8749,7.6487 L3.4939,5.6057 C3.4849,5.5807 3.4729,5.5587 3.4639,5.5337"
+                                    mask="url(#google-mark-b)"
+                                  ></path>
+                                </g>
+                                <mask id="google-mark-d" fill="#fff">
+                                  <use xlink:href="#google-mark-c"></use>
+                                </mask>
+                                <path
+                                  fill="#EA4335"
+                                  d="M0.894,4.3291 L3.478,6.4431 C4.113,4.5611 5.843,3.1671 7.889,3.1671 C9.018,3.1451 10.102,3.5781 10.912,4.3671 L13.169,2.0781 C11.733,0.7231 9.85,-0.0219 7.889,0.0001 C4.941,0.0001 2.245,1.6791 0.894,4.3291"
+                                  mask="url(#google-mark-d)"
+                                ></path>
+                              </g></svg
+                            ><svg
+                              class="w-commerce-commercequickcheckoutmicrosofticon"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 16 16"
+                            >
+                              <g fill="none" fill-rule="evenodd">
+                                <polygon
+                                  fill="#F05022"
+                                  points="7 7 1 7 1 1 7 1"
+                                ></polygon>
+                                <polygon
+                                  fill="#7DB902"
+                                  points="15 7 9 7 9 1 15 1"
+                                ></polygon>
+                                <polygon
+                                  fill="#00A4EE"
+                                  points="7 15 1 15 1 9 7 9"
+                                ></polygon>
+                                <polygon
+                                  fill="#FFB700"
+                                  points="15 15 9 15 9 9 15 9"
+                                ></polygon>
+                              </g>
+                            </svg>
+                            <div>Pay with browser.</div></a
+                          >
+                        </div>
+                        <a
+                          href="/checkout"
+                          value="Continue to Checkout"
+                          class="w-commerce-commercecartcheckoutbutton button is-small"
+                          data-loading-text="Hang Tight..."
+                          data-node-type="cart-checkout-button"
+                          >Continue to Checkout</a
+                        >
+                      </div>
+                    </div>
+                  </form>
+                  <div class="w-commerce-commercecartemptystate">
+                    <div aria-label="This cart is empty" aria-live="polite">
+                      No items found.
+                    </div>
+                  </div>
+                  <div
+                    aria-live="assertive"
+                    style="display: none"
+                    data-node-type="commerce-cart-error"
+                    class="w-commerce-commercecarterrorstate"
+                  >
+                    <div
+                      class="w-cart-error-msg"
+                      data-w-cart-quantity-error="Product is not available in this quantity."
+                      data-w-cart-general-error="Something went wrong when adding this item to the cart."
+                      data-w-cart-checkout-error="Checkout is disabled on this site."
+                      data-w-cart-cart_order_min-error="The order minimum was not met. Add more items to your cart to continue."
+                      data-w-cart-subscription_error-error="Before you purchase, please use your email invite to verify your address so we can send order updates."
+                    >
+                      Product is not available in this quantity.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <div class="padding-global padding-section-small">
+            <div class="container-large">
+              <div class="footer-wrapper">
+                <a
+                  title="Homepage"
+                  href="/"
+                  aria-current="page"
+                  class="footer-logo w-inline-block w--current"
+                  style="font-family: 'Londrina Solid', sans-serif; font-size: 32px; font-weight: 700; color: #111; text-decoration: none;"
+                  >WADDAT</a>
+                <div class="footer-nav-links">
+                  <div class="footer-column">
+                    <a href="#products" class="nav-link lowercase">OUR DRINKS</a
+                    ><a href="#about" class="nav-link lowercase">ABOUT</a
+                    ><a href="#wholesale" class="nav-link lowercase">WHOLESALE</a
+                    ><a href="#faq" class="nav-link lowercase">FAQ</a
+                    ><a href="#wholesale" class="nav-link lowercase">CONTACT</a>
+                  </div>
+                </div>
+                <div class="social-media">
+                  <div class="join-us">JOIN US ON SOCIAL MEDIA!</div>
+                  <div class="icons-wrapper" style="display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 0.5rem;">
+                    <a
+                      href="https://www.instagram.com/waddatbeverage/"
+                      target="_blank"
+                      class="social-media-link w-inline-block"
+                      style="display: flex; align-items: center; justify-content: center;"
+                      ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a
+                    ><a
+                      href="https://www.tiktok.com/@waddatbevarage"
+                      target="_blank"
+                      class="social-media-link w-inline-block"
+                      style="display: flex; align-items: center; justify-content: center;"
+                      ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z"/></svg></a
+                    >
+                  </div>
+                  <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                    <a href="mailto:hello@waddat.com" class="text-color-black text-size-small" style="text-decoration: none;">hello@waddat.com</a>
+                    <a href="tel:07941907091" class="text-color-black text-size-small" style="text-decoration: none;">07941907091</a>
+                  </div>
+                </div>
+              </div>
+              <div class="spacer-medium"></div>
+              <div class="footer-wrapper align-flex">
+                <a
+                  id="w-node-b32f2486-3bb1-1bab-5d05-d1138574e4a2-0f3e225c"
+                  href="#"
+                  class="text-size-small text-color-black"
+                  >© 2026 Waddat Beverage</a
+                  >Built by <a href="https://conerstonedg.com" target="_blank" rel="noopener noreferrer" class="text-color-black">Cornerstone Digital</a></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script
+      src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=680aa12b0e13118b7b331d1d"
+      type="text/javascript"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/js/webflow.schunk.161f08e56d0294aa.js"
+      type="text/javascript"
+      integrity="sha384-Ag00QULjJn2u4JyYooFrvsgwpBw3rBqcJbLZR+bK4KSwn6LZKAstjOcDLDIbmiaD"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/js/webflow.schunk.9a401368ebc3ae9b.js"
+      type="text/javascript"
+      integrity="sha384-8gbwUmc5IecOpidX/qUBcWB7xrIE2g2iFyGv02R5/UTFauS/U55xYQOvjbpzoORx"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/js/webflow.schunk.2c2c83d71c9c4058.js"
+      type="text/javascript"
+      integrity="sha384-m5nnXYnrWfawQkkqxiWH9Eax3pKUq81O5uYgFb+sQfJssSEvwu1RmTpfyycSw9Oo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/js/webflow.2c81782d.56368984eca88cff.js"
+      type="text/javascript"
+      integrity="sha384-NRZjmo2QFoF/tmqC6mf+R3hFt/fGSeQKphak61zG5Rd98TJBCD22dVtg2gb8DHHg"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
