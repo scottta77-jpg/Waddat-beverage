@@ -19,8 +19,8 @@
   },
   {
     "id": "3",
-    "slug": "ginger-shot",
-    "name": "Ginger Shot",
+    "slug": "ginger",
+    "name": "Ginger",
     "price": 3.00,
     "description": "Zesty ginger shot for a natural energy boost.",
     "sizes": ["100ml"],

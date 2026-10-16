@@ -21,6 +21,11 @@ export default defineConfig({
             _res.end()
             return
           }
+          if (url === '/product/ginger-shot' || url === '/product/ginger-shot/') {
+            _res.writeHead(301, { Location: '/product/ginger' })
+            _res.end()
+            return
+          }
           // If request is for a product page without trailing slash
           if (url.startsWith('/product/') && !url.endsWith('/') && !url.includes('.')) {
             req.url = `${url}/index.html`
@@ -40,6 +45,7 @@ export default defineConfig({
         'product-sorrel-drink': resolve(import.meta.dirname, 'product/sorrel-drink/index.html'),
         'product-soursop-sea-moss': resolve(import.meta.dirname, 'product/Soursop-Sea-Moss/index.html'),
         'product-irish-moss-soursop': resolve(import.meta.dirname, 'product/irish-moss-soursop/index.html'),
+        'product-ginger': resolve(import.meta.dirname, 'product/ginger/index.html'),
         'product-ginger-shot': resolve(import.meta.dirname, 'product/ginger-shot/index.html'),
         'product-irish-moss-pineapple': resolve(import.meta.dirname, 'product/irish-moss-pineapple/index.html'),
         'product-irish-moss-guava-banana': resolve(import.meta.dirname, 'product/irish-moss-guava-banana/index.html'),
