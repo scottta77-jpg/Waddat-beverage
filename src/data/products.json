@@ -10,12 +10,12 @@
   },
   {
     "id": "2",
-    "slug": "irish-moss-soursop",
-    "name": "Irish Moss & Soursop",
+    "slug": "Soursop-Sea-Moss",
+    "name": "Soursop Sea Moss",
     "price": 3.50,
-    "description": "Natural Irish Moss & Soursop blend.",
+    "description": "Natural Soursop Sea Moss blend.",
     "sizes": ["500ml"],
-    "image": "/irish-moss-soursop.png"
+    "image": "/soursop-sea-moss-3f.png"
   },
   {
     "id": "3",
