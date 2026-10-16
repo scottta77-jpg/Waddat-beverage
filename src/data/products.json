@@ -28,12 +28,12 @@
   },
   {
     "id": "4",
-    "slug": "irish-moss-pineapple",
-    "name": "Irish Moss & Pineapple",
-    "price": 3.50,
-    "description": "Natural Irish Moss blended with sweet pineapple.",
+    "slug": "Pineapple-Sea-Moss",
+    "name": "Pineapple Sea Moss",
+    "price": 6.00,
+    "description": "Natural Irish Moss and sea moss blended with sweet pineapple.",
     "sizes": ["500ml"],
-    "image": "/irish-moss-pineapple.png"
+    "image": "/pineapple-sea-moss-3f.png"
   },
   {
     "id": "5",
