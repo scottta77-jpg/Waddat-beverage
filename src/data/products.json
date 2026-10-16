@@ -37,11 +37,11 @@
   },
   {
     "id": "5",
-    "slug": "irish-moss-guava-banana",
-    "name": "Irish Moss, Guava & Banana",
-    "price": 3.50,
-    "description": "Rich Irish Moss combined with tropical guava and sweet banana.",
+    "slug": "Lemonade",
+    "name": "Lemonade",
+    "price": 6.00,
+    "description": "Crisp and invigorating, fresh Jamaican style lemonade.",
     "sizes": ["500ml"],
-    "image": "/irish-moss-guava-banana.png"
+    "image": "/lemonade-3f.png"
   }
 ]

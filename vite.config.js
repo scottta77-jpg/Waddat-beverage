@@ -26,6 +26,16 @@ export default defineConfig({
             _res.end()
             return
           }
+          if (url === '/product/irish-moss-guava-banana' || url === '/product/irish-moss-guava-banana/') {
+            _res.writeHead(301, { Location: '/product/Lemonade/' })
+            _res.end()
+            return
+          }
+          if (url === '/product/lemonade' || url === '/product/lemonade/') {
+            _res.writeHead(301, { Location: '/product/Lemonade/' })
+            _res.end()
+            return
+          }
           // If request is for a product page without trailing slash
           if (url.startsWith('/product/') && !url.endsWith('/') && !url.includes('.')) {
             req.url = `${url}/index.html`
@@ -48,6 +58,7 @@ export default defineConfig({
         'product-ginger': resolve(import.meta.dirname, 'product/ginger/index.html'),
         'product-ginger-shot': resolve(import.meta.dirname, 'product/ginger-shot/index.html'),
         'product-irish-moss-pineapple': resolve(import.meta.dirname, 'product/irish-moss-pineapple/index.html'),
+        'product-lemonade': resolve(import.meta.dirname, 'product/Lemonade/index.html'),
         'product-irish-moss-guava-banana': resolve(import.meta.dirname, 'product/irish-moss-guava-banana/index.html'),
       },
     },
