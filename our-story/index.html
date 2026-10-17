@@ -30,7 +30,7 @@
       box-sizing: border-box;
     }
     :root {
-      --color-sky-blue: #97d5ee;
+      --color-sky-blue: #85d7fa;
       --color-cream: #f6eee3;
       --color-cream-light: #fdfbf7;
       --color-orange: #f86317;
@@ -102,137 +102,237 @@
     }
 
     /* ==========================================================================
-       HERO SECTION (Sky Blue #97d5ee)
+       HERO SECTION (Matching Graphic Mockup & Reference Image)
        ========================================================================== */
     .section-hero {
       background-color: var(--color-sky-blue);
       position: relative;
       overflow: hidden;
-      padding-top: 140px;
-      padding-bottom: 5.5rem;
+      padding-top: 130px;
+      padding-bottom: 0;
+      min-height: 720px;
     }
+
+    /* Top Centered Caption */
+    .story-top-banner {
+      position: absolute;
+      top: 14px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      font-family: var(--font-body);
+      font-size: 11.5px;
+      font-weight: 600;
+      letter-spacing: 2.2px;
+      text-transform: uppercase;
+      color: #211509;
+      z-index: 1000;
+      pointer-events: none;
+    }
+
+    /* Top Left Lime Leaf Graphic */
+    .hero-top-leaf {
+      position: absolute;
+      top: 75px;
+      left: -15px;
+      width: 155px;
+      height: auto;
+      z-index: 2;
+      pointer-events: none;
+      transform: rotate(0deg);
+      filter: drop-shadow(0 6px 12px rgba(0,0,0,0.06));
+    }
+
+    /* Top Right Pineapple Slice Peeking In */
+    .hero-top-pineapple {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 180px;
+      height: auto;
+      z-index: 5;
+      pointer-events: none;
+      filter: drop-shadow(0 10px 18px rgba(0,0,0,0.18));
+    }
+
+    .hero-container {
+      width: 100%;
+      max-width: 1360px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 3rem;
+      padding-right: 3rem;
+      position: relative;
+      z-index: 3;
+    }
+
     .hero-layout {
       display: grid;
-      grid-template-columns: 1.15fr 1fr;
+      grid-template-columns: 1fr 1.15fr;
       align-items: center;
-      gap: 2.5rem;
+      gap: 2rem;
       position: relative;
-      z-index: 2;
+      min-height: 590px;
     }
+
+    .hero-left-content {
+      position: relative;
+      z-index: 10;
+      padding-bottom: 20px;
+      padding-left: 20px;
+      margin-top: -30px;
+    }
+
     .hero-title-badge {
       font-family: var(--font-display);
-      font-size: 7.5rem;
-      line-height: 0.9;
+      font-weight: 900;
+      font-size: 8.5rem;
+      line-height: 0.88;
       color: #ffffff;
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.15rem;
       letter-spacing: 1px;
-      text-shadow: 0 4px 0 rgba(33, 21, 9, 0.08);
+      display: inline-block;
+      transform: rotate(-2.5deg);
+      text-shadow: 0 4px 14px rgba(0,0,0,0.06);
     }
+
+    .hero-text-block {
+      margin-left: 4.8rem;
+    }
+
     .hero-subheading {
       font-family: var(--font-display);
-      font-size: 3.1rem;
-      line-height: 1.05;
+      font-weight: 900;
+      font-size: 3.4rem;
+      line-height: 0.96;
       color: var(--color-dark);
-      margin-bottom: 1.4rem;
+      margin-bottom: 1.1rem;
+      letter-spacing: 0.5px;
     }
+
     .hero-text {
-      font-size: 1.28rem;
-      line-height: 1.6;
+      font-family: var(--font-body);
+      font-size: 1.25rem;
+      line-height: 1.45;
       color: var(--color-dark);
       max-width: 480px;
       font-weight: 500;
+      margin: 0;
     }
 
-    /* Hero Bottle & Fruit Composition (Static, No Motion Effects) */
-    .hero-visual-stage {
-      position: relative;
-      height: 520px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .hero-splash-bg {
+    /* Bottom-Left Soursop Cluster (Anchored to section-hero) */
+    .hero-soursop-cluster {
       position: absolute;
-      top: 50%;
-      left: 55%;
-      transform: translate(-50%, -50%) scale(1.15);
-      width: 480px;
-      height: 480px;
-      z-index: 1;
-      opacity: 0.95;
+      bottom: -45px;
+      left: -50px;
+      width: 440px;
+      height: 300px;
+      z-index: 8;
       pointer-events: none;
     }
-    .hero-leaf-1 {
+    .hero-soursop-whole {
       position: absolute;
-      top: 18%;
-      left: 14%;
-      width: 60px;
-      transform: rotate(-35deg);
-      z-index: 2;
+      bottom: 5px;
+      left: 0;
+      width: 270px;
+      height: auto;
+      transform: rotate(-18deg);
+      filter: drop-shadow(0 15px 25px rgba(0,0,0,0.22));
+      pointer-events: none;
     }
-    .hero-leaf-2 {
+    .hero-soursop-slice {
       position: absolute;
-      bottom: 16%;
-      right: 12%;
-      width: 70px;
-      transform: rotate(50deg);
-      z-index: 2;
+      bottom: -40px;
+      left: 95px;
+      width: 240px;
+      height: auto;
+      transform: rotate(12deg);
+      filter: drop-shadow(0 18px 28px rgba(0,0,0,0.25));
+      pointer-events: none;
     }
 
-    /* Hero Bottles */
-    .hero-bottle {
+    /* Right-Side Bottle & Splash Stage (Completely Static, No Motion/Animations) */
+    .hero-bottle-stage {
+      position: relative;
+      width: 100%;
+      height: 600px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      pointer-events: none;
+    }
+
+    .hero-purple-splash {
       position: absolute;
-      bottom: 20px;
-      height: 440px;
+      right: -65px;
+      top: 40%;
+      transform: translateY(-50%) scale(1.35);
+      width: 660px;
+      height: auto;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .hero-sorrel-flowers {
+      position: absolute;
+      top: 55px;
+      right: 330px;
+      width: 185px;
+      height: auto;
+      transform: rotate(-10deg);
+      z-index: 3;
+      pointer-events: none;
+      filter: drop-shadow(0 12px 20px rgba(0,0,0,0.22));
+    }
+
+    .hero-ginger-root {
+      position: absolute;
+      bottom: 95px;
+      right: 355px;
+      width: 200px;
+      height: auto;
+      transform: rotate(18deg);
+      z-index: 6;
+      pointer-events: none;
+      filter: drop-shadow(0 14px 22px rgba(0,0,0,0.25));
+    }
+
+    .hero-bottle-sorrel {
+      position: absolute;
+      bottom: -40px;
+      right: 175px;
+      height: 635px;
       width: auto;
       object-fit: contain;
-      filter: drop-shadow(0 15px 25px rgba(0,0,0,0.22));
-      transition: transform 0.3s ease, filter 0.3s ease;
-    }
-    .hero-bottle:hover {
-      transform: scale(1.04) !important;
-      filter: drop-shadow(0 20px 30px rgba(0,0,0,0.3));
-    }
-    .hero-bottle-sorrel {
-      left: 32%;
-      transform: rotate(-10deg);
+      transform: rotate(14deg);
       z-index: 5;
-    }
-    .hero-bottle-pineapple {
-      left: 56%;
-      transform: rotate(8deg);
-      z-index: 4;
+      pointer-events: none;
+      filter: drop-shadow(0 20px 32px rgba(0,0,0,0.3));
     }
 
-    /* Hero Fruits (Static Positioned, No Motion Effects) */
-    .fruit-item {
+    .hero-green-leaves {
       position: absolute;
-      filter: drop-shadow(0 10px 18px rgba(0,0,0,0.18));
+      bottom: 0px;
+      right: 110px;
+      width: 205px;
+      height: auto;
+      transform: rotate(-12deg);
+      z-index: 6;
       pointer-events: none;
+      filter: drop-shadow(0 8px 16px rgba(0,0,0,0.22));
     }
-    .hero-fruit-soursop-whole {
-      top: 24%;
-      left: 4%;
-      width: 145px;
-      z-index: 6;
-    }
-    .hero-fruit-soursop-slice {
-      bottom: 2%;
-      left: -2%;
-      width: 155px;
-      z-index: 6;
-    }
-    .hero-fruit-pineapple-slice {
-      top: 36%;
-      right: -2%;
-      width: 150px;
-      z-index: 6;
-    }
-    .hero-fruit-ginger {
-      bottom: 2%;
-      left: 42%;
-      width: 130px;
-      z-index: 7;
+
+    .hero-bottle-pineapple {
+      position: absolute;
+      bottom: -50px;
+      right: 0px;
+      height: 575px;
+      width: auto;
+      object-fit: contain;
+      transform: rotate(18deg);
+      z-index: 4;
+      pointer-events: none;
+      filter: drop-shadow(0 20px 32px rgba(0,0,0,0.26));
     }
 
     /* ==========================================================================
@@ -511,11 +611,7 @@
       width: auto;
       object-fit: contain;
       filter: drop-shadow(0 15px 22px rgba(0,0,0,0.22));
-      transition: transform 0.3s ease, filter 0.3s ease;
-    }
-    .trio-bottle:hover {
-      transform: translateY(-6px) scale(1.04) !important;
-      filter: drop-shadow(0 22px 30px rgba(0,0,0,0.3));
+      pointer-events: none;
     }
     .trio-bottle-sorrel {
       left: 15%;
@@ -738,8 +834,13 @@
        RESPONSIVE BREAKPOINTS
        ========================================================================== */
     @media (max-width: 1024px) {
-      .hero-title-badge { font-size: 5.5rem; }
+      .hero-title-badge { font-size: 5.8rem; }
       .hero-subheading { font-size: 2.6rem; }
+      .hero-bottle-sorrel { height: 460px; right: 130px; }
+      .hero-bottle-pineapple { height: 420px; right: 0; }
+      .hero-purple-splash { width: 500px; }
+      .hero-sorrel-flowers { right: 260px; width: 140px; }
+      .hero-ginger-root { right: 280px; width: 150px; }
       .section-heading-lg, .timeline-heading { font-size: 2.8rem; }
       .stockist-heading, .stockist-heading-sub { font-size: 2.2rem; }
       .stockist-card-peeking-fruit, .stockist-card-peeking-flower { display: none; }
@@ -748,23 +849,62 @@
     .trio-fruit-pine, .trio-fruit-ginger,
     .next-chapter-fruits-stage img,
     .ginger-accent-1995,
-    .hero-leaf-1, .hero-leaf-2, .roots-leaf, .next-leaf-bg {
+    .hero-top-leaf, .hero-top-pineapple,
+    .roots-leaf, .next-leaf-bg {
       pointer-events: none;
     }
 
     @media (max-width: 860px) {
-      .section-hero { padding-top: 115px; }
-      .hero-layout, .roots-layout, .timeline-layout {
+      .story-top-banner { display: none !important; }
+      .hero-top-leaf { display: none !important; }
+      .hero-top-pineapple { display: none !important; }
+      .section-hero { padding-top: 130px; min-height: auto; padding-bottom: 2rem; }
+      .hero-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        min-height: auto;
+      }
+      .hero-container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+      .hero-left-content {
+        padding-bottom: 0;
+        padding-left: 0;
+        text-align: center;
+      }
+      .hero-title-badge { font-size: 5rem; margin-bottom: 0.6rem; transform: rotate(0deg); }
+      .hero-text-block { margin-left: 0; }
+      .hero-subheading { font-size: 2.4rem; text-align: center; }
+      .hero-text { text-align: center; margin: 0 auto; max-width: 440px; }
+      
+      .hero-soursop-cluster {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        margin: 1.5rem auto 0;
+        width: 320px;
+        height: 200px;
+      }
+      .hero-soursop-whole { width: 200px; bottom: 10px; left: 10px; }
+      .hero-soursop-slice { width: 190px; bottom: 0; left: 80px; }
+
+      .hero-bottle-stage {
+        height: 480px;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+      .hero-purple-splash { width: 440px; right: -10px; top: 40%; }
+      .hero-sorrel-flowers { width: 120px; top: 60px; right: 240px; }
+      .hero-ginger-root { width: 130px; bottom: 70px; right: 260px; }
+      .hero-bottle-sorrel { height: 420px; right: 120px; }
+      .hero-bottle-pineapple { height: 380px; right: 10px; }
+      .hero-green-leaves { width: 120px; bottom: 10px; right: 80px; }
+
+      .roots-layout, .timeline-layout {
         grid-template-columns: 1fr;
         gap: 2.5rem;
       }
-      .hero-title-badge { font-size: 4.8rem; text-align: center; }
-      .hero-subheading { font-size: 2.3rem; text-align: center; }
-      .hero-text { text-align: center; margin: 0 auto; }
-      .hero-visual-stage { height: 420px; }
-      .hero-bottle { height: 350px; }
-      .hero-splash-bg { width: 380px; height: 380px; left: 50%; }
-
       .roots-visual-composition { height: 320px; }
       .trio-bottles-stage { height: 380px; }
       .trio-bottle { height: 300px; }
@@ -779,16 +919,30 @@
     }
 
     @media (max-width: 520px) {
-      .section-hero { padding-top: 100px; }
-      .hero-title-badge { font-size: 3.6rem; }
-      .hero-subheading { font-size: 1.85rem; }
-      .section-heading-lg, .timeline-heading { font-size: 2.2rem; }
-      .hero-bottle { height: 280px; }
-      .hero-fruit-soursop-whole { width: 100px; }
-      .hero-fruit-soursop-slice { width: 110px; }
-      .hero-fruit-pineapple-slice { width: 100px; }
-      .hero-fruit-ginger { width: 90px; }
+      .section-hero { padding-top: 125px; }
+      .hero-title-badge { font-size: 3.8rem; }
+      .hero-subheading { font-size: 1.9rem; }
+      .hero-text { font-size: 1.1rem; }
+      
+      .hero-bottle-stage {
+        height: 380px;
+        max-width: 340px;
+      }
+      .hero-purple-splash { width: 320px; right: 0; }
+      .hero-sorrel-flowers { width: 95px; top: 45px; right: 180px; }
+      .hero-ginger-root { width: 105px; bottom: 50px; right: 190px; }
+      .hero-bottle-sorrel { height: 330px; right: 85px; }
+      .hero-bottle-pineapple { height: 300px; right: 0; }
+      .hero-green-leaves { width: 95px; bottom: 5px; right: 55px; }
 
+      .hero-soursop-cluster {
+        width: 270px;
+        height: 170px;
+      }
+      .hero-soursop-whole { width: 165px; }
+      .hero-soursop-slice { width: 160px; left: 65px; }
+
+      .section-heading-lg, .timeline-heading { font-size: 2.2rem; }
       .stockist-heading, .stockist-heading-sub { font-size: 1.75rem; }
       .become-stockist-btn { font-size: 19px; padding: 12px 28px; }
     }
@@ -865,39 +1019,60 @@
     </div>
 
     <main class="main-wrapper">
+      <!-- Top Proposed Brand Story Caption -->
+      <div class="story-top-banner">PROPOSED BRAND STORY • FOR CLIENT CONFIRMATION</div>
+
       <!-- ========================================================================
-           HERO SECTION: FROM GRANDAD'S FARM TO YOUR FIRST SIP
+           HERO SECTION: MATCHING REFERENCE IMAGE & GRAPHIC DESIGN
            ======================================================================== -->
       <section class="section-hero" id="story-hero">
-        <div class="story-container">
+        <!-- Top-Left Two-Leaf Lime Accent -->
+        <img src="/hero-top-leaf.svg" alt="" class="hero-top-leaf"/>
+
+        <!-- Top-Right Pineapple Slice Peeking In -->
+        <img src="/fruits/hero_top_pineapple_corner.png" alt="" class="hero-top-pineapple"/>
+
+        <div class="hero-container">
           <div class="hero-layout">
-            <!-- Text Left -->
-            <div class="hero-content">
+            <!-- Left Column: Typography -->
+            <div class="hero-left-content">
               <h1 class="hero-title-badge">OUR STORY</h1>
-              <h2 class="hero-subheading">FROM GRANDAD’S FARM.<br>TO YOUR FIRST SIP.</h2>
-              <p class="hero-text">
-                A little Jamaican sunshine. A family memory.<br/>
-                A flavour worth sharing.
-              </p>
+              <div class="hero-text-block">
+                <h2 class="hero-subheading">FROM GRANDAD’S FARM.<br>TO YOUR FIRST SIP.</h2>
+                <p class="hero-text">
+                  A little Jamaican sunshine.<br/>
+                  A family memory. A flavour worth sharing.
+                </p>
+              </div>
             </div>
 
-            <!-- Bottle & Fruit Stage Right (No Continuous Fruit Motion) -->
-            <div class="hero-visual-stage">
-              <img src="/story-splash-purple.svg" alt="" class="hero-splash-bg"/>
-              <img src="/story-leaf-lime.svg" alt="" class="hero-leaf-1"/>
-              <img src="/story-leaf-lime.svg" alt="" class="hero-leaf-2"/>
+            <!-- Right Column: The Two Waddat Bottles, Purple Splash & Ingredients Stage -->
+            <div class="hero-bottle-stage">
+              <!-- Purple Organic Splash Background -->
+              <img src="/hero-splash-purple.svg" alt="" class="hero-purple-splash"/>
 
-              <!-- Waddat Bottles -->
-              <img src="/sorrel-3f.png" alt="Waddat Sorrel Natural Drink" class="hero-bottle hero-bottle-sorrel" title="Waddat Sorrel"/>
-              <img src="/pineapple-sea-moss-3f.png" alt="Waddat Pineapple Sea Moss" class="hero-bottle hero-bottle-pineapple" title="Waddat Pineapple Sea Moss"/>
+              <!-- Fresh Sorrel Calyx / Hibiscus Flowers behind Sorrel bottle shoulder -->
+              <img src="/fruits/sorrel_calyx.png" alt="Fresh Sorrel Flowers" class="hero-sorrel-flowers"/>
 
-              <!-- Tropical Fruits (Static, Natural Positioned) -->
-              <img src="/fruits/soursop_hero_fruit.png" alt="Fresh Soursop Fruit" class="fruit-item hero-fruit-soursop-whole"/>
-              <img src="/fruits/soursop_slice.png" alt="Cut Soursop" class="fruit-item hero-fruit-soursop-slice"/>
-              <img src="/fruits/pineapple_slice.png" alt="Juicy Pineapple Slice" class="fruit-item hero-fruit-pineapple-slice"/>
-              <img src="/fruits/ginger_root.png" alt="Fresh Ginger Root" class="fruit-item hero-fruit-ginger"/>
+              <!-- Fresh Ginger Root to the left of Sorrel bottle waist -->
+              <img src="/fruits/ginger_hero_flipped.png" alt="Fresh Ginger Root" class="hero-ginger-root"/>
+
+              <!-- Waddat Sorrel Bottle in front -->
+              <img src="/sorrel-3f.png" alt="Waddat Sorrel Natural Drink" class="hero-bottle-sorrel"/>
+
+              <!-- Green glossy leaves at base of bottles -->
+              <img src="/fruits/green_leaves_pair.png" alt="Fresh Leaves" class="hero-green-leaves"/>
+
+              <!-- Waddat Pineapple Sea Moss Bottle behind -->
+              <img src="/pineapple-sea-moss-3f.png" alt="Waddat Pineapple Sea Moss" class="hero-bottle-pineapple"/>
             </div>
           </div>
+        </div>
+
+        <!-- Bottom-Left Soursop Cluster: Anchored to bottom-left corner of the section -->
+        <div class="hero-soursop-cluster">
+          <img src="/fruits/soursop_hero_fruit.png" alt="Whole Soursop Fruit" class="hero-soursop-whole"/>
+          <img src="/fruits/soursop_slice.png" alt="Cut Soursop" class="hero-soursop-slice"/>
         </div>
       </section>
 
