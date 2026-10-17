@@ -46,6 +46,9 @@ export default defineConfig({
             _res.end()
             return
           }
+          if (url === '/our-story' || url === '/our-story/') {
+            req.url = '/our-story/index.html'
+          }
           // If request is for a product page without trailing slash
           if (url.startsWith('/product/') && !url.endsWith('/') && !url.includes('.')) {
             req.url = `${url}/index.html`
@@ -61,6 +64,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(import.meta.dirname, 'index.html'),
+        'our-story': resolve(import.meta.dirname, 'our-story/index.html'),
         404: resolve(import.meta.dirname, '404.html'),
         'product-sorrel-drink': resolve(import.meta.dirname, 'product/sorrel-drink/index.html'),
         'product-soursop-sea-moss': resolve(import.meta.dirname, 'product/Soursop-Sea-Moss/index.html'),
