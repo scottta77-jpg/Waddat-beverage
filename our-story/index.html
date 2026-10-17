@@ -19,9 +19,9 @@
   <!-- Google Fonts: Londrina Solid & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Londrina+Solid:wght@400;900&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Londrina+Solid:wght@300;400;900&display=swap" rel="stylesheet"/>
 
-  <!-- Shared Webflow CSS for navigation and grid basics -->
+  <!-- Webflow base stylesheet -->
   <link href="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/css/zoooooom.webflow.shared.0cfbcd198.min.css" rel="stylesheet" type="text/css"/>
 
   <style>
@@ -53,14 +53,33 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Typography Defaults */
-    h1, h2, h3, h4, .font-display {
+    /* Webflow badge suppression */
+    .w-webflow-badge, a[href*="webflow.com?utm_campaign="] {
+      display: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+
+    /* Homepage Matching Navbar */
+    .navbar {
+      z-index: 999 !important;
+    }
+    .navbar .nav-link,
+    .navbar .nav-link.w--current,
+    .footer .nav-link,
+    .footer .nav-link.w--current {
+      color: #211509 !important;
+      white-space: nowrap !important;
+    }
+
+    /* Typography */
+    h1, h2, h3, h4 {
       font-family: var(--font-display);
       text-transform: uppercase;
       margin: 0;
       letter-spacing: 0.5px;
     }
-
     p {
       margin: 0 0 1rem;
       line-height: 1.65;
@@ -75,147 +94,10 @@
       padding-left: 2rem;
       padding-right: 2rem;
     }
-
     @media (max-width: 767px) {
       .story-container {
         padding-left: 1.25rem;
         padding-right: 1.25rem;
-      }
-    }
-
-    /* Top Header Pill Navbar Matching Design Mockup */
-    .top-header-wrapper {
-      background-color: var(--color-sky-blue);
-      padding-top: 1.25rem;
-      padding-bottom: 0.5rem;
-    }
-    .navbar-pill-box {
-      background-color: var(--color-lime);
-      border: 3px solid var(--color-dark);
-      border-radius: 999px;
-      box-shadow: 0 5px 0 var(--color-dark);
-      padding: 0.5rem 1rem 0.5rem 1.6rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      max-width: 1100px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 999;
-    }
-    .brand-logo {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-    }
-    .brand-logo img {
-      height: 38px;
-      width: auto;
-      display: block;
-    }
-    .nav-links-wrap {
-      display: flex;
-      align-items: center;
-      gap: 2.2rem;
-    }
-    .story-nav-link {
-      font-family: var(--font-display);
-      font-size: 21px;
-      letter-spacing: 0.5px;
-      text-decoration: none;
-      color: var(--color-dark);
-      text-transform: uppercase;
-      transition: color 0.2s ease, transform 0.2s ease;
-      position: relative;
-    }
-    .story-nav-link:hover {
-      color: var(--color-purple);
-      transform: translateY(-1px);
-    }
-    .story-nav-link.active {
-      color: var(--color-purple);
-    }
-    .story-nav-link.active::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 100%;
-      height: 3px;
-      background-color: var(--color-purple);
-      border-radius: 2px;
-    }
-    .cta-stock-btn {
-      font-family: var(--font-display);
-      font-size: 20px;
-      text-transform: uppercase;
-      background-color: var(--color-orange);
-      color: #ffffff;
-      padding: 10px 26px;
-      border-radius: 999px;
-      border: 2px solid var(--color-dark);
-      box-shadow: 0 4px 0 var(--color-dark);
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.2s;
-    }
-    .cta-stock-btn:hover {
-      background-color: #ff742d;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 0 var(--color-dark);
-    }
-    .cta-stock-btn:active {
-      transform: translateY(2px);
-      box-shadow: 0 2px 0 var(--color-dark);
-    }
-
-    /* Mobile Menu Toggle */
-    .mobile-menu-btn {
-      display: none;
-      background: none;
-      border: 2px solid var(--color-dark);
-      border-radius: 8px;
-      padding: 6px 9px;
-      cursor: pointer;
-    }
-    .mobile-menu-btn span {
-      display: block;
-      width: 22px;
-      height: 3px;
-      background-color: var(--color-dark);
-      margin: 4px 0;
-      border-radius: 2px;
-    }
-    .mobile-nav-drawer {
-      display: none;
-      position: absolute;
-      top: calc(100% + 12px);
-      left: 0;
-      width: 100%;
-      background-color: var(--color-cream);
-      border: 3px solid var(--color-dark);
-      border-radius: 24px;
-      padding: 1.5rem 2rem;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-      flex-direction: column;
-      gap: 1.25rem;
-      z-index: 998;
-    }
-    .mobile-nav-drawer.open {
-      display: flex;
-    }
-
-    @media (max-width: 991px) {
-      .nav-links-wrap {
-        display: none;
-      }
-      .mobile-menu-btn {
-        display: block;
-      }
-      .navbar-pill-box {
-        padding: 0.6rem 1.25rem;
       }
     }
 
@@ -226,7 +108,7 @@
       background-color: var(--color-sky-blue);
       position: relative;
       overflow: hidden;
-      padding-top: 2.5rem;
+      padding-top: 140px;
       padding-bottom: 5.5rem;
     }
     .hero-layout {
@@ -261,7 +143,7 @@
       font-weight: 500;
     }
 
-    /* Hero Bottle & Fruit Animation Stage */
+    /* Hero Bottle & Fruit Composition (Static, No Motion Effects) */
     .hero-visual-stage {
       position: relative;
       height: 520px;
@@ -287,7 +169,6 @@
       width: 60px;
       transform: rotate(-35deg);
       z-index: 2;
-      animation: leafSway 6s ease-in-out infinite;
     }
     .hero-leaf-2 {
       position: absolute;
@@ -296,10 +177,9 @@
       width: 70px;
       transform: rotate(50deg);
       z-index: 2;
-      animation: leafSway 7s ease-in-out infinite reverse;
     }
 
-    /* Floating Bottles */
+    /* Hero Bottles */
     .hero-bottle {
       position: absolute;
       bottom: 20px;
@@ -307,114 +187,52 @@
       width: auto;
       object-fit: contain;
       filter: drop-shadow(0 15px 25px rgba(0,0,0,0.22));
-      transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.3, 1.2), filter 0.4s ease;
-      cursor: pointer;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+    .hero-bottle:hover {
+      transform: scale(1.04) !important;
+      filter: drop-shadow(0 20px 30px rgba(0,0,0,0.3));
     }
     .hero-bottle-sorrel {
       left: 32%;
       transform: rotate(-10deg);
       z-index: 5;
-      animation: floatBottleSorrel 5s ease-in-out infinite;
     }
     .hero-bottle-pineapple {
       left: 56%;
       transform: rotate(8deg);
       z-index: 4;
-      animation: floatBottlePineapple 5.5s ease-in-out infinite;
-    }
-    .hero-bottle:hover {
-      filter: drop-shadow(0 22px 35px rgba(0,0,0,0.3));
     }
 
-    /* Floating Fruits */
+    /* Hero Fruits (Static Positioned, No Motion Effects) */
     .fruit-item {
       position: absolute;
       filter: drop-shadow(0 10px 18px rgba(0,0,0,0.18));
-      transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), filter 0.35s ease;
-      cursor: pointer;
+      pointer-events: none;
     }
-    .fruit-item:hover {
-      transform: scale(1.08) rotate(3deg) !important;
-      filter: drop-shadow(0 16px 24px rgba(0,0,0,0.25));
-    }
-
     .hero-fruit-soursop-whole {
       top: 24%;
       left: 4%;
       width: 145px;
       z-index: 6;
-      animation: fruitBob1 4.5s ease-in-out infinite;
     }
     .hero-fruit-soursop-slice {
       bottom: 2%;
       left: -2%;
       width: 155px;
       z-index: 6;
-      animation: fruitBob2 5s ease-in-out infinite;
     }
     .hero-fruit-pineapple-slice {
       top: 36%;
       right: -2%;
       width: 150px;
       z-index: 6;
-      animation: fruitBob3 5.2s ease-in-out infinite;
     }
     .hero-fruit-ginger {
       bottom: 2%;
       left: 42%;
       width: 130px;
       z-index: 7;
-      animation: fruitBob1 4.8s ease-in-out infinite reverse;
-    }
-
-    /* Keyframe Animations */
-    @keyframes floatBottleSorrel {
-      0%, 100% {
-        transform: translateY(0px) rotate(-10deg);
-      }
-      50% {
-        transform: translateY(-14px) rotate(-8deg);
-      }
-    }
-    @keyframes floatBottlePineapple {
-      0%, 100% {
-        transform: translateY(0px) rotate(8deg);
-      }
-      50% {
-        transform: translateY(-16px) rotate(10deg);
-      }
-    }
-    @keyframes fruitBob1 {
-      0%, 100% {
-        transform: translateY(0px) rotate(0deg);
-      }
-      50% {
-        transform: translateY(-12px) rotate(4deg);
-      }
-    }
-    @keyframes fruitBob2 {
-      0%, 100% {
-        transform: translateY(0px) rotate(0deg);
-      }
-      50% {
-        transform: translateY(-10px) rotate(-5deg);
-      }
-    }
-    @keyframes fruitBob3 {
-      0%, 100% {
-        transform: translateY(0px) rotate(0deg);
-      }
-      50% {
-        transform: translateY(-14px) rotate(6deg);
-      }
-    }
-    @keyframes leafSway {
-      0%, 100% {
-        transform: rotate(-35deg) scale(1);
-      }
-      50% {
-        transform: rotate(-25deg) scale(1.05);
-      }
     }
 
     /* ==========================================================================
@@ -489,41 +307,33 @@
     .roots-fruit-cluster img {
       position: absolute;
       filter: drop-shadow(0 12px 20px rgba(0,0,0,0.18));
-      transition: transform 0.3s ease;
-    }
-    .roots-fruit-cluster img:hover {
-      transform: scale(1.06);
+      pointer-events: none;
     }
     .roots-soursop-whole {
       top: 5%;
       right: 25%;
       width: 175px;
-      animation: fruitBob1 5.2s ease-in-out infinite;
     }
     .roots-soursop-slice {
       top: 25%;
       right: 5%;
       width: 185px;
-      animation: fruitBob2 4.7s ease-in-out infinite;
     }
     .roots-pineapple {
       bottom: 10%;
       left: 15%;
       width: 160px;
-      animation: fruitBob3 5s ease-in-out infinite;
     }
     .roots-ginger {
       bottom: 5%;
       right: 15%;
       width: 160px;
-      animation: fruitBob1 5.5s ease-in-out infinite reverse;
     }
     .roots-flower {
       bottom: 12%;
       left: 36%;
       width: 125px;
       z-index: 5;
-      animation: fruitBob2 4.2s ease-in-out infinite;
     }
 
     /* ==========================================================================
@@ -659,7 +469,6 @@
       width: 140px;
       height: auto;
       filter: drop-shadow(0 10px 18px rgba(0,0,0,0.25));
-      animation: fruitBob2 5s ease-in-out infinite;
     }
     .accent-splash-1995 {
       position: absolute;
@@ -702,27 +511,25 @@
       width: auto;
       object-fit: contain;
       filter: drop-shadow(0 15px 22px rgba(0,0,0,0.22));
-      transition: transform 0.35s cubic-bezier(0.2, 0.9, 0.3, 1.2), filter 0.35s;
-      cursor: pointer;
+      transition: transform 0.3s ease, filter 0.3s ease;
     }
     .trio-bottle:hover {
-      transform: translateY(-8px) scale(1.05) !important;
+      transform: translateY(-6px) scale(1.04) !important;
       filter: drop-shadow(0 22px 30px rgba(0,0,0,0.3));
     }
     .trio-bottle-sorrel {
       left: 15%;
       z-index: 4;
-      animation: floatBottleSorrel 5.2s ease-in-out infinite;
+      transform: rotate(-5deg);
     }
     .trio-bottle-pineapple {
       left: 36%;
       z-index: 5;
-      animation: floatBottlePineapple 5.7s ease-in-out infinite;
     }
     .trio-bottle-ginger {
       left: 57%;
       z-index: 4;
-      animation: floatBottleSorrel 5.4s ease-in-out infinite reverse;
+      transform: rotate(5deg);
     }
     .trio-fruit-pine {
       position: absolute;
@@ -730,7 +537,7 @@
       left: 2%;
       width: 120px;
       z-index: 6;
-      animation: fruitBob1 4.8s ease-in-out infinite;
+      filter: drop-shadow(0 8px 16px rgba(0,0,0,0.18));
     }
     .trio-fruit-ginger {
       position: absolute;
@@ -738,7 +545,7 @@
       right: 5%;
       width: 130px;
       z-index: 6;
-      animation: fruitBob2 5.1s ease-in-out infinite;
+      filter: drop-shadow(0 8px 16px rgba(0,0,0,0.18));
     }
 
     /* ==========================================================================
@@ -809,7 +616,7 @@
       left: 12%;
       width: 190px;
       z-index: 4;
-      animation: fruitBob1 5.5s ease-in-out infinite;
+      filter: drop-shadow(0 12px 20px rgba(0,0,0,0.18));
     }
     .next-soursop-slice {
       position: absolute;
@@ -817,7 +624,7 @@
       left: 24%;
       width: 170px;
       z-index: 5;
-      animation: fruitBob2 4.9s ease-in-out infinite;
+      filter: drop-shadow(0 12px 20px rgba(0,0,0,0.18));
     }
     .next-guava-whole {
       position: absolute;
@@ -825,7 +632,7 @@
       right: 12%;
       width: 165px;
       z-index: 4;
-      animation: fruitBob3 5.3s ease-in-out infinite;
+      filter: drop-shadow(0 12px 20px rgba(0,0,0,0.18));
     }
     .next-guava-slice {
       position: absolute;
@@ -833,11 +640,11 @@
       right: 25%;
       width: 155px;
       z-index: 5;
-      animation: fruitBob1 4.6s ease-in-out infinite reverse;
+      filter: drop-shadow(0 12px 20px rgba(0,0,0,0.18));
     }
 
     /* ==========================================================================
-       SECTION 7: STOCKIST BANNER & FOOTER
+       SECTION 7: STOCKIST BANNER
        ========================================================================== */
     .section-stockist-cta {
       background-color: var(--color-cream);
@@ -862,7 +669,6 @@
       width: 110px;
       z-index: 5;
       filter: drop-shadow(0 8px 16px rgba(0,0,0,0.25));
-      animation: fruitBob1 5s ease-in-out infinite;
       pointer-events: none;
     }
     .stockist-card-peeking-flower {
@@ -872,7 +678,6 @@
       width: 80px;
       z-index: 6;
       filter: drop-shadow(0 6px 14px rgba(0,0,0,0.25));
-      animation: fruitBob2 4.6s ease-in-out infinite;
       pointer-events: none;
     }
     .stockist-text-wrapper {
@@ -929,41 +734,6 @@
       box-shadow: 0 2px 0 var(--color-dark);
     }
 
-    /* Footer */
-    .story-footer {
-      background-color: var(--color-cream);
-      border-top: 1px solid rgba(33, 21, 9, 0.12);
-      padding: 2.5rem 0 2rem;
-    }
-    .footer-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-    }
-    .footer-brand-links {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-    }
-    .footer-divider {
-      color: rgba(33, 21, 9, 0.3);
-      font-size: 1.5rem;
-    }
-    .footer-links-group {
-      display: flex;
-      align-items: center;
-      gap: 1.75rem;
-    }
-    .footer-disclaimer {
-      font-size: 0.82rem;
-      font-style: italic;
-      color: #666666;
-      max-width: 440px;
-      text-align: right;
-    }
-
     /* ==========================================================================
        RESPONSIVE BREAKPOINTS
        ========================================================================== */
@@ -975,7 +745,15 @@
       .stockist-card-peeking-fruit, .stockist-card-peeking-flower { display: none; }
     }
 
+    .trio-fruit-pine, .trio-fruit-ginger,
+    .next-chapter-fruits-stage img,
+    .ginger-accent-1995,
+    .hero-leaf-1, .hero-leaf-2, .roots-leaf, .next-leaf-bg {
+      pointer-events: none;
+    }
+
     @media (max-width: 860px) {
+      .section-hero { padding-top: 115px; }
       .hero-layout, .roots-layout, .timeline-layout {
         grid-template-columns: 1fr;
         gap: 2.5rem;
@@ -998,20 +776,10 @@
         text-align: center;
         padding: 2.5rem 1.75rem;
       }
-      .footer-row {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-      .footer-brand-links {
-        flex-direction: column;
-        gap: 1rem;
-      }
-      .footer-divider { display: none; }
-      .footer-disclaimer { text-align: center; }
     }
 
     @media (max-width: 520px) {
+      .section-hero { padding-top: 100px; }
       .hero-title-badge { font-size: 3.6rem; }
       .hero-subheading { font-size: 1.85rem; }
       .section-heading-lg, .timeline-heading { font-size: 2.2rem; }
@@ -1027,308 +795,363 @@
   </style>
 </head>
 <body>
-
-  <!-- ========================================================================
-       TOP NAVBAR (YELLOW PILL MATCHING DESIGN MOCKUP)
-       ======================================================================== -->
-  <header class="top-header-wrapper" role="banner">
-    <div class="story-container">
-      <div class="navbar-pill-box">
-        <a href="/" class="brand-logo" aria-label="Waddat Home">
-          <img src="/waddat-nav-logo.png" alt="Waddat Beverage"/>
-        </a>
-
-        <!-- Desktop Navigation -->
-        <nav class="nav-links-wrap" role="navigation">
-          <a href="/#products" class="story-nav-link">DRINKS</a>
-          <a href="/our-story/" class="story-nav-link active">OUR STORY</a>
-          <a href="/#about" class="story-nav-link">ABOUT</a>
-          <a href="/#faq" class="story-nav-link">FAQ</a>
-          <a href="/#wholesale" class="story-nav-link">CONTACT</a>
-          <a href="/#wholesale" class="cta-stock-btn">STOCK NOW</a>
-        </nav>
-
-        <!-- Mobile Burger Button -->
-        <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Toggle navigation menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-
-        <!-- Mobile Drawer -->
-        <div class="mobile-nav-drawer" id="mobile-drawer">
-          <a href="/#products" class="story-nav-link">DRINKS</a>
-          <a href="/our-story/" class="story-nav-link active">OUR STORY</a>
-          <a href="/#about" class="story-nav-link">ABOUT</a>
-          <a href="/#faq" class="story-nav-link">FAQ</a>
-          <a href="/#wholesale" class="story-nav-link">CONTACT</a>
-          <a href="/#wholesale" class="cta-stock-btn" style="text-align: center;">STOCK NOW</a>
+  <div class="page-wrapper">
+    <!-- ========================================================================
+         HOME MATCHING NAVBAR
+         ======================================================================== -->
+    <div
+      data-w-id="7ff63783-38d7-a209-3135-0442324d2956"
+      data-animation="default"
+      data-collapse="medium"
+      data-duration="400"
+      data-easing="ease"
+      data-easing2="ease"
+      role="banner"
+      class="navbar w-nav"
+    >
+      <div class="padding-global">
+        <div class="nav-container">
+          <div class="nav-wrapper">
+            <a
+              href="/"
+              class="brand w-nav-brand"
+              style="text-decoration: none;"
+            >
+              <img src="/waddat-nav-logo.png" alt="Waddat" style="height: 40px; width: auto; display: block;" />
+            </a>
+            <nav role="navigation" class="nav-menu w-nav-menu">
+              <div class="menu-wrapper">
+                <a href="/#products" class="nav-link w-nav-link">DRINKS</a>
+                <a href="/our-story/" class="nav-link w-nav-link">OUR STORY</a>
+                <a href="/#about" class="nav-link w-nav-link">ABOUT</a>
+                <a href="/#faq" class="nav-link w-nav-link">FAQ</a>
+                <a href="/#wholesale" class="nav-link w-nav-link">CONTACT</a>
+                <a
+                  data-w-id="4fab8454-2460-543d-fa9a-058251a37004"
+                  href="/#wholesale"
+                  class="button-wrapper hide-desktop w-inline-block"
+                  ><div class="button is-cta">STOCK NOW</div>
+                  <div class="button-shadow"></div
+                ></a>
+              </div>
+            </nav>
+            <a
+              data-w-id="d5a2b38d-59eb-fe0c-870a-48efbe1898b1"
+              href="/#wholesale"
+              class="button-wrapper hide-tablet w-inline-block"
+              ><div class="button is-cta">STOCK NOW</div>
+              <div class="button-shadow"></div
+            ></a>
+            <div class="menu-button w-nav-button">
+              <div
+                data-is-ix2-target="1"
+                class="menu-bars"
+                data-w-id="486bf92d-7ccf-2b86-c2f0-c3adf68f3199"
+                data-animation-type="lottie"
+                data-src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/68112ef7f148e769796d0a14_Animation%20-%201745956566908.lottie"
+                data-loop="0"
+                data-direction="1"
+                data-autoplay="0"
+                data-renderer="svg"
+                data-default-duration="0"
+                data-duration="3"
+                data-loading="eager"
+                data-ix2-initial-state="0"
+              ></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </header>
 
-  <main>
-    <!-- ========================================================================
-         HERO SECTION: FROM GRANDAD'S FARM TO YOUR FIRST SIP
-         ======================================================================== -->
-    <section class="section-hero" id="story-hero">
-      <div class="story-container">
-        <div class="hero-layout">
-          <!-- Text Left -->
-          <div class="hero-content">
-            <h1 class="hero-title-badge">OUR STORY</h1>
-            <h2 class="hero-subheading">FROM GRANDAD’S FARM.<br>TO YOUR FIRST SIP.</h2>
-            <p class="hero-text">
-              A little Jamaican sunshine. A family memory.<br/>
-              A flavour worth sharing.
-            </p>
-          </div>
+    <main class="main-wrapper">
+      <!-- ========================================================================
+           HERO SECTION: FROM GRANDAD'S FARM TO YOUR FIRST SIP
+           ======================================================================== -->
+      <section class="section-hero" id="story-hero">
+        <div class="story-container">
+          <div class="hero-layout">
+            <!-- Text Left -->
+            <div class="hero-content">
+              <h1 class="hero-title-badge">OUR STORY</h1>
+              <h2 class="hero-subheading">FROM GRANDAD’S FARM.<br>TO YOUR FIRST SIP.</h2>
+              <p class="hero-text">
+                A little Jamaican sunshine. A family memory.<br/>
+                A flavour worth sharing.
+              </p>
+            </div>
 
-          <!-- Animated Bottle & Fruit Stage Right -->
-          <div class="hero-visual-stage">
-            <img src="/story-splash-purple.svg" alt="" class="hero-splash-bg"/>
-            <img src="/story-leaf-lime.svg" alt="" class="hero-leaf-1"/>
-            <img src="/story-leaf-lime.svg" alt="" class="hero-leaf-2"/>
+            <!-- Bottle & Fruit Stage Right (No Continuous Fruit Motion) -->
+            <div class="hero-visual-stage">
+              <img src="/story-splash-purple.svg" alt="" class="hero-splash-bg"/>
+              <img src="/story-leaf-lime.svg" alt="" class="hero-leaf-1"/>
+              <img src="/story-leaf-lime.svg" alt="" class="hero-leaf-2"/>
 
-            <!-- Floating Hero Waddat Bottles -->
-            <img src="/sorrel-3f.png" alt="Waddat Sorrel Natural Drink" class="hero-bottle hero-bottle-sorrel" title="Waddat Sorrel"/>
-            <img src="/pineapple-sea-moss-3f.png" alt="Waddat Pineapple Sea Moss" class="hero-bottle hero-bottle-pineapple" title="Waddat Pineapple Sea Moss"/>
+              <!-- Waddat Bottles -->
+              <img src="/sorrel-3f.png" alt="Waddat Sorrel Natural Drink" class="hero-bottle hero-bottle-sorrel" title="Waddat Sorrel"/>
+              <img src="/pineapple-sea-moss-3f.png" alt="Waddat Pineapple Sea Moss" class="hero-bottle hero-bottle-pineapple" title="Waddat Pineapple Sea Moss"/>
 
-            <!-- Floating Hero Tropical Fruits -->
-            <img src="/fruits/soursop_hero_fruit.png" alt="Fresh Soursop Fruit" class="fruit-item hero-fruit-soursop-whole"/>
-            <img src="/fruits/soursop_slice.png" alt="Cut Soursop" class="fruit-item hero-fruit-soursop-slice"/>
-            <img src="/fruits/pineapple_slice.png" alt="Juicy Pineapple Slice" class="fruit-item hero-fruit-pineapple-slice"/>
-            <img src="/fruits/ginger_root.png" alt="Fresh Ginger Root" class="fruit-item hero-fruit-ginger"/>
+              <!-- Tropical Fruits (Static, Natural Positioned) -->
+              <img src="/fruits/soursop_hero_fruit.png" alt="Fresh Soursop Fruit" class="fruit-item hero-fruit-soursop-whole"/>
+              <img src="/fruits/soursop_slice.png" alt="Cut Soursop" class="fruit-item hero-fruit-soursop-slice"/>
+              <img src="/fruits/pineapple_slice.png" alt="Juicy Pineapple Slice" class="fruit-item hero-fruit-pineapple-slice"/>
+              <img src="/fruits/ginger_root.png" alt="Fresh Ginger Root" class="fruit-item hero-fruit-ginger"/>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ========================================================================
-         SECTION 2: OUR ROOTS - EVERY BOTTLE HAS A BEGINNING
-         ======================================================================== -->
-    <section class="section-roots" id="our-roots">
-      <div class="story-container">
-        <div class="roots-layout">
-          <!-- Text Left -->
-          <div>
-            <div class="section-kicker">OUR ROOTS</div>
-            <h2 class="section-heading-lg">
-              EVERY BOTTLE HAS A<br/>
-              <span class="highlight-orange">BEGINNING.</span>
-            </h2>
-            <p class="roots-body">
-              Before there was a bottle, a label or a name, there was a little girl on her grandad’s farm in Jamaica. Surrounded by fresh fruit and familiar flavours, she discovered that the best things were made with care and shared with others.
-            </p>
+      <!-- ========================================================================
+           SECTION 2: OUR ROOTS - EVERY BOTTLE HAS A BEGINNING
+           ======================================================================== -->
+      <section class="section-roots" id="our-roots">
+        <div class="story-container">
+          <div class="roots-layout">
+            <!-- Text Left -->
+            <div>
+              <div class="section-kicker">OUR ROOTS</div>
+              <h2 class="section-heading-lg">
+                EVERY BOTTLE HAS A<br/>
+                <span class="highlight-orange">BEGINNING.</span>
+              </h2>
+              <p class="roots-body">
+                Before there was a bottle, a label or a name, there was a little girl on her grandad’s farm in Jamaica. Surrounded by fresh fruit and familiar flavours, she discovered that the best things were made with care and shared with others.
+              </p>
+            </div>
+
+            <!-- Visual Fruit Composition Right -->
+            <div class="roots-visual-composition">
+              <img src="/story-splash-purple.svg" alt="" class="roots-splash-bg"/>
+              <img src="/story-leaf-lime.svg" alt="" class="roots-leaf"/>
+              <div class="roots-fruit-cluster">
+                <img src="/fruits/soursop_hero_fruit.png" alt="Soursop" class="roots-soursop-whole"/>
+                <img src="/fruits/soursop_slice.png" alt="Soursop Cut" class="roots-soursop-slice"/>
+                <img src="/fruits/pineapple_slice.png" alt="Pineapple Wedge" class="roots-pineapple"/>
+                <img src="/fruits/hibiscus_flower.png" alt="Red Hibiscus" class="roots-flower"/>
+                <img src="/fruits/ginger_root.png" alt="Ginger Root" class="roots-ginger"/>
+              </div>
+            </div>
           </div>
+        </div>
+      </section>
 
-          <!-- Visual Fruit Composition Right -->
-          <div class="roots-visual-composition">
-            <img src="/story-splash-purple.svg" alt="" class="roots-splash-bg"/>
-            <img src="/story-leaf-lime.svg" alt="" class="roots-leaf"/>
-            <div class="roots-fruit-cluster">
-              <img src="/fruits/soursop_hero_fruit.png" alt="Soursop" class="roots-soursop-whole"/>
-              <img src="/fruits/soursop_slice.png" alt="Soursop Cut" class="roots-soursop-slice"/>
-              <img src="/fruits/pineapple_slice.png" alt="Pineapple Wedge" class="roots-pineapple"/>
-              <img src="/fruits/hibiscus_flower.png" alt="Red Hibiscus" class="roots-flower"/>
-              <img src="/fruits/ginger_root.png" alt="Ginger Root" class="roots-ginger"/>
+      <!-- ========================================================================
+           SECTION 3: 1985 - A FARM. A GRANDAD. A FIRST BATCH.
+           ======================================================================== -->
+      <section class="section-timeline-1985" id="story-1985">
+        <div class="story-container">
+          <div class="timeline-layout">
+            <!-- Photo Left -->
+            <div class="framed-photo-wrapper">
+              <img src="/story-grandad-farm.png" alt="Grandad and granddaughter preparing Jamaican drink recipe on the farm" class="framed-photo"/>
+              <div class="photo-caption">Illustrative scene</div>
+            </div>
+
+            <!-- Content Right -->
+            <div class="timeline-content-col">
+              <div class="timeline-stem-wrapper">
+                <div class="timeline-badge timeline-badge-purple">1985</div>
+                <span class="timeline-stem-line purple"></span>
+              </div>
+              <h2 class="timeline-heading">
+                A FARM. A GRANDAD.<br/>
+                <span class="highlight-orange">A FIRST BATCH.</span>
+              </h2>
+              <p class="timeline-body">
+                On her grandad’s farm, our founder helped prepare the first homemade batch of what would one day inspire Waddat. Sorrel, ginger and tropical fruit brought everyone to the table. For her, those moments became the taste of home.
+              </p>
+              <img src="/story-leaf-lime.svg" alt="" class="decorative-leaf-right"/>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================================
+           SECTION 4: 1995 - THE RECIPES TRAVELLED. THE ROOTS STAYED.
+           ======================================================================== -->
+      <section class="section-timeline-1995" id="story-1995">
+        <div class="story-container">
+          <div class="timeline-layout">
+            <!-- Content Left -->
+            <div class="timeline-content-col">
+              <div class="timeline-stem-wrapper">
+                <div class="timeline-badge timeline-badge-lime">1995</div>
+                <span class="timeline-stem-line lime"></span>
+              </div>
+              <h2 class="timeline-heading">
+                THE RECIPES TRAVELLED.<br/>
+                <span class="highlight-lime">THE ROOTS STAYED.</span>
+              </h2>
+              <p class="timeline-body">
+                A decade later, a new chapter in the UK brought new surroundings, but the flavours of Jamaica came too. Family gatherings became a place to share those much-loved recipes, keeping a connection to home alive, one glass at a time.
+              </p>
+              <div class="ginger-container-1995">
+                <img src="/fruits/ginger_root.png" alt="Ginger Root" class="ginger-accent-1995"/>
+              </div>
+            </div>
+
+            <!-- Photo Right -->
+            <div class="framed-photo-wrapper">
+              <img src="/story-kitchen-recipes.png" alt="Family sharing homemade drinks in the kitchen" class="framed-photo"/>
+              <div class="photo-caption">Illustrative scene</div>
+              <img src="/story-splash-purple.svg" alt="" class="accent-splash-1995"/>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================================
+           SECTION 5: 2025 - A FAMILY INSPIRATION. A BRAND OF ITS OWN.
+           ======================================================================== -->
+      <section class="section-timeline-2025" id="story-2025">
+        <div class="story-container">
+          <div class="timeline-layout">
+            <!-- Waddat Trio Bottles Left -->
+            <div class="trio-bottles-stage">
+              <img src="/story-splash-purple.svg" alt="" class="trio-splash-bg"/>
+              <img src="/sorrel-3f.png" alt="Sorrel Bottle" class="trio-bottle trio-bottle-sorrel" title="Sorrel"/>
+              <img src="/pineapple-sea-moss-3f.png" alt="Pineapple Sea Moss Bottle" class="trio-bottle trio-bottle-pineapple" title="Pineapple Sea Moss"/>
+              <img src="/ginger-3f.png" alt="Ginger Bottle" class="trio-bottle trio-bottle-ginger" title="Ginger"/>
+              <img src="/fruits/pineapple_slice.png" alt="Pineapple Wedge" class="trio-fruit-pine"/>
+              <img src="/fruits/ginger_root.png" alt="Ginger" class="trio-fruit-ginger"/>
+            </div>
+
+            <!-- Content Right -->
+            <div class="timeline-content-col">
+              <div class="timeline-stem-wrapper">
+                <div class="timeline-badge timeline-badge-purple">2025</div>
+                <span class="timeline-stem-line purple"></span>
+              </div>
+              <h2 class="timeline-heading">
+                A FAMILY INSPIRATION.<br/>
+                <span class="highlight-orange">A BRAND OF ITS OWN.</span>
+              </h2>
+              <p class="timeline-body">
+                In 2025, Waddat officially launched, turning years of inspiration into a range of Jamaican-inspired drinks. From bold sorrel and warming ginger to tropical sea moss blends, the aim was simple: bring island flavour to more people, in a bottle ready to share.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================================
+           SECTION 6: THE NEXT CHAPTER - OUR ROOTS RUN DEEP
+           ======================================================================== -->
+      <section class="section-next-chapter" id="story-next-chapter">
+        <div class="story-container">
+          <div class="roots-layout">
+            <!-- Text Left -->
+            <div>
+              <div class="section-kicker">THE NEXT CHAPTER</div>
+              <h2 class="section-heading-lg">
+                OUR ROOTS RUN DEEP.<br/>
+                OUR STORY KEEPS GROWING.
+              </h2>
+              <p class="roots-body">
+                From the farm to your local shop, the spirit stays the same: bold flavour, warm memories and something good to share. Whether you grew up with these tastes or are discovering them for the first time, there’s a place for you in the Waddat story.
+              </p>
+              <a href="/#products" class="explore-drinks-btn">EXPLORE OUR DRINKS</a>
+            </div>
+
+            <!-- Tropical Fruit Cluster Right -->
+            <div class="next-chapter-fruits-stage">
+              <img src="/story-splash-purple.svg" alt="" class="next-splash-bg"/>
+              <img src="/story-leaf-lime.svg" alt="" class="next-leaf-bg"/>
+              <img src="/fruits/soursop_hero_fruit.png" alt="Whole Soursop" class="next-soursop-whole"/>
+              <img src="/fruits/soursop_slice.png" alt="Cut Soursop" class="next-soursop-slice"/>
+              <img src="/fruits/green_guava.png" alt="Whole Guava" class="next-guava-whole"/>
+              <img src="/fruits/guava_slice.png" alt="Pink Guava" class="next-guava-slice"/>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================================
+           SECTION 7: STOCKIST CALL-TO-ACTION CARD
+           ======================================================================== -->
+      <section class="section-stockist-cta" id="story-stockist">
+        <div class="story-container">
+          <div class="stockist-card">
+            <!-- Peeking Fruit Accents Matching Mockup -->
+            <img src="/fruits/pineapple_slice.png" alt="" class="stockist-card-peeking-fruit"/>
+            <img src="/fruits/hibiscus_flower.png" alt="" class="stockist-card-peeking-flower"/>
+
+            <div class="stockist-text-wrapper">
+              <h2 class="stockist-heading">WANT WADDAT <u>ON</u> YOUR SHELVES?</h2>
+              <div class="stockist-heading-sub">BE PART OF OUR NEXT CHAPTER.</div>
+            </div>
+            <div class="stockist-btn-wrapper">
+              <a href="/#wholesale" class="become-stockist-btn">BECOME A STOCKIST</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================================
+           HOMEPAGE MATCHING FOOTER
+           ======================================================================== -->
+      <div class="footer">
+        <div class="padding-global padding-section-small">
+          <div class="container-large">
+            <div class="footer-wrapper">
+              <a
+                title="Homepage"
+                href="/"
+                class="footer-logo w-inline-block"
+                style="font-family: 'Londrina Solid', sans-serif; font-size: 32px; font-weight: 700; color: #111; text-decoration: none;"
+                >WADDAT</a>
+              <div class="footer-nav-links">
+                <div class="footer-column">
+                  <a href="/#products" class="nav-link lowercase">DRINKS</a>
+                  <a href="/our-story/" class="nav-link lowercase">OUR STORY</a>
+                  <a href="/#about" class="nav-link lowercase">ABOUT</a>
+                  <a href="/#faq" class="nav-link lowercase">FAQ</a>
+                  <a href="/#wholesale" class="nav-link lowercase">CONTACT</a>
+                </div>
+              </div>
+              <div class="social-media">
+                <div class="join-us">JOIN US ON SOCIAL MEDIA!</div>
+                <div class="icons-wrapper" style="display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 0.5rem;">
+                  <a
+                    href="https://www.instagram.com/waddatbeverage/"
+                    target="_blank"
+                    class="social-media-link w-inline-block"
+                    style="display: flex; align-items: center; justify-content: center;"
+                    ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a
+                  ><a
+                    href="https://www.tiktok.com/@waddatbevarage"
+                    target="_blank"
+                    class="social-media-link w-inline-block"
+                    style="display: flex; align-items: center; justify-content: center;"
+                    ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z"/></svg></a
+                  >
+                </div>
+                <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                  <a href="mailto:hello@waddat.com" class="text-color-black text-size-small" style="text-decoration: none;">hello@waddat.com</a>
+                  <a href="tel:07941907091" class="text-color-black text-size-small" style="text-decoration: none;">07941907091</a>
+                </div>
+              </div>
+            </div>
+            <div class="spacer-medium"></div>
+            <div class="footer-wrapper align-flex">
+              <a
+                id="w-node-b32f2486-3bb1-1bab-5d05-d1138574e4a2-0f3e225c"
+                href="#"
+                class="text-size-small text-color-black"
+                >© 2026 Waddat Beverage</a
+              >Built by <a href="https://conerstonedg.com" target="_blank" rel="noopener noreferrer" class="text-color-black">Cornerstone Digital</a>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </main>
+  </div>
 
-    <!-- ========================================================================
-         SECTION 3: 1985 - A FARM. A GRANDAD. A FIRST BATCH.
-         ======================================================================== -->
-    <section class="section-timeline-1985" id="story-1985">
-      <div class="story-container">
-        <div class="timeline-layout">
-          <!-- Photo Left -->
-          <div class="framed-photo-wrapper">
-            <img src="/story-grandad-farm.png" alt="Grandad and granddaughter preparing Jamaican drink recipe on the farm" class="framed-photo"/>
-            <div class="photo-caption">Illustrative scene</div>
-          </div>
-
-          <!-- Content Right -->
-          <div class="timeline-content-col">
-            <div class="timeline-stem-wrapper">
-              <div class="timeline-badge timeline-badge-purple">1985</div>
-              <span class="timeline-stem-line purple"></span>
-            </div>
-            <h2 class="timeline-heading">
-              A FARM. A GRANDAD.<br/>
-              <span class="highlight-orange">A FIRST BATCH.</span>
-            </h2>
-            <p class="timeline-body">
-              On her grandad’s farm, our founder helped prepare the first homemade batch of what would one day inspire Waddat. Sorrel, ginger and tropical fruit brought everyone to the table. For her, those moments became the taste of home.
-            </p>
-            <img src="/story-leaf-lime.svg" alt="" class="decorative-leaf-right"/>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================================================
-         SECTION 4: 1995 - THE RECIPES TRAVELLED. THE ROOTS STAYED.
-         ======================================================================== -->
-    <section class="section-timeline-1995" id="story-1995">
-      <div class="story-container">
-        <div class="timeline-layout">
-          <!-- Content Left -->
-          <div class="timeline-content-col">
-            <div class="timeline-stem-wrapper">
-              <div class="timeline-badge timeline-badge-lime">1995</div>
-              <span class="timeline-stem-line lime"></span>
-            </div>
-            <h2 class="timeline-heading">
-              THE RECIPES TRAVELLED.<br/>
-              <span class="highlight-lime">THE ROOTS STAYED.</span>
-            </h2>
-            <p class="timeline-body">
-              A decade later, a new chapter in the UK brought new surroundings, but the flavours of Jamaica came too. Family gatherings became a place to share those much-loved recipes, keeping a connection to home alive, one glass at a time.
-            </p>
-            <div class="ginger-container-1995">
-              <img src="/fruits/ginger_root.png" alt="Ginger Root" class="ginger-accent-1995"/>
-            </div>
-          </div>
-
-          <!-- Photo Right -->
-          <div class="framed-photo-wrapper">
-            <img src="/story-kitchen-recipes.png" alt="Family sharing homemade drinks in the kitchen" class="framed-photo"/>
-            <div class="photo-caption">Illustrative scene</div>
-            <img src="/story-splash-purple.svg" alt="" class="accent-splash-1995"/>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================================================
-         SECTION 5: 2025 - A FAMILY INSPIRATION. A BRAND OF ITS OWN.
-         ======================================================================== -->
-    <section class="section-timeline-2025" id="story-2025">
-      <div class="story-container">
-        <div class="timeline-layout">
-          <!-- Waddat Trio Bottles Left -->
-          <div class="trio-bottles-stage">
-            <img src="/story-splash-purple.svg" alt="" class="trio-splash-bg"/>
-            <img src="/sorrel-3f.png" alt="Sorrel Bottle" class="trio-bottle trio-bottle-sorrel" title="Sorrel"/>
-            <img src="/pineapple-sea-moss-3f.png" alt="Pineapple Sea Moss Bottle" class="trio-bottle trio-bottle-pineapple" title="Pineapple Sea Moss"/>
-            <img src="/ginger-3f.png" alt="Ginger Bottle" class="trio-bottle trio-bottle-ginger" title="Ginger"/>
-            <img src="/fruits/pineapple_slice.png" alt="Pineapple Wedge" class="trio-fruit-pine"/>
-            <img src="/fruits/ginger_root.png" alt="Ginger" class="trio-fruit-ginger"/>
-          </div>
-
-          <!-- Content Right -->
-          <div class="timeline-content-col">
-            <div class="timeline-stem-wrapper">
-              <div class="timeline-badge timeline-badge-purple">2025</div>
-              <span class="timeline-stem-line purple"></span>
-            </div>
-            <h2 class="timeline-heading">
-              A FAMILY INSPIRATION.<br/>
-              <span class="highlight-orange">A BRAND OF ITS OWN.</span>
-            </h2>
-            <p class="timeline-body">
-              In 2025, Waddat officially launched, turning years of inspiration into a range of Jamaican-inspired drinks. From bold sorrel and warming ginger to tropical sea moss blends, the aim was simple: bring island flavour to more people, in a bottle ready to share.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================================================
-         SECTION 6: THE NEXT CHAPTER - OUR ROOTS RUN DEEP
-         ======================================================================== -->
-    <section class="section-next-chapter" id="story-next-chapter">
-      <div class="story-container">
-        <div class="roots-layout">
-          <!-- Text Left -->
-          <div>
-            <div class="section-kicker">THE NEXT CHAPTER</div>
-            <h2 class="section-heading-lg">
-              OUR ROOTS RUN DEEP.<br/>
-              OUR STORY KEEPS GROWING.
-            </h2>
-            <p class="roots-body">
-              From the farm to your local shop, the spirit stays the same: bold flavour, warm memories and something good to share. Whether you grew up with these tastes or are discovering them for the first time, there’s a place for you in the Waddat story.
-            </p>
-            <a href="/#products" class="explore-drinks-btn">EXPLORE OUR DRINKS</a>
-          </div>
-
-          <!-- Tropical Fruit Cluster Right -->
-          <div class="next-chapter-fruits-stage">
-            <img src="/story-splash-purple.svg" alt="" class="next-splash-bg"/>
-            <img src="/story-leaf-lime.svg" alt="" class="next-leaf-bg"/>
-            <img src="/fruits/soursop_hero_fruit.png" alt="Whole Soursop" class="next-soursop-whole"/>
-            <img src="/fruits/soursop_slice.png" alt="Cut Soursop" class="next-soursop-slice"/>
-            <img src="/fruits/green_guava.png" alt="Whole Guava" class="next-guava-whole"/>
-            <img src="/fruits/guava_slice.png" alt="Pink Guava" class="next-guava-slice"/>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================================================
-         SECTION 7: STOCKIST CALL-TO-ACTION CARD
-         ======================================================================== -->
-    <section class="section-stockist-cta" id="story-stockist">
-      <div class="story-container">
-        <div class="stockist-card">
-          <!-- Peeking Fruit Accents Matching Mockup -->
-          <img src="/fruits/pineapple_slice.png" alt="" class="stockist-card-peeking-fruit"/>
-          <img src="/fruits/hibiscus_flower.png" alt="" class="stockist-card-peeking-flower"/>
-
-          <div class="stockist-text-wrapper">
-            <h2 class="stockist-heading">WANT WADDAT <u>ON</u> YOUR SHELVES?</h2>
-            <div class="stockist-heading-sub">BE PART OF OUR NEXT CHAPTER.</div>
-          </div>
-          <div class="stockist-btn-wrapper">
-            <a href="/#wholesale" class="become-stockist-btn">BECOME A STOCKIST</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- ========================================================================
-       FOOTER
-       ======================================================================== -->
-  <footer class="story-footer">
-    <div class="story-container">
-      <div class="footer-row">
-        <!-- Logo & Links -->
-        <div class="footer-brand-links">
-          <a href="/" class="brand-logo" aria-label="Waddat Home">
-            <img src="/waddat-nav-logo.png" alt="Waddat Beverage"/>
-          </a>
-          <span class="footer-divider">|</span>
-          <div class="footer-links-group">
-            <a href="/#products" class="story-nav-link">DRINKS</a>
-            <a href="/our-story/" class="story-nav-link active">OUR STORY</a>
-            <a href="/#wholesale" class="story-nav-link">CONTACT</a>
-          </div>
-        </div>
-
-        <!-- Disclaimer & Copyright -->
-        <div class="footer-disclaimer">
-          Illustrative history and imagery. Dates and events subject to client confirmation.<br/>
-          © 2026 Waddat Beverage. Built by Cornerstone Digital.
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Mobile Drawer Toggle Script -->
-  <script>
-    const toggleBtn = document.getElementById('mobile-toggle');
-    const drawer = document.getElementById('mobile-drawer');
-    if (toggleBtn && drawer) {
-      toggleBtn.addEventListener('click', () => {
-        drawer.classList.toggle('open');
-      });
-    }
-  </script>
+  <!-- Webflow scripts for interactive navbar, mobile menu toggle, and animations -->
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=680aa12b0e13118b7b331d1d" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/js/webflow.schunk.161f08e56d0294aa.js" type="text/javascript" integrity="sha384-Ag00QULjJn2u4JyYooFrvsgwpBw3rBqcJbLZR+bK4KSwn6LZKAstjOcDLDIbmiaD" crossorigin="anonymous"></script>
+  <script src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/js/webflow.schunk.9a401368ebc3ae9b.js" type="text/javascript" integrity="sha384-8gbwUmc5IecOpidX/qUBcWB7xrIE2g2iFyGv02R5/UTFauS/U55xYQOvjbpzoORx" crossorigin="anonymous"></script>
+  <script src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/js/webflow.schunk.2c2c83d71c9c4058.js" type="text/javascript" integrity="sha384-m5nnXYnrWfawQkkqxiWH9Eax3pKUq81O5uYgFb+sQfJssSEvwu1RmTpfyycSw9Oo" crossorigin="anonymous"></script>
+  <script src="https://cdn.prod.website-files.com/680aa12b0e13118b7b331d1d/js/webflow.2c81782d.56368984eca88cff.js" type="text/javascript" integrity="sha384-NRZjmo2QFoF/tmqC6mf+R3hFt/fGSeQKphak61zG5Rd98TJBCD22dVtg2gb8DHHg" crossorigin="anonymous"></script>
 </body>
 </html>
