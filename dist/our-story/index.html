@@ -841,40 +841,200 @@
       pointer-events: none;
     }
 
-    /* Section 1995 (Orange) */
+    /* ==========================================================================
+       SECTION 1995 (Orange Background)
+       ========================================================================== */
     .section-timeline-1995 {
       background-color: var(--color-orange);
       color: #ffffff;
-      padding: 6rem 0;
+      padding: 6.5rem 0;
       position: relative;
       overflow: hidden;
     }
-    .section-timeline-1995 .timeline-body {
+    .timeline-1995-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 3.5rem;
+    }
+    .timeline-1995-col {
+      display: flex;
+      align-items: stretch;
+      gap: 1.75rem;
+      position: relative;
+    }
+    .timeline-1995-stem {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+      padding-top: 10px;
+    }
+    .timeline-1995-dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background-color: var(--color-purple);
+      border: 2px solid #211509;
+      margin-bottom: 12px;
+      flex-shrink: 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .timeline-1995-line {
+      width: 2px;
+      flex-grow: 1;
+      border-left: 2.5px dashed #211509;
+      opacity: 0.75;
+    }
+    .timeline-1995-content {
+      position: relative;
+      flex-grow: 1;
+    }
+    .timeline-1995-badge-wrapper {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1.15rem;
+      position: relative;
+    }
+    .timeline-1995-badge {
+      font-family: var(--font-display);
+      font-size: 1.9rem;
+      line-height: 1;
+      padding: 7px 28px;
+      border-radius: 999px;
+      background-color: var(--color-lime);
+      color: var(--color-dark);
+      border: 2px solid var(--color-dark);
+      box-shadow: 0 3px 0 var(--color-dark);
+    }
+    .timeline-1995-badge-curve {
+      margin-top: 4px;
+      display: block;
+      width: 65px;
+      height: 8px;
+    }
+    .timeline-1995-heading {
+      font-family: var(--font-display);
+      font-size: 3.35rem;
+      line-height: 1.05;
+      text-transform: uppercase;
       color: #ffffff;
+      margin: 0 0 1.25rem;
+      letter-spacing: 0.5px;
     }
-    .section-timeline-1995 .photo-caption {
+    .timeline-1995-heading .highlight-lime {
+      color: var(--color-lime);
+    }
+    .timeline-1995-body {
+      font-size: 1.18rem;
+      line-height: 1.68;
+      color: #ffffff;
+      margin: 0;
+      max-width: 500px;
+    }
+    .timeline-1995-leaves {
+      position: absolute;
+      right: -30px;
+      top: -5px;
+      width: 88px;
+      transform: rotate(50deg);
+      pointer-events: none;
+      z-index: 2;
+      opacity: 0.95;
+    }
+
+    /* Picture Frame & Homepage About Assets (1995) */
+    .picture-frame-1995-wrapper {
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .picture-frame-card-1995 {
+      width: 100%;
+      max-width: 520px;
+      min-height: 300px;
+      aspect-ratio: 4 / 3;
+      border-radius: 28px;
+      border: 3.5px solid var(--color-dark);
+      box-shadow: 0 16px 36px rgba(0,0,0,0.22);
+      background: linear-gradient(135deg, #fbf7ee 0%, #faecd7 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      z-index: 2;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .picture-frame-card-1995:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 22px 42px rgba(0,0,0,0.28);
+    }
+    .photo-caption-1995 {
+      font-size: 0.85rem;
+      font-style: italic;
       color: #ffe6da;
+      margin-top: 0.75rem;
+      padding-left: 0.5rem;
+      z-index: 2;
+      position: relative;
     }
-    .section-timeline-1995 .framed-photo {
-      border-color: #211509;
-      box-shadow: 0 16px 36px rgba(0,0,0,0.25);
+    .frame-1995-splash {
+      position: absolute;
+      top: -35px;
+      right: -45px;
+      width: 270px;
+      height: 270px;
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0.92;
     }
-    .ginger-container-1995 {
-      margin-top: 1.5rem;
-      display: inline-block;
-    }
-    .ginger-accent-1995 {
+    .frame-1995-guava {
+      position: absolute;
+      top: -45px;
+      left: -35px;
       width: 140px;
       height: auto;
-      filter: drop-shadow(0 10px 18px rgba(0,0,0,0.25));
+      transform: rotate(-18deg);
+      filter: drop-shadow(0 14px 22px rgba(0,0,0,0.3));
+      z-index: 3;
+      pointer-events: none;
     }
-    .accent-splash-1995 {
+    .frame-1995-ginger {
       position: absolute;
-      right: -40px;
-      top: 20%;
-      width: 200px;
-      height: 200px;
-      opacity: 0.85;
+      bottom: 0px;
+      left: -45px;
+      width: 155px;
+      height: auto;
+      transform: rotate(12deg);
+      filter: drop-shadow(0 16px 24px rgba(0,0,0,0.32));
+      z-index: 3;
+      pointer-events: none;
+    }
+    .frame-1995-flower {
+      position: absolute;
+      bottom: -22px;
+      right: 40px;
+      width: 125px;
+      height: auto;
+      transform: rotate(-12deg);
+      filter: drop-shadow(0 14px 22px rgba(0,0,0,0.3));
+      z-index: 3;
+      pointer-events: none;
+    }
+    .frame-1995-hibiscus {
+      position: absolute;
+      bottom: 25px;
+      right: -25px;
+      width: 80px;
+      height: auto;
+      transform: rotate(22deg);
+      filter: drop-shadow(0 10px 18px rgba(0,0,0,0.28));
+      z-index: 3;
       pointer-events: none;
     }
 
@@ -1052,15 +1212,17 @@
       .hero-ginger-root { right: -15px; bottom: 30px; width: 155px; }
       .roots-heading { font-size: 3.1rem; }
       .roots-timeline-heading { font-size: 2.75rem; }
-      .roots-top-grid, .roots-timeline-grid { gap: 2.5rem; }
+      .roots-top-grid, .roots-timeline-grid, .timeline-1995-grid { gap: 2.5rem; }
       .roots-fruit-bowl-top { max-width: 380px; }
-      .picture-frame-card { max-width: 440px; }
-      .section-heading-lg, .timeline-heading { font-size: 2.8rem; }
+      .picture-frame-card, .picture-frame-card-1995 { max-width: 440px; }
+      .section-heading-lg, .timeline-heading, .timeline-1995-heading { font-size: 2.8rem; }
     }
 
     .trio-fruit-pine, .trio-fruit-ginger,
     .next-chapter-fruits-stage img,
-    .ginger-accent-1995,
+    .frame-1995-guava, .frame-1995-ginger,
+    .frame-1995-flower, .frame-1995-hibiscus,
+    .frame-1995-splash, .timeline-1995-leaves,
     .hero-top-leaf, .hero-top-pineapple,
     .roots-leaf, .next-leaf-bg,
     .roots-timeline-leaves {
@@ -1121,12 +1283,12 @@
       .hero-bottle-pineapple { height: 420px; right: 35px; transform: rotate(-13.5deg); }
       .hero-bottle-sorrel { height: 470px; right: 125px; transform: rotate(21deg); }
 
-      .roots-top-grid, .roots-timeline-grid {
+      .roots-top-grid, .roots-timeline-grid, .timeline-1995-grid {
         grid-template-columns: 1fr;
         gap: 3rem;
         text-align: center;
       }
-      .roots-body, .roots-timeline-body {
+      .roots-body, .roots-timeline-body, .timeline-1995-body {
         margin: 0 auto;
         max-width: 520px;
       }
@@ -1134,20 +1296,24 @@
         margin: 0 auto;
         max-width: 380px;
       }
-      .picture-frame-wrapper {
+      .picture-frame-wrapper, .picture-frame-1995-wrapper {
         margin: 0 auto;
         max-width: 440px;
         align-items: center;
       }
-      .roots-timeline-col {
+      .photo-caption, .photo-caption-1995 {
+        text-align: center;
+        padding-left: 0;
+      }
+      .roots-timeline-col, .timeline-1995-col {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
       }
-      .roots-timeline-stem {
+      .roots-timeline-stem, .timeline-1995-stem {
         display: none;
       }
-      .roots-timeline-leaves {
+      .roots-timeline-leaves, .timeline-1995-leaves {
         display: none;
       }
 
@@ -1195,12 +1361,17 @@
       }
 
       .roots-heading { font-size: 2.4rem; }
-      .roots-timeline-heading { font-size: 2.15rem; }
-      .roots-body, .roots-timeline-body { font-size: 1.05rem; }
+      .roots-timeline-heading, .timeline-1995-heading { font-size: 2.15rem; }
+      .roots-body, .roots-timeline-body, .timeline-1995-body { font-size: 1.05rem; }
       .roots-fruit-bowl-top { max-width: 290px; }
-      .picture-frame-card { max-width: 320px; min-height: 240px; }
+      .picture-frame-card, .picture-frame-card-1995 { max-width: 320px; min-height: 240px; }
 
       .section-heading-lg, .timeline-heading { font-size: 2.2rem; }
+      .frame-1995-guava { width: 95px; top: -30px; left: -20px; }
+      .frame-1995-ginger { width: 110px; bottom: 0; left: -25px; }
+      .frame-1995-flower { width: 85px; bottom: -15px; right: 20px; }
+      .frame-1995-hibiscus { width: 55px; bottom: 15px; right: -15px; }
+      .frame-1995-splash { width: 190px; height: 190px; right: -25px; top: -20px; }
     }
   </style>
 </head>
@@ -1399,30 +1570,55 @@
            ======================================================================== -->
       <section class="section-timeline-1995" id="story-1995">
         <div class="story-container">
-          <div class="timeline-layout">
-            <!-- Content Left -->
-            <div class="timeline-content-col">
-              <div class="timeline-stem-wrapper">
-                <div class="timeline-badge timeline-badge-lime">1995</div>
-                <span class="timeline-stem-line lime"></span>
+          <div class="timeline-1995-grid">
+            <!-- Left: Timeline stem + 1995 content -->
+            <div class="timeline-1995-col">
+              <div class="timeline-1995-stem">
+                <div class="timeline-1995-dot"></div>
+                <div class="timeline-1995-line"></div>
               </div>
-              <h2 class="timeline-heading">
-                THE RECIPES TRAVELLED.<br/>
-                <span class="highlight-lime">THE ROOTS STAYED.</span>
-              </h2>
-              <p class="timeline-body">
-                A decade later, a new chapter in the UK brought new surroundings, but the flavours of Jamaica came too. Family gatherings became a place to share those much-loved recipes, keeping a connection to home alive, one glass at a time.
-              </p>
-              <div class="ginger-container-1995">
-                <img src="/fruits/ginger_root.png" alt="Ginger Root" class="ginger-accent-1995"/>
+              <div class="timeline-1995-content">
+                <div class="timeline-1995-badge-wrapper">
+                  <div class="timeline-1995-badge">1995</div>
+                  <svg class="timeline-1995-badge-curve" width="65" height="8" viewBox="0 0 65 8" fill="none" aria-hidden="true">
+                    <path d="M2 2C19 7 46 7 63 2" stroke="#211509" stroke-width="2.5" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <h2 class="timeline-1995-heading">
+                  THE RECIPES TRAVELLED.<br/>
+                  <span class="highlight-lime">THE ROOTS STAYED.</span>
+                </h2>
+                <p class="timeline-1995-body">
+                  A decade later, a new chapter in the UK brought new surroundings, but the flavours of Jamaica came too. Family gatherings became a place to share those much-loved recipes, keeping a connection to home alive, one glass at a time.
+                </p>
+                <img src="/hero-top-leaf.svg" alt="" class="timeline-1995-leaves" />
               </div>
             </div>
 
-            <!-- Photo Right -->
-            <div class="framed-photo-wrapper">
-              <img src="/story-kitchen-recipes.png" alt="Family sharing homemade drinks in the kitchen" class="framed-photo"/>
-              <div class="photo-caption">Illustrative scene</div>
-              <img src="/story-splash-purple.svg" alt="" class="accent-splash-1995"/>
+            <!-- Right: Empty Picture Frame + Homepage About Section Assets -->
+            <div class="picture-frame-wrapper picture-frame-1995-wrapper">
+              <!-- Purple Splash Backdrop -->
+              <img src="/story-splash-purple.svg" alt="" class="frame-1995-splash" />
+
+              <!-- Empty Picture Frame (Ready for user's photo) -->
+              <div class="picture-frame-card picture-frame-card-1995">
+                <div class="picture-frame-inner-border">
+                  <svg class="picture-frame-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="3" ry="3"/>
+                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                    <polyline points="21 15 16 10 5 21"/>
+                  </svg>
+                  <div class="picture-frame-label">Family Recipe Photo</div>
+                  <div class="picture-frame-subtext">Original photo being added soon</div>
+                </div>
+              </div>
+              <div class="photo-caption photo-caption-1995">Illustrative scene</div>
+
+              <!-- Tropical Assets from Homepage About Section (Guava Slice, Ginger Root, Sorrel Calyx, Hibiscus) -->
+              <img src="/fruits/guava_slice.png" alt="Guava Slice" class="frame-1995-guava" />
+              <img src="/fruits/ginger_root.png" alt="Ginger Root" class="frame-1995-ginger" />
+              <img src="/fruits/sorrel_calyx.png" alt="Sorrel Flower Calyx" class="frame-1995-flower" />
+              <img src="/fruits/hibiscus_flower.png" alt="Hibiscus Flower" class="frame-1995-hibiscus" />
             </div>
           </div>
         </div>
