@@ -108,33 +108,34 @@
       background-color: var(--color-sky-blue);
       position: relative;
       overflow: hidden;
-      padding-top: 135px;
+      padding-top: clamp(90px, 11vh, 125px);
       padding-bottom: 0;
-      min-height: 640px;
+      min-height: clamp(520px, 92vh, 660px);
     }
 
-    /* Top Left Lime Leaf Graphic */
+    /* Top Left Lime Leaf Graphic (copied from homepage) */
     .hero-top-leaf {
       position: absolute;
-      top: 85px;
-      left: -5px;
-      width: 125px;
+      top: clamp(75px, 13vh, 105px);
+      left: clamp(-20px, -1.5vw, -10px);
+      width: clamp(95px, 9.5vw, 125px);
       height: auto;
       z-index: 2;
       pointer-events: none;
       filter: drop-shadow(0 6px 12px rgba(0,0,0,0.06));
     }
 
-    /* Top Right Pineapple Slice Peeking In */
+    /* Top Right Pineapple Slice Peeking In (copied from homepage) */
     .hero-top-pineapple {
       position: absolute;
-      top: 0;
-      right: 0;
-      width: 175px;
+      top: clamp(-95px, -8vw, -70px);
+      right: clamp(-75px, -6vw, -50px);
+      width: clamp(240px, 22vw, 320px);
       height: auto;
+      transform: rotate(72deg);
       z-index: 5;
       pointer-events: none;
-      filter: drop-shadow(0 10px 18px rgba(0,0,0,0.18));
+      filter: drop-shadow(0 12px 22px rgba(0,0,0,0.2));
     }
 
     .hero-container {
@@ -154,7 +155,7 @@
       align-items: center;
       gap: 1rem;
       position: relative;
-      min-height: 520px;
+      min-height: clamp(430px, 75vh, 560px);
     }
 
     .hero-left-content {
@@ -203,30 +204,44 @@
       margin: 0;
     }
 
-    /* Bottom-Left Soursop Pair (Anchored to bottom-left of section-hero) */
+    /* Bottom-Left Soursop Cluster: composed from homepage assets (whole spiky soursop + cut slice) */
     .hero-soursop-cluster {
       position: absolute;
-      bottom: -15px;
-      left: -90px;
-      width: clamp(250px, 22vw, 310px);
+      bottom: 0;
+      left: 0;
+      width: clamp(260px, 25vw, 340px);
+      height: clamp(360px, 65vh, 480px);
       z-index: 8;
       pointer-events: none;
-      line-height: 0;
     }
-    .hero-soursop-pair-img {
-      width: 100%;
+    .hero-soursop-whole {
+      position: absolute;
+      bottom: clamp(100px, 18vh, 140px);
+      left: clamp(-55px, -4.5vw, -40px);
+      width: clamp(175px, 17.5vw, 230px);
       height: auto;
-      display: block;
+      z-index: 1;
       pointer-events: none;
       filter: drop-shadow(0 15px 25px rgba(0,0,0,0.18));
+    }
+    .hero-soursop-slice {
+      position: absolute;
+      bottom: clamp(-20px, -3vh, -10px);
+      left: clamp(-50px, -4vw, -35px);
+      width: clamp(215px, 21vw, 275px);
+      height: auto;
+      transform: rotate(-19deg);
+      z-index: 2;
+      pointer-events: none;
+      filter: drop-shadow(0 16px 28px rgba(0,0,0,0.22));
     }
 
     /* Right-Side Bottle & Splash Stage (Completely Static, No Motion/Animations) */
     .hero-bottle-stage {
       position: relative;
       width: 100%;
-      height: 610px;
-      margin-top: -35px;
+      height: clamp(450px, 78vh, 580px);
+      margin-top: -20px;
       display: flex;
       align-items: flex-end;
       justify-content: center;
@@ -235,10 +250,10 @@
 
     .hero-purple-splash {
       position: absolute;
-      right: -30px;
-      top: 38%;
-      transform: translateY(-50%) scale(1.12);
-      width: 610px;
+      right: clamp(-25px, -2vw, -10px);
+      top: 36%;
+      transform: translateY(-50%);
+      width: clamp(330px, 34vw, 470px);
       height: auto;
       z-index: 1;
       pointer-events: none;
@@ -246,11 +261,11 @@
 
     .hero-sorrel-flowers {
       position: absolute;
-      top: 15px;
-      right: 280px;
-      width: 165px;
+      top: clamp(20px, 5vh, 40px);
+      right: clamp(190px, 20vw, 270px);
+      width: clamp(125px, 12vw, 165px);
       height: auto;
-      transform: rotate(5deg);
+      transform: rotate(8deg);
       z-index: 2;
       pointer-events: none;
       filter: drop-shadow(0 10px 18px rgba(0,0,0,0.18));
@@ -258,9 +273,9 @@
 
     .hero-ginger-root {
       position: absolute;
-      bottom: 85px;
-      right: 320px;
-      width: 185px;
+      bottom: clamp(60px, 12vh, 90px);
+      right: clamp(230px, 24vw, 320px);
+      width: clamp(135px, 13vw, 185px);
       height: auto;
       transform: rotate(18deg);
       z-index: 3;
@@ -271,8 +286,8 @@
     .hero-bottle-pineapple {
       position: absolute;
       bottom: 0px;
-      right: 5px;
-      height: 540px;
+      right: clamp(-10px, -1vw, 5px);
+      height: clamp(390px, 68vh, 510px);
       width: auto;
       object-fit: contain;
       transform: rotate(-13.5deg);
@@ -283,9 +298,9 @@
 
     .hero-green-leaves {
       position: absolute;
-      bottom: 40px;
-      right: 120px;
-      width: 200px;
+      bottom: clamp(25px, 5vh, 40px);
+      right: clamp(85px, 9vw, 130px);
+      width: clamp(140px, 13vw, 190px);
       height: auto;
       transform: rotate(0deg);
       z-index: 5;
@@ -295,9 +310,9 @@
 
     .hero-bottle-sorrel {
       position: absolute;
-      bottom: 10px;
-      right: 145px;
-      height: 610px;
+      bottom: clamp(5px, 1.5vh, 15px);
+      right: clamp(105px, 11vw, 155px);
+      height: clamp(430px, 75vh, 580px);
       width: auto;
       object-fit: contain;
       transform: rotate(21deg);
@@ -855,6 +870,17 @@
         left: 0;
         margin: 1.5rem auto 0;
         width: 260px;
+        height: 280px;
+      }
+      .hero-soursop-whole {
+        width: 170px;
+        top: 10px;
+        left: 0px;
+      }
+      .hero-soursop-slice {
+        width: 200px;
+        bottom: 0px;
+        left: 20px;
       }
 
       .hero-bottle-stage {
@@ -906,6 +932,17 @@
 
       .hero-soursop-cluster {
         width: 220px;
+        height: 240px;
+      }
+      .hero-soursop-whole {
+        width: 145px;
+        top: 5px;
+        left: 0px;
+      }
+      .hero-soursop-slice {
+        width: 170px;
+        bottom: 0px;
+        left: 15px;
       }
 
       .section-heading-lg, .timeline-heading { font-size: 2.2rem; }
@@ -989,11 +1026,11 @@
            HERO SECTION: MATCHING REFERENCE IMAGE & GRAPHIC DESIGN
            ======================================================================== -->
       <section class="section-hero" id="story-hero">
-        <!-- Top-Left Two-Leaf Lime Accent -->
-        <img src="/story-hero/lime-leaf.png" alt="" class="hero-top-leaf"/>
+        <!-- Top-Left Two-Leaf Lime Accent (copied from homepage) -->
+        <img src="/hero-top-leaf.svg" alt="" class="hero-top-leaf"/>
 
-        <!-- Top-Right Pineapple Slice Peeking In -->
-        <img src="/story-hero/pineapple-corner.png" alt="" class="hero-top-pineapple"/>
+        <!-- Top-Right Pineapple Slice Peeking In (copied from homepage) -->
+        <img src="/fruits/pineapple_slice.png" alt="" class="hero-top-pineapple"/>
 
         <div class="hero-container">
           <div class="hero-layout">
@@ -1011,20 +1048,20 @@
 
             <!-- Right Column: The Two Waddat Bottles, Purple Splash & Ingredients Stage -->
             <div class="hero-bottle-stage">
-              <!-- Purple Organic Splash Background -->
-              <img src="/story-hero/purple-splash-solid.png" alt="" class="hero-purple-splash"/>
+              <!-- Purple Organic Splash Background (copied from homepage) -->
+              <img src="/hero-splash-purple.svg" alt="" class="hero-purple-splash"/>
 
-              <!-- Fresh Sorrel Calyx / Hibiscus Flowers behind Sorrel bottle shoulder -->
-              <img src="/story-hero/sorrel-calyx-clean.png" alt="Fresh Sorrel Flowers" class="hero-sorrel-flowers"/>
+              <!-- Fresh Sorrel Calyx / Hibiscus Flowers (copied from homepage) -->
+              <img src="/fruits/sorrel_calyx.png" alt="Fresh Sorrel Flowers" class="hero-sorrel-flowers"/>
 
-              <!-- Fresh Ginger Root to the left of Sorrel bottle waist -->
+              <!-- Fresh Ginger Root to the left of Sorrel bottle waist (copied from homepage) -->
               <img src="/fruits/ginger_hero_flipped.png" alt="Fresh Ginger Root" class="hero-ginger-root"/>
 
               <!-- Waddat Pineapple Sea Moss Bottle (leaning counter-clockwise -13.5deg) -->
               <img src="/pineapple-sea-moss-3f.png" alt="Waddat Pineapple Sea Moss" class="hero-bottle-pineapple"/>
 
-              <!-- Green glossy leaves at base between bottles -->
-              <img src="/story-hero/leaves-clean.png" alt="Fresh Leaves" class="hero-green-leaves"/>
+              <!-- Green glossy leaves at base between bottles (copied from homepage) -->
+              <img src="/fruits/green_leaves_pair.png" alt="Fresh Leaves" class="hero-green-leaves"/>
 
               <!-- Waddat Sorrel Bottle in front (leaning clockwise +21deg) -->
               <img src="/sorrel-3f.png" alt="Waddat Sorrel Natural Drink" class="hero-bottle-sorrel"/>
@@ -1032,9 +1069,10 @@
           </div>
         </div>
 
-        <!-- Bottom-Left Soursop Pair: Anchored to bottom-left corner of the section -->
+        <!-- Bottom-Left Soursop Cluster: Composed from homepage assets (whole spiky soursop + cut slice) -->
         <div class="hero-soursop-cluster">
-          <img src="/story-hero/soursop-pair.png" alt="Fresh Soursop Pair" class="hero-soursop-pair-img"/>
+          <img src="/fruits/soursop_hero_fruit.png" alt="Whole Soursop" class="hero-soursop-whole"/>
+          <img src="/fruits/soursop_slice.png" alt="Cut Soursop" class="hero-soursop-slice"/>
         </div>
       </section>
 
