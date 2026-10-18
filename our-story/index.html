@@ -562,93 +562,104 @@
       margin: 0;
     }
 
-    /* Fruit Composition */
-    .roots-fruit-stage {
+    /* Fruit Bowl Top Stage (Next to EVERY BOTTLE HAS A BEGINNING) */
+    .roots-bowl-stage-top {
       position: relative;
-      width: 100%;
-      height: 380px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    .roots-fruit-stage img {
+    .roots-top-lime-leaves {
       position: absolute;
-      pointer-events: none;
-    }
-    .roots-lime-leaves-top {
-      top: 15px;
+      top: 0px;
       left: 15px;
       width: 110px;
-      transform: rotate(-12deg);
+      transform: rotate(-15deg);
       z-index: 1;
+      pointer-events: none;
     }
-    .roots-green-leaves {
-      top: 5px;
-      right: 15px;
-      width: 150px;
-      transform: rotate(35deg);
+    .roots-fruit-bowl-top {
+      position: relative;
       z-index: 2;
+      width: 100%;
+      max-width: 440px;
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 18px 32px rgba(0,0,0,0.18));
+      transition: transform 0.35s ease;
     }
-    .roots-soursop-fruit {
-      top: 10px;
-      right: 30px;
-      width: 250px;
-      filter: drop-shadow(0 14px 26px rgba(0,0,0,0.18));
-      transform: rotate(10deg);
-      z-index: 3;
-    }
-    .roots-sorrel-calyx-1 {
-      top: 65px;
-      left: 65px;
-      width: 165px;
-      filter: drop-shadow(0 12px 22px rgba(0,0,0,0.18));
-      transform: rotate(-8deg);
-      z-index: 4;
-    }
-    .roots-sorrel-calyx-2 {
-      top: 120px;
-      left: 135px;
-      width: 110px;
-      filter: drop-shadow(0 10px 18px rgba(0,0,0,0.18));
-      transform: rotate(20deg);
-      z-index: 5;
-    }
-    .roots-pineapple-slice {
-      bottom: 40px;
-      right: 115px;
-      width: 195px;
-      filter: drop-shadow(0 14px 24px rgba(0,0,0,0.2));
-      transform: rotate(-8deg);
-      z-index: 6;
-    }
-    .roots-ginger-slices {
-      bottom: 35px;
-      left: 165px;
-      width: 130px;
-      filter: drop-shadow(0 10px 20px rgba(0,0,0,0.22));
-      z-index: 7;
+    .roots-fruit-bowl-top:hover {
+      transform: scale(1.03) translateY(-4px);
     }
 
-    /* 1985 Timeline Grid */
+    /* 1985 Timeline Grid with Picture Frame */
     .roots-timeline-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
       gap: 3.5rem;
     }
-    .roots-bowl-stage {
+    .picture-frame-wrapper {
+      position: relative;
+      width: 100%;
       display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .picture-frame-card {
+      width: 100%;
+      max-width: 520px;
+      min-height: 300px;
+      aspect-ratio: 4 / 3;
+      border-radius: 28px;
+      border: 3.5px solid var(--color-dark);
+      box-shadow: 0 16px 36px rgba(0,0,0,0.12);
+      background: linear-gradient(135deg, #f0e6d6 0%, #e5d8c3 100%);
+      display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .roots-fruit-bowl {
-      width: 100%;
-      max-width: 440px;
-      height: auto;
-      display: block;
-      filter: drop-shadow(0 18px 32px rgba(0,0,0,0.18));
-      transition: transform 0.35s cubic-bezier(0.2, 1, 0.3, 1);
+    .picture-frame-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 22px 42px rgba(0,0,0,0.18);
     }
-    .roots-fruit-bowl:hover {
-      transform: scale(1.03) translateY(-4px);
+    .picture-frame-inner-border {
+      position: absolute;
+      inset: 16px;
+      border: 2px dashed rgba(33, 21, 9, 0.25);
+      border-radius: 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .picture-frame-icon {
+      width: 54px;
+      height: 54px;
+      margin-bottom: 0.85rem;
+      opacity: 0.45;
+      color: var(--color-dark);
+    }
+    .picture-frame-label {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--color-dark);
+      opacity: 0.75;
+      margin-bottom: 0.25rem;
+    }
+    .picture-frame-subtext {
+      font-size: 0.95rem;
+      color: var(--color-dark);
+      opacity: 0.6;
+      max-width: 260px;
     }
     .roots-timeline-col {
       display: flex;
@@ -1042,8 +1053,8 @@
       .roots-heading { font-size: 3.1rem; }
       .roots-timeline-heading { font-size: 2.75rem; }
       .roots-top-grid, .roots-timeline-grid { gap: 2.5rem; }
-      .roots-fruit-stage { height: 330px; }
-      .roots-fruit-bowl { max-width: 380px; }
+      .roots-fruit-bowl-top { max-width: 380px; }
+      .picture-frame-card { max-width: 440px; }
       .section-heading-lg, .timeline-heading { font-size: 2.8rem; }
     }
 
@@ -1052,7 +1063,6 @@
     .ginger-accent-1995,
     .hero-top-leaf, .hero-top-pineapple,
     .roots-leaf, .next-leaf-bg,
-    .roots-fruit-stage img,
     .roots-timeline-leaves {
       pointer-events: none;
     }
@@ -1120,14 +1130,14 @@
         margin: 0 auto;
         max-width: 520px;
       }
-      .roots-fruit-stage {
-        max-width: 440px;
+      .roots-bowl-stage-top {
         margin: 0 auto;
-        height: 320px;
+        max-width: 380px;
       }
-      .roots-bowl-stage {
+      .picture-frame-wrapper {
         margin: 0 auto;
-        max-width: 360px;
+        max-width: 440px;
+        align-items: center;
       }
       .roots-timeline-col {
         flex-direction: column;
@@ -1187,8 +1197,8 @@
       .roots-heading { font-size: 2.4rem; }
       .roots-timeline-heading { font-size: 2.15rem; }
       .roots-body, .roots-timeline-body { font-size: 1.05rem; }
-      .roots-fruit-stage { height: 270px; max-width: 320px; }
-      .roots-fruit-bowl { max-width: 290px; }
+      .roots-fruit-bowl-top { max-width: 290px; }
+      .picture-frame-card { max-width: 320px; min-height: 240px; }
 
       .section-heading-lg, .timeline-heading { font-size: 2.2rem; }
     }
@@ -1333,22 +1343,28 @@
                 Before there was a bottle, a label or a name, there was a little girl on her grandad’s farm in Jamaica. Surrounded by fresh fruit and familiar flavours, she discovered that the best things were made with care and shared with others.
               </p>
             </div>
-            <div class="roots-fruit-stage">
-              <img src="/hero-top-leaf.svg" alt="" class="roots-lime-leaves-top" />
-              <img src="/fruits/green_leaves_pair.png" alt="" class="roots-green-leaves" />
-              <img src="/fruits/soursop_slice.png" alt="Soursop Slice" class="roots-soursop-fruit" />
-              <img src="/fruits/sorrel_calyx.png" alt="Sorrel Calyx" class="roots-sorrel-calyx-1" />
-              <img src="/fruits/hibiscus_flower.png" alt="Sorrel Flower" class="roots-sorrel-calyx-2" />
-              <img src="/fruits/pineapple_slice.png" alt="Pineapple Slice" class="roots-pineapple-slice" />
-              <img src="/fruits/ginger_slice.png" alt="Ginger Slices" class="roots-ginger-slices" />
+            <div class="roots-bowl-stage-top">
+              <img src="/hero-top-leaf.svg" alt="" class="roots-top-lime-leaves" />
+              <img src="/waddat-fruit-bowl.png" alt="Waddat tropical fruit and ingredients bowl" class="roots-fruit-bowl-top" />
             </div>
           </div>
 
           <!-- Part 2: 1985 / A Farm. A Grandad. A First Batch. -->
           <div class="roots-timeline-grid" id="story-1985">
-            <!-- Left: Tropical ingredients bowl from homepage benefits section (holding slot for photo) -->
-            <div class="roots-bowl-stage">
-              <img src="/waddat-fruit-bowl.png" alt="Waddat tropical fruit and ingredients bowl" class="roots-fruit-bowl" />
+            <!-- Left: Picture frame ready for family photo to be inserted -->
+            <div class="picture-frame-wrapper">
+              <div class="picture-frame-card">
+                <div class="picture-frame-inner-border">
+                  <svg class="picture-frame-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="3" ry="3"/>
+                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                    <polyline points="21 15 16 10 5 21"/>
+                  </svg>
+                  <div class="picture-frame-label">Family Photo</div>
+                  <div class="picture-frame-subtext">Original photo being added soon</div>
+                </div>
+              </div>
+              <div class="photo-caption">Illustrative scene</div>
             </div>
 
             <!-- Right: Timeline stem + 1985 content -->
