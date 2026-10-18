@@ -274,7 +274,7 @@
     .hero-sorrel-flowers {
       position: absolute;
       top: clamp(40px, 7vh, 85px);
-      right: clamp(300px, 29vw, 420px);
+      right: clamp(340px, 32vw, 460px);
       width: clamp(145px, 14.5vw, 205px);
       height: auto;
       transform: rotate(-10deg);
@@ -286,21 +286,21 @@
 
     .hero-ginger-root {
       position: absolute;
-      bottom: clamp(50px, 9vh, 95px);
-      right: clamp(320px, 31vw, 450px);
-      width: clamp(185px, 18vw, 255px);
+      bottom: clamp(35px, 6vh, 65px);
+      right: clamp(-20px, -1.5vw, 5px);
+      width: clamp(160px, 15vw, 215px);
       height: auto;
-      transform: rotate(50deg);
-      z-index: 7;
+      transform: rotate(25deg);
+      z-index: 5;
       pointer-events: none;
       filter: drop-shadow(0 14px 24px rgba(0,0,0,0.22));
-      animation: heroGingerEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both;
+      animation: heroGingerEntrance 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.22s both;
     }
 
     .hero-bottle-pineapple {
       position: absolute;
       bottom: 0px;
-      right: clamp(-15px, -1vw, 5px);
+      right: clamp(40px, 4vw, 75px);
       height: clamp(480px, 70vh, 660px);
       width: auto;
       object-fit: contain;
@@ -314,7 +314,7 @@
     .hero-bottle-sorrel {
       position: absolute;
       bottom: clamp(5px, 1.5vh, 20px);
-      right: clamp(95px, 9.5vw, 150px);
+      right: clamp(150px, 14vw, 215px);
       height: clamp(540px, 78vh, 740px);
       width: auto;
       object-fit: contain;
@@ -445,34 +445,19 @@
         transform: translate3d(0, 0, 0) rotate(-10deg) scale(1);
       }
     }
-      100% {
-        opacity: 1;
-        transform: translate3d(0, 0, 0) rotate(-8deg) scale(1);
-      }
-    }
 
     @keyframes heroGingerEntrance {
       0% {
         opacity: 0.2;
-        transform: translate3d(-30px, 40px, 0) rotate(35deg) scale(0.65);
+        transform: translate3d(50px, 45px, 0) rotate(10deg) scale(0.55);
       }
       70% {
         opacity: 1;
-        transform: translate3d(3px, -3px, 0) rotate(53deg) scale(1.03);
+        transform: translate3d(-4px, -3px, 0) rotate(27deg) scale(1.035);
       }
       100% {
         opacity: 1;
-        transform: translate3d(0, 0, 0) rotate(50deg) scale(1);
-      }
-    }
-      100% {
-        opacity: 1;
-        transform: translate3d(0, 0, 0) rotate(62deg) scale(1);
-      }
-    }
-      100% {
-        opacity: 1;
-        transform: translate3d(0, 0, 0) rotate(-12deg) scale(1);
+        transform: translate3d(0, 0, 0) rotate(25deg) scale(1);
       }
     }
 
@@ -1030,11 +1015,11 @@
     @media (max-width: 1024px) {
       .hero-title-badge { font-size: 6.2rem; }
       .hero-subheading { font-size: 2.8rem; }
-      .hero-bottle-sorrel { height: 500px; right: 110px; }
-      .hero-bottle-pineapple { height: 440px; right: 0; }
+      .hero-bottle-sorrel { height: 500px; right: 130px; }
+      .hero-bottle-pineapple { height: 440px; right: 35px; }
       .hero-purple-splash { width: 500px; }
-      .hero-sorrel-flowers { right: 260px; width: 140px; }
-      .hero-ginger-root { right: 260px; width: 155px; }
+      .hero-sorrel-flowers { right: 300px; width: 140px; }
+      .hero-ginger-root { right: -15px; bottom: 30px; width: 155px; }
       .section-heading-lg, .timeline-heading { font-size: 2.8rem; }
       .stockist-heading, .stockist-heading-sub { font-size: 2.2rem; }
       .stockist-card-peeking-fruit, .stockist-card-peeking-flower { display: none; }
@@ -1097,10 +1082,10 @@
         margin: 0 auto;
       }
       .hero-purple-splash { width: 440px; right: -10px; top: 48%; }
-      .hero-sorrel-flowers { width: 125px; top: 50px; right: 240px; }
-      .hero-ginger-root { width: 140px; bottom: 70px; right: 240px; }
-      .hero-bottle-pineapple { height: 420px; right: 10px; transform: rotate(-13.5deg); }
-      .hero-bottle-sorrel { height: 470px; right: 110px; transform: rotate(21deg); }
+      .hero-sorrel-flowers { width: 125px; top: 50px; right: 260px; }
+      .hero-ginger-root { width: 140px; bottom: 35px; right: -10px; }
+      .hero-bottle-pineapple { height: 420px; right: 35px; transform: rotate(-13.5deg); }
+      .hero-bottle-sorrel { height: 470px; right: 125px; transform: rotate(21deg); }
 
       .roots-layout, .timeline-layout {
         grid-template-columns: 1fr;
@@ -1131,10 +1116,10 @@
         max-width: 360px;
       }
       .hero-purple-splash { width: 330px; right: 0; top: 48%; }
-      .hero-sorrel-flowers { width: 105px; top: 40px; right: 170px; }
-      .hero-ginger-root { width: 115px; bottom: 55px; right: 175px; }
-      .hero-bottle-pineapple { height: 340px; right: 0; transform: rotate(-13.5deg); }
-      .hero-bottle-sorrel { height: 380px; right: 80px; transform: rotate(21deg); }
+      .hero-sorrel-flowers { width: 105px; top: 40px; right: 200px; }
+      .hero-ginger-root { width: 115px; bottom: 30px; right: -10px; }
+      .hero-bottle-pineapple { height: 340px; right: 25px; transform: rotate(-13.5deg); }
+      .hero-bottle-sorrel { height: 380px; right: 95px; transform: rotate(21deg); }
 
       .hero-soursop-cluster {
         width: 220px;
