@@ -1038,68 +1038,188 @@
       pointer-events: none;
     }
 
-    /* Section 2025 (Cream) */
+    /* ==========================================================================
+       SECTION 2025 (Cream Background)
+       ========================================================================== */
     .section-timeline-2025 {
       background-color: var(--color-cream);
       padding: 6.5rem 0 6rem;
       position: relative;
       border-top: 1px solid rgba(33, 21, 9, 0.06);
     }
+    .timeline-2025-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 3.5rem;
+    }
+    .timeline-2025-col {
+      display: flex;
+      align-items: stretch;
+      gap: 1.75rem;
+      position: relative;
+    }
+    .timeline-2025-stem {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+      padding-top: 10px;
+    }
+    .timeline-2025-dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background-color: var(--color-purple);
+      border: 2px solid #211509;
+      margin-bottom: 12px;
+      flex-shrink: 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    }
+    .timeline-2025-line {
+      width: 2px;
+      flex-grow: 1;
+      border-left: 2.5px dashed #211509;
+      opacity: 0.75;
+    }
+    .timeline-2025-content {
+      position: relative;
+      flex-grow: 1;
+    }
+    .timeline-2025-badge-wrapper {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1.15rem;
+      position: relative;
+    }
+    .timeline-2025-badge {
+      font-family: var(--font-display);
+      font-size: 1.9rem;
+      line-height: 1;
+      padding: 7px 28px;
+      border-radius: 999px;
+      background-color: var(--color-purple);
+      color: #ffffff;
+      border: 2px solid var(--color-dark);
+      box-shadow: 0 3px 0 var(--color-dark);
+    }
+    .timeline-2025-badge-curve {
+      margin-top: 4px;
+      display: block;
+      width: 65px;
+      height: 8px;
+    }
+    .timeline-2025-heading {
+      font-family: var(--font-display);
+      font-size: 3.35rem;
+      line-height: 1.05;
+      text-transform: uppercase;
+      color: var(--color-dark);
+      margin: 0 0 1.25rem;
+      letter-spacing: 0.5px;
+    }
+    .timeline-2025-heading .highlight-orange {
+      color: var(--color-orange);
+    }
+    .timeline-2025-body {
+      font-size: 1.18rem;
+      line-height: 1.68;
+      color: var(--color-dark);
+      margin: 0;
+      max-width: 500px;
+    }
+
+    /* Trio Bottles Stage */
     .trio-bottles-stage {
       position: relative;
       height: 480px;
       display: flex;
       align-items: flex-end;
       justify-content: center;
+      width: 100%;
+      max-width: 540px;
     }
     .trio-splash-bg {
       position: absolute;
-      top: 45%;
-      left: 45%;
-      transform: translate(-50%, -50%);
-      width: 440px;
-      height: 440px;
+      top: 38%;
+      left: 12%;
+      transform: translate(-40%, -50%);
+      width: 400px;
+      height: 400px;
       z-index: 1;
-      opacity: 0.9;
+      opacity: 0.95;
+      pointer-events: none;
+    }
+    .trio-leaf-bg {
+      position: absolute;
+      top: 10%;
+      right: 3%;
+      width: 120px;
+      height: auto;
+      transform: rotate(32deg);
+      z-index: 2;
+      opacity: 0.95;
+      pointer-events: none;
+    }
+    .trio-bottles-ground-shadow {
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 440px;
+      height: 28px;
+      background: radial-gradient(ellipse at center, rgba(33, 21, 9, 0.28) 0%, rgba(33, 21, 9, 0.08) 55%, transparent 75%);
+      border-radius: 50%;
+      z-index: 2;
+      pointer-events: none;
     }
     .trio-bottle {
       position: absolute;
-      bottom: 25px;
-      height: 380px;
+      bottom: 22px;
+      height: 410px;
       width: auto;
       object-fit: contain;
-      filter: drop-shadow(0 15px 22px rgba(0,0,0,0.22));
+      filter: drop-shadow(0 14px 20px rgba(0,0,0,0.18));
       pointer-events: none;
+      transition: transform 0.3s ease;
     }
     .trio-bottle-sorrel {
-      left: 15%;
+      left: 16%;
       z-index: 4;
-      transform: rotate(-5deg);
+      transform: rotate(-3deg);
     }
     .trio-bottle-pineapple {
       left: 36%;
       z-index: 5;
+      transform: rotate(0deg);
     }
     .trio-bottle-ginger {
-      left: 57%;
+      left: 56%;
       z-index: 4;
-      transform: rotate(5deg);
+      transform: rotate(3deg);
     }
     .trio-fruit-pine {
       position: absolute;
-      bottom: 10px;
-      left: 2%;
-      width: 120px;
+      bottom: 8px;
+      left: 11%;
+      width: 140px;
+      height: auto;
+      transform: rotate(-15deg);
       z-index: 6;
-      filter: drop-shadow(0 8px 16px rgba(0,0,0,0.18));
+      filter: drop-shadow(0 12px 18px rgba(0,0,0,0.22));
+      pointer-events: none;
     }
     .trio-fruit-ginger {
       position: absolute;
-      bottom: 15px;
-      right: 5%;
-      width: 130px;
+      bottom: 8px;
+      right: 6%;
+      width: 140px;
+      height: auto;
+      transform: rotate(-8deg);
       z-index: 6;
-      filter: drop-shadow(0 8px 16px rgba(0,0,0,0.18));
+      filter: drop-shadow(0 12px 20px rgba(0,0,0,0.24));
+      pointer-events: none;
     }
 
     /* ==========================================================================
@@ -1212,13 +1332,14 @@
       .hero-ginger-root { right: -15px; bottom: 30px; width: 155px; }
       .roots-heading { font-size: 3.1rem; }
       .roots-timeline-heading { font-size: 2.75rem; }
-      .roots-top-grid, .roots-timeline-grid, .timeline-1995-grid { gap: 2.5rem; }
+      .roots-top-grid, .roots-timeline-grid, .timeline-1995-grid, .timeline-2025-grid { gap: 2.5rem; }
       .roots-fruit-bowl-top { max-width: 380px; }
       .picture-frame-card, .picture-frame-card-1995 { max-width: 440px; }
-      .section-heading-lg, .timeline-heading, .timeline-1995-heading { font-size: 2.8rem; }
+      .section-heading-lg, .timeline-heading, .timeline-1995-heading, .timeline-2025-heading { font-size: 2.8rem; }
     }
 
     .trio-fruit-pine, .trio-fruit-ginger,
+    .trio-leaf-bg, .trio-bottles-ground-shadow,
     .next-chapter-fruits-stage img,
     .frame-1995-guava, .frame-1995-ginger,
     .frame-1995-flower, .frame-1995-hibiscus,
@@ -1283,12 +1404,12 @@
       .hero-bottle-pineapple { height: 420px; right: 35px; transform: rotate(-13.5deg); }
       .hero-bottle-sorrel { height: 470px; right: 125px; transform: rotate(21deg); }
 
-      .roots-top-grid, .roots-timeline-grid, .timeline-1995-grid {
+      .roots-top-grid, .roots-timeline-grid, .timeline-1995-grid, .timeline-2025-grid {
         grid-template-columns: 1fr;
         gap: 3rem;
         text-align: center;
       }
-      .roots-body, .roots-timeline-body, .timeline-1995-body {
+      .roots-body, .roots-timeline-body, .timeline-1995-body, .timeline-2025-body {
         margin: 0 auto;
         max-width: 520px;
       }
@@ -1305,12 +1426,12 @@
         text-align: center;
         padding-left: 0;
       }
-      .roots-timeline-col, .timeline-1995-col {
+      .roots-timeline-col, .timeline-1995-col, .timeline-2025-col {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
       }
-      .roots-timeline-stem, .timeline-1995-stem {
+      .roots-timeline-stem, .timeline-1995-stem, .timeline-2025-stem {
         display: none;
       }
       .roots-timeline-leaves, .timeline-1995-leaves {
@@ -1322,8 +1443,16 @@
         gap: 2.5rem;
       }
       .roots-visual-composition { height: 320px; }
-      .trio-bottles-stage { height: 380px; }
-      .trio-bottle { height: 300px; }
+      .trio-bottles-stage {
+        height: 420px;
+        margin: 0 auto;
+        max-width: 480px;
+      }
+      .trio-bottle { height: 340px; }
+      .trio-splash-bg { width: 300px; height: 300px; }
+      .trio-leaf-bg { width: 90px; }
+      .trio-fruit-pine { width: 115px; }
+      .trio-fruit-ginger { width: 115px; }
 
       .next-chapter-fruits-stage { height: 340px; }
     }
@@ -1361,8 +1490,8 @@
       }
 
       .roots-heading { font-size: 2.4rem; }
-      .roots-timeline-heading, .timeline-1995-heading { font-size: 2.15rem; }
-      .roots-body, .roots-timeline-body, .timeline-1995-body { font-size: 1.05rem; }
+      .roots-timeline-heading, .timeline-1995-heading, .timeline-2025-heading { font-size: 2.15rem; }
+      .roots-body, .roots-timeline-body, .timeline-1995-body, .timeline-2025-body { font-size: 1.05rem; }
       .roots-fruit-bowl-top { max-width: 290px; }
       .picture-frame-card, .picture-frame-card-1995 { max-width: 320px; min-height: 240px; }
 
@@ -1372,6 +1501,38 @@
       .frame-1995-flower { width: 85px; bottom: -15px; right: 20px; }
       .frame-1995-hibiscus { width: 55px; bottom: 15px; right: -15px; }
       .frame-1995-splash { width: 190px; height: 190px; right: -25px; top: -20px; }
+      .trio-bottles-stage {
+        height: 350px;
+        max-width: 360px;
+      }
+      .trio-bottle {
+        height: 275px;
+        bottom: 18px;
+      }
+      .trio-splash-bg {
+        width: 240px;
+        height: 240px;
+      }
+      .trio-leaf-bg {
+        width: 75px;
+        top: 10%;
+        right: 2%;
+      }
+      .trio-fruit-pine {
+        width: 90px;
+        bottom: 8px;
+        left: 2%;
+      }
+      .trio-fruit-ginger {
+        width: 90px;
+        bottom: 8px;
+        right: 2%;
+      }
+      .trio-bottles-ground-shadow {
+        width: 310px;
+        height: 20px;
+        bottom: 10px;
+      }
     }
   </style>
 </head>
@@ -1629,30 +1790,51 @@
            ======================================================================== -->
       <section class="section-timeline-2025" id="story-2025">
         <div class="story-container">
-          <div class="timeline-layout">
+          <div class="timeline-2025-grid">
             <!-- Waddat Trio Bottles Left -->
             <div class="trio-bottles-stage">
+              <!-- Purple Splash Backdrop -->
               <img src="/story-splash-purple.svg" alt="" class="trio-splash-bg"/>
+              
+              <!-- Lime Leaf Behind Ginger Bottle -->
+              <img src="/hero-top-leaf.svg" alt="" class="trio-leaf-bg"/>
+
+              <!-- Soft Ground Shadow -->
+              <div class="trio-bottles-ground-shadow"></div>
+
+              <!-- Waddat 3-Bottle Trio -->
               <img src="/sorrel-3f.png" alt="Sorrel Bottle" class="trio-bottle trio-bottle-sorrel" title="Sorrel"/>
               <img src="/pineapple-sea-moss-3f.png" alt="Pineapple Sea Moss Bottle" class="trio-bottle trio-bottle-pineapple" title="Pineapple Sea Moss"/>
               <img src="/ginger-3f.png" alt="Ginger Bottle" class="trio-bottle trio-bottle-ginger" title="Ginger"/>
-              <img src="/fruits/pineapple_slice.png" alt="Pineapple Wedge" class="trio-fruit-pine"/>
-              <img src="/fruits/ginger_root.png" alt="Ginger" class="trio-fruit-ginger"/>
+
+              <!-- Pineapple Slice Resting at Sorrel Base -->
+              <img src="/fruits/pineapple_slice.png" alt="Pineapple Slice" class="trio-fruit-pine"/>
+
+              <!-- Ginger Root Resting at Ginger Base -->
+              <img src="/fruits/ginger_root.png" alt="Ginger Root" class="trio-fruit-ginger"/>
             </div>
 
-            <!-- Content Right -->
-            <div class="timeline-content-col">
-              <div class="timeline-stem-wrapper">
-                <div class="timeline-badge timeline-badge-purple">2025</div>
-                <span class="timeline-stem-line purple"></span>
+            <!-- Content Right: Authentic Timeline Stem + 2025 Content -->
+            <div class="timeline-2025-col">
+              <div class="timeline-2025-stem">
+                <div class="timeline-2025-dot"></div>
+                <div class="timeline-2025-line"></div>
               </div>
-              <h2 class="timeline-heading">
-                A FAMILY INSPIRATION.<br/>
-                <span class="highlight-orange">A BRAND OF ITS OWN.</span>
-              </h2>
-              <p class="timeline-body">
-                In 2025, Waddat officially launched, turning years of inspiration into a range of Jamaican-inspired drinks. From bold sorrel and warming ginger to tropical sea moss blends, the aim was simple: bring island flavour to more people, in a bottle ready to share.
-              </p>
+              <div class="timeline-2025-content">
+                <div class="timeline-2025-badge-wrapper">
+                  <div class="timeline-2025-badge">2025</div>
+                  <svg class="timeline-2025-badge-curve" width="65" height="8" viewBox="0 0 65 8" fill="none" aria-hidden="true">
+                    <path d="M2 2C19 7 46 7 63 2" stroke="#211509" stroke-width="2.5" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <h2 class="timeline-2025-heading">
+                  A FAMILY INSPIRATION.<br/>
+                  <span class="highlight-orange">A BRAND OF ITS OWN.</span>
+                </h2>
+                <p class="timeline-2025-body">
+                  In 2025, Waddat officially launched, turning years of inspiration into a range of Jamaican-inspired drinks. From bold sorrel and warming ginger to tropical sea moss blends, the aim was simple: bring island flavour to more people, in a bottle ready to share.
+                </p>
+              </div>
             </div>
           </div>
         </div>
