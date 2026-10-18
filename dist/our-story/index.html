@@ -918,96 +918,7 @@
       filter: drop-shadow(0 12px 20px rgba(0,0,0,0.18));
     }
 
-    /* ==========================================================================
-       SECTION 7: STOCKIST BANNER
-       ========================================================================== */
-    .section-stockist-cta {
-      background-color: var(--color-cream);
-      padding: 4.5rem 0 3.5rem;
-    }
-    .stockist-card {
-      background-color: var(--color-purple-banner);
-      border-radius: 28px;
-      border: 3.5px solid var(--color-dark);
-      box-shadow: 0 10px 0 var(--color-dark);
-      padding: 3rem 3.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 2.5rem;
-      position: relative;
-    }
-    .stockist-card-peeking-fruit {
-      position: absolute;
-      top: -35px;
-      right: 240px;
-      width: 110px;
-      z-index: 5;
-      filter: drop-shadow(0 8px 16px rgba(0,0,0,0.25));
-      pointer-events: none;
-    }
-    .stockist-card-peeking-flower {
-      position: absolute;
-      top: 10px;
-      right: 180px;
-      width: 80px;
-      z-index: 6;
-      filter: drop-shadow(0 6px 14px rgba(0,0,0,0.25));
-      pointer-events: none;
-    }
-    .stockist-text-wrapper {
-      position: relative;
-      z-index: 2;
-    }
-    .stockist-heading {
-      font-family: var(--font-display);
-      font-size: 2.75rem;
-      line-height: 1.1;
-      color: #ffffff;
-      margin-bottom: 0.25rem;
-    }
-    .stockist-heading u {
-      text-decoration-thickness: 3px;
-      text-underline-offset: 4px;
-    }
-    .stockist-heading-sub {
-      font-family: var(--font-display);
-      font-size: 2.75rem;
-      line-height: 1.1;
-      color: var(--color-lime);
-    }
-    .stockist-btn-wrapper {
-      position: relative;
-      z-index: 2;
-      flex-shrink: 0;
-    }
-    .become-stockist-btn {
-      font-family: var(--font-display);
-      font-size: 22px;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      background-color: var(--color-lime);
-      color: var(--color-dark);
-      padding: 15px 36px;
-      border-radius: 999px;
-      border: 2.5px solid var(--color-dark);
-      box-shadow: 0 5px 0 var(--color-dark);
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      white-space: nowrap;
-      transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.2s;
-    }
-    .become-stockist-btn:hover {
-      background-color: #edff47;
-      transform: translateY(-2px);
-      box-shadow: 0 7px 0 var(--color-dark);
-    }
-    .become-stockist-btn:active {
-      transform: translateY(2px);
-      box-shadow: 0 2px 0 var(--color-dark);
-    }
+
 
     /* ==========================================================================
        RESPONSIVE BREAKPOINTS
@@ -1021,8 +932,6 @@
       .hero-sorrel-flowers { right: 300px; width: 140px; }
       .hero-ginger-root { right: -15px; bottom: 30px; width: 155px; }
       .section-heading-lg, .timeline-heading { font-size: 2.8rem; }
-      .stockist-heading, .stockist-heading-sub { font-size: 2.2rem; }
-      .stockist-card-peeking-fruit, .stockist-card-peeking-flower { display: none; }
     }
 
     .trio-fruit-pine, .trio-fruit-ginger,
@@ -1097,12 +1006,7 @@
 
       .next-chapter-fruits-stage { height: 340px; }
 
-      .stockist-card {
-        flex-direction: column;
-        text-align: center;
-        padding: 2.5rem 1.75rem;
-      }
-    }
+
 
     @media (max-width: 520px) {
       .section-hero { padding-top: 125px; }
@@ -1137,8 +1041,6 @@
       }
 
       .section-heading-lg, .timeline-heading { font-size: 2.2rem; }
-      .stockist-heading, .stockist-heading-sub { font-size: 1.75rem; }
-      .become-stockist-btn { font-size: 19px; padding: 12px 28px; }
     }
   </style>
 </head>
@@ -1430,25 +1332,53 @@
       </section>
 
       <!-- ========================================================================
-           SECTION 7: STOCKIST CALL-TO-ACTION CARD
+           SECTION 7: WHOLESALE PROMO BANNER (MATCHING HOMEPAGE)
            ======================================================================== -->
-      <section class="section-stockist-cta" id="story-stockist">
-        <div class="story-container">
-          <div class="stockist-card">
-            <!-- Peeking Fruit Accents Matching Mockup -->
-            <img src="/fruits/pineapple_slice.png" alt="" class="stockist-card-peeking-fruit"/>
-            <img src="/fruits/hibiscus_flower.png" alt="" class="stockist-card-peeking-flower"/>
-
-            <div class="stockist-text-wrapper">
-              <h2 class="stockist-heading">WANT WADDAT <u>ON</u> YOUR SHELVES?</h2>
-              <div class="stockist-heading-sub">BE PART OF OUR NEXT CHAPTER.</div>
-            </div>
-            <div class="stockist-btn-wrapper">
-              <a href="/#wholesale" class="become-stockist-btn">BECOME A STOCKIST</a>
+      <div class="promo-section" style="background-color: #EFE4CD !important;">
+        <div class="padding-global padding-section-large">
+          <div class="container-medium">
+            <div class="z-index-1">
+              <div class="cta">
+                <h2 class="cta-heading">
+                  BRING WADDAT TO YOUR STORE: <br /><span
+                    class="text-color-yellow"
+                    >LET'S TALK WHOLESALE TODAY</span
+                  >
+                </h2>
+                <a
+                  href="/#wholesale"
+                  class="button-wrapper align-center w-inline-block"
+                  ><div class="button">STOCK WADDAT</div>
+                  <div class="button-shadow"></div
+                ></a>
+              </div>
+              <div class="background-image-wrapper">
+                <img
+                  src="/fruits/soursop_slice.png"
+                  loading="lazy"
+                  width="375"
+                  data-w-id="6b10c753-6de2-cc99-e8b7-d3b3f8a2146f"
+                  alt="Soursop Slice"
+                  sizes="(max-width: 479px) 100vw, 375px"
+                  class="kiwi"
+                /><img
+                  src="/fruits/guava_slice.png"
+                  loading="lazy"
+                  width="169.5"
+                  alt="Guava Slice"
+                  class="orange-slice"
+                /><img
+                  src="/yellow-shape.svg"
+                  loading="lazy"
+                  width="166.5"
+                  alt=""
+                  class="white-shape"
+                />
+              </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       <!-- ========================================================================
            HOMEPAGE MATCHING FOOTER
