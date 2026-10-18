@@ -1130,7 +1130,7 @@
       max-width: 500px;
     }
 
-    /* Trio Bottles Stage */
+    /* 2025 Bottles Stage (Full 5-Drink Lineup) */
     .trio-bottles-stage {
       position: relative;
       height: 480px;
@@ -1138,24 +1138,24 @@
       align-items: flex-end;
       justify-content: center;
       width: 100%;
-      max-width: 540px;
+      max-width: 580px;
     }
     .trio-splash-bg {
       position: absolute;
-      top: 38%;
-      left: 12%;
-      transform: translate(-40%, -50%);
-      width: 400px;
-      height: 400px;
+      top: 42%;
+      left: 18%;
+      transform: translate(-50%, -50%);
+      width: 440px;
+      height: 440px;
       z-index: 1;
       opacity: 0.95;
       pointer-events: none;
     }
     .trio-leaf-bg {
       position: absolute;
-      top: 10%;
-      right: 3%;
-      width: 120px;
+      top: 6%;
+      right: 4%;
+      width: 125px;
       height: auto;
       transform: rotate(32deg);
       z-index: 2;
@@ -1167,7 +1167,7 @@
       bottom: 12px;
       left: 50%;
       transform: translateX(-50%);
-      width: 440px;
+      width: 520px;
       height: 28px;
       background: radial-gradient(ellipse at center, rgba(33, 21, 9, 0.28) 0%, rgba(33, 21, 9, 0.08) 55%, transparent 75%);
       border-radius: 50%;
@@ -1177,49 +1177,37 @@
     .trio-bottle {
       position: absolute;
       bottom: 22px;
-      height: 410px;
+      height: 380px;
       width: auto;
       object-fit: contain;
       filter: drop-shadow(0 14px 20px rgba(0,0,0,0.18));
       pointer-events: none;
       transition: transform 0.3s ease;
     }
+    .trio-bottle-soursop {
+      left: 2%;
+      z-index: 3;
+      transform: rotate(-5deg);
+    }
     .trio-bottle-sorrel {
-      left: 16%;
+      left: 20%;
       z-index: 4;
-      transform: rotate(-3deg);
+      transform: rotate(-2.5deg);
     }
     .trio-bottle-pineapple {
-      left: 36%;
-      z-index: 5;
+      left: 39%;
+      z-index: 6;
       transform: rotate(0deg);
     }
     .trio-bottle-ginger {
-      left: 56%;
+      left: 58%;
       z-index: 4;
-      transform: rotate(3deg);
+      transform: rotate(2.5deg);
     }
-    .trio-fruit-pine {
-      position: absolute;
-      bottom: 2px;
-      left: 10%;
-      width: 145px;
-      height: auto;
+    .trio-bottle-lemonade {
+      left: 76%;
+      z-index: 3;
       transform: rotate(5deg);
-      z-index: 6;
-      filter: drop-shadow(0 10px 16px rgba(0,0,0,0.20));
-      pointer-events: none;
-    }
-    .trio-fruit-ginger {
-      position: absolute;
-      bottom: 8px;
-      right: 6%;
-      width: 140px;
-      height: auto;
-      transform: rotate(-8deg);
-      z-index: 6;
-      filter: drop-shadow(0 12px 20px rgba(0,0,0,0.24));
-      pointer-events: none;
     }
 
     /* ==========================================================================
@@ -1338,7 +1326,6 @@
       .section-heading-lg, .timeline-heading, .timeline-1995-heading, .timeline-2025-heading { font-size: 2.8rem; }
     }
 
-    .trio-fruit-pine, .trio-fruit-ginger,
     .trio-leaf-bg, .trio-bottles-ground-shadow,
     .next-chapter-fruits-stage img,
     .frame-1995-guava, .frame-1995-ginger,
@@ -1446,13 +1433,11 @@
       .trio-bottles-stage {
         height: 420px;
         margin: 0 auto;
-        max-width: 480px;
+        max-width: 520px;
       }
-      .trio-bottle { height: 340px; }
-      .trio-splash-bg { width: 300px; height: 300px; }
-      .trio-leaf-bg { width: 90px; }
-      .trio-fruit-pine { width: 115px; }
-      .trio-fruit-ginger { width: 115px; }
+      .trio-bottle { height: 320px; }
+      .trio-splash-bg { width: 340px; height: 340px; }
+      .trio-leaf-bg { width: 95px; }
 
       .next-chapter-fruits-stage { height: 340px; }
     }
@@ -1502,35 +1487,26 @@
       .frame-1995-hibiscus { width: 55px; bottom: 15px; right: -15px; }
       .frame-1995-splash { width: 190px; height: 190px; right: -25px; top: -20px; }
       .trio-bottles-stage {
-        height: 350px;
-        max-width: 360px;
+        height: 310px;
+        max-width: 350px;
+        margin: 0 auto;
       }
       .trio-bottle {
-        height: 275px;
-        bottom: 18px;
+        height: 220px;
+        bottom: 16px;
       }
       .trio-splash-bg {
         width: 240px;
         height: 240px;
       }
       .trio-leaf-bg {
-        width: 75px;
-        top: 10%;
-        right: 2%;
-      }
-      .trio-fruit-pine {
-        width: 90px;
-        bottom: 8px;
-        left: 2%;
-      }
-      .trio-fruit-ginger {
-        width: 90px;
-        bottom: 8px;
+        width: 65px;
+        top: 6%;
         right: 2%;
       }
       .trio-bottles-ground-shadow {
         width: 310px;
-        height: 20px;
+        height: 18px;
         bottom: 10px;
       }
     }
@@ -1788,24 +1764,23 @@
       <section class="section-timeline-2025" id="story-2025">
         <div class="story-container">
           <div class="timeline-2025-grid">
-            <!-- Waddat Trio Bottles Left -->
+            <!-- Waddat 5-Bottle Full Lineup Left -->
             <div class="trio-bottles-stage">
               <!-- Purple Splash Backdrop -->
               <img src="/story-splash-purple.svg" alt="" class="trio-splash-bg"/>
               
-              <!-- Lime Leaf Behind Ginger Bottle -->
+              <!-- Lime Leaf Behind Ginger / Lemonade Bottle -->
               <img src="/hero-top-leaf.svg" alt="" class="trio-leaf-bg"/>
 
               <!-- Soft Ground Shadow -->
               <div class="trio-bottles-ground-shadow"></div>
 
-              <!-- Waddat 3-Bottle Trio -->
+              <!-- Full 5-Drink Lineup -->
+              <img src="/soursop-sea-moss-3f.png" alt="Soursop Sea Moss Bottle" class="trio-bottle trio-bottle-soursop" title="Soursop Sea Moss"/>
               <img src="/sorrel-3f.png" alt="Sorrel Bottle" class="trio-bottle trio-bottle-sorrel" title="Sorrel"/>
               <img src="/pineapple-sea-moss-3f.png" alt="Pineapple Sea Moss Bottle" class="trio-bottle trio-bottle-pineapple" title="Pineapple Sea Moss"/>
               <img src="/ginger-3f.png" alt="Ginger Bottle" class="trio-bottle trio-bottle-ginger" title="Ginger"/>
-
-              <!-- Piece of Sea Moss Resting at Sorrel Base -->
-              <img src="/fruits/sea_moss_piece.png" alt="Piece of Sea Moss" class="trio-fruit-pine trio-fruit-seamoss"/>
+              <img src="/lemonade-3f.png" alt="Lemonade Bottle" class="trio-bottle trio-bottle-lemonade" title="Lemonade"/>
             </div>
 
             <!-- Content Right: Authentic Timeline Stem + 2025 Content -->
