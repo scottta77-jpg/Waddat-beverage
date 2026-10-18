@@ -113,7 +113,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding-top: clamp(100px, 12vh, 130px);
+      padding-top: clamp(85px, 9.5vh, 110px);
       padding-bottom: clamp(20px, 4vh, 40px);
       box-sizing: border-box;
     }
@@ -158,28 +158,28 @@
 
     .hero-layout {
       display: grid;
-      grid-template-columns: 1.15fr 1fr;
+      grid-template-columns: 1.05fr 1fr;
       align-items: center;
-      gap: 1rem;
+      gap: 1.5rem;
       position: relative;
-      min-height: clamp(430px, 75vh, 560px);
+      min-height: clamp(520px, 80vh, 750px);
     }
 
     .hero-left-content {
       position: relative;
       z-index: 10;
-      padding-bottom: 30px;
-      padding-left: 55px;
+      padding-bottom: 20px;
+      padding-left: clamp(20px, 3.5vw, 65px);
       margin-top: -10px;
     }
 
     .hero-title-badge {
       font-family: var(--font-display);
       font-weight: 900;
-      font-size: clamp(4.6rem, 6.8vw, 8.2rem);
-      line-height: 0.88;
+      font-size: clamp(5.4rem, 8.2vw, 10.2rem);
+      line-height: 0.86;
       color: #ffffff;
-      margin-bottom: 1.1rem;
+      margin-bottom: 1.25rem;
       letter-spacing: 1px;
       display: inline-block;
       white-space: nowrap;
@@ -189,26 +189,26 @@
     }
 
     .hero-text-block {
-      margin-left: 1.8rem;
+      margin-left: 0.5rem;
     }
 
     .hero-subheading {
       font-family: var(--font-display);
       font-weight: 900;
-      font-size: clamp(2.3rem, 3.2vw, 3.6rem);
+      font-size: clamp(2.4rem, 3.6vw, 4.2rem);
       line-height: 0.94;
       color: var(--color-dark);
-      margin-bottom: 1rem;
+      margin-bottom: 1.2rem;
       letter-spacing: 0.5px;
       animation: heroSubheadingEntrance 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
     }
 
     .hero-text {
       font-family: var(--font-body);
-      font-size: clamp(1.05rem, 1.2vw, 1.25rem);
-      line-height: 1.45;
+      font-size: clamp(1.15rem, 1.35vw, 1.45rem);
+      line-height: 1.5;
       color: var(--color-dark);
-      max-width: 480px;
+      max-width: 520px;
       font-weight: 500;
       margin: 0;
       animation: heroTextEntrance 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
@@ -217,19 +217,19 @@
     /* Bottom-Left Soursop Cluster: composed from homepage assets (whole spiky soursop + cut slice) */
     .hero-soursop-cluster {
       position: absolute;
-      bottom: 0;
-      left: 0;
-      width: clamp(260px, 25vw, 360px);
-      height: clamp(360px, 55vh, 500px);
+      bottom: -30px;
+      left: -30px;
+      width: clamp(270px, 25vw, 360px);
+      height: clamp(360px, 52vh, 480px);
       z-index: 8;
       pointer-events: none;
       animation: heroSoursopClusterEntrance 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both;
     }
     .hero-soursop-whole {
       position: absolute;
-      bottom: clamp(100px, 16vh, 150px);
+      bottom: clamp(110px, 17vh, 160px);
       left: clamp(-55px, -4.5vw, -40px);
-      width: clamp(175px, 17vw, 240px);
+      width: clamp(185px, 18vw, 255px);
       height: auto;
       z-index: 1;
       pointer-events: none;
@@ -239,7 +239,7 @@
       position: absolute;
       bottom: clamp(-20px, -3vh, -10px);
       left: clamp(-50px, -4vw, -35px);
-      width: clamp(215px, 21vw, 290px);
+      width: clamp(225px, 22vw, 305px);
       height: auto;
       transform: rotate(-19deg);
       z-index: 2;
@@ -247,11 +247,11 @@
       filter: drop-shadow(0 16px 28px rgba(0,0,0,0.22));
     }
 
-    /* Right-Side Bottle & Splash Stage (Completely Static, No Motion/Animations) */
+    /* Right-Side Bottle & Splash Stage */
     .hero-bottle-stage {
       position: relative;
       width: 100%;
-      height: clamp(500px, 72vh, 650px);
+      height: clamp(560px, 80vh, 760px);
       margin-top: -20px;
       display: flex;
       align-items: flex-end;
@@ -261,10 +261,10 @@
 
     .hero-purple-splash {
       position: absolute;
-      right: clamp(-25px, -2vw, -10px);
+      right: clamp(-30px, -2vw, -10px);
       top: 36%;
       transform: translateY(-50%);
-      width: clamp(360px, 38vw, 540px);
+      width: clamp(420px, 44vw, 640px);
       height: auto;
       z-index: 1;
       pointer-events: none;
@@ -273,55 +273,55 @@
 
     .hero-sorrel-flowers {
       position: absolute;
-      top: clamp(20px, 5vh, 40px);
-      right: clamp(190px, 20vw, 270px);
-      width: clamp(125px, 12vw, 165px);
+      top: clamp(40px, 7vh, 85px);
+      right: clamp(300px, 29vw, 420px);
+      width: clamp(145px, 14.5vw, 205px);
       height: auto;
-      transform: rotate(8deg);
-      z-index: 2;
+      transform: rotate(-10deg);
+      z-index: 5;
       pointer-events: none;
-      filter: drop-shadow(0 10px 18px rgba(0,0,0,0.18));
+      filter: drop-shadow(0 12px 20px rgba(0,0,0,0.2));
       animation: heroSorrelFlowerEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
     }
 
     .hero-ginger-root {
       position: absolute;
-      bottom: clamp(60px, 12vh, 90px);
-      right: clamp(230px, 24vw, 320px);
-      width: clamp(135px, 13vw, 185px);
+      bottom: clamp(50px, 9vh, 95px);
+      right: clamp(320px, 31vw, 450px);
+      width: clamp(185px, 18vw, 255px);
       height: auto;
-      transform: rotate(18deg);
-      z-index: 3;
+      transform: rotate(50deg);
+      z-index: 7;
       pointer-events: none;
-      filter: drop-shadow(0 12px 20px rgba(0,0,0,0.22));
+      filter: drop-shadow(0 14px 24px rgba(0,0,0,0.22));
       animation: heroGingerEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both;
     }
 
     .hero-bottle-pineapple {
       position: absolute;
       bottom: 0px;
-      right: clamp(-10px, -1vw, 5px);
-      height: clamp(400px, 62vh, 560px);
+      right: clamp(-15px, -1vw, 5px);
+      height: clamp(480px, 70vh, 660px);
       width: auto;
       object-fit: contain;
       transform: rotate(-13.5deg);
       z-index: 4;
       pointer-events: none;
-      filter: drop-shadow(0 18px 28px rgba(0,0,0,0.25));
+      filter: drop-shadow(0 20px 32px rgba(0,0,0,0.26));
       animation: heroBottlePineEntrance 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.12s both;
     }
 
     .hero-bottle-sorrel {
       position: absolute;
-      bottom: clamp(5px, 1.5vh, 15px);
-      right: clamp(105px, 11vw, 160px);
-      height: clamp(450px, 70vh, 640px);
+      bottom: clamp(5px, 1.5vh, 20px);
+      right: clamp(95px, 9.5vw, 150px);
+      height: clamp(540px, 78vh, 740px);
       width: auto;
       object-fit: contain;
       transform: rotate(21deg);
       z-index: 6;
       pointer-events: none;
-      filter: drop-shadow(0 22px 34px rgba(0,0,0,0.3));
+      filter: drop-shadow(0 24px 38px rgba(0,0,0,0.32));
       animation: heroBottleSorrelEntrance 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.08s both;
     }
 
@@ -434,30 +434,45 @@
     @keyframes heroSorrelFlowerEntrance {
       0% {
         opacity: 0.2;
-        transform: translate3d(0, -60px, 0) rotate(-5deg) scale(0.65);
+        transform: translate3d(0, -60px, 0) rotate(-25deg) scale(0.65);
       }
       70% {
         opacity: 1;
-        transform: translate3d(0, 4px, 0) rotate(10deg) scale(1.03);
+        transform: translate3d(0, 4px, 0) rotate(-8deg) scale(1.03);
       }
       100% {
         opacity: 1;
-        transform: translate3d(0, 0, 0) rotate(8deg) scale(1);
+        transform: translate3d(0, 0, 0) rotate(-10deg) scale(1);
+      }
+    }
+      100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) rotate(-8deg) scale(1);
       }
     }
 
     @keyframes heroGingerEntrance {
       0% {
         opacity: 0.2;
-        transform: translate3d(-30px, 40px, 0) rotate(6deg) scale(0.65);
+        transform: translate3d(-30px, 40px, 0) rotate(35deg) scale(0.65);
       }
       70% {
         opacity: 1;
-        transform: translate3d(3px, -3px, 0) rotate(20deg) scale(1.03);
+        transform: translate3d(3px, -3px, 0) rotate(53deg) scale(1.03);
       }
       100% {
         opacity: 1;
-        transform: translate3d(0, 0, 0) rotate(18deg) scale(1);
+        transform: translate3d(0, 0, 0) rotate(50deg) scale(1);
+      }
+    }
+      100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) rotate(62deg) scale(1);
+      }
+    }
+      100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) rotate(-12deg) scale(1);
       }
     }
 
@@ -1013,13 +1028,13 @@
        RESPONSIVE BREAKPOINTS
        ========================================================================== */
     @media (max-width: 1024px) {
-      .hero-title-badge { font-size: 5.8rem; }
-      .hero-subheading { font-size: 2.6rem; }
-      .hero-bottle-sorrel { height: 460px; right: 130px; }
-      .hero-bottle-pineapple { height: 420px; right: 0; }
+      .hero-title-badge { font-size: 6.2rem; }
+      .hero-subheading { font-size: 2.8rem; }
+      .hero-bottle-sorrel { height: 500px; right: 110px; }
+      .hero-bottle-pineapple { height: 440px; right: 0; }
       .hero-purple-splash { width: 500px; }
       .hero-sorrel-flowers { right: 260px; width: 140px; }
-      .hero-ginger-root { right: 280px; width: 150px; }
+      .hero-ginger-root { right: 260px; width: 155px; }
       .section-heading-lg, .timeline-heading { font-size: 2.8rem; }
       .stockist-heading, .stockist-heading-sub { font-size: 2.2rem; }
       .stockist-card-peeking-fruit, .stockist-card-peeking-flower { display: none; }
@@ -1077,15 +1092,15 @@
       }
 
       .hero-bottle-stage {
-        height: 480px;
-        max-width: 500px;
+        height: 520px;
+        max-width: 520px;
         margin: 0 auto;
       }
       .hero-purple-splash { width: 440px; right: -10px; top: 48%; }
-      .hero-sorrel-flowers { width: 120px; top: 60px; right: 240px; }
-      .hero-ginger-root { width: 130px; bottom: 70px; right: 260px; }
-      .hero-bottle-pineapple { height: 380px; right: 10px; transform: rotate(-13.5deg); }
-      .hero-bottle-sorrel { height: 420px; right: 120px; transform: rotate(21deg); }
+      .hero-sorrel-flowers { width: 125px; top: 50px; right: 240px; }
+      .hero-ginger-root { width: 140px; bottom: 70px; right: 240px; }
+      .hero-bottle-pineapple { height: 420px; right: 10px; transform: rotate(-13.5deg); }
+      .hero-bottle-sorrel { height: 470px; right: 110px; transform: rotate(21deg); }
 
       .roots-layout, .timeline-layout {
         grid-template-columns: 1fr;
@@ -1112,14 +1127,14 @@
       .hero-left-content { margin-bottom: 2rem; }
       
       .hero-bottle-stage {
-        height: 400px;
-        max-width: 340px;
+        height: 440px;
+        max-width: 360px;
       }
-      .hero-purple-splash { width: 320px; right: 0; top: 48%; }
-      .hero-sorrel-flowers { width: 95px; top: 45px; right: 180px; }
-      .hero-ginger-root { width: 105px; bottom: 50px; right: 190px; }
-      .hero-bottle-pineapple { height: 300px; right: 0; transform: rotate(-13.5deg); }
-      .hero-bottle-sorrel { height: 330px; right: 85px; transform: rotate(21deg); }
+      .hero-purple-splash { width: 330px; right: 0; top: 48%; }
+      .hero-sorrel-flowers { width: 105px; top: 40px; right: 170px; }
+      .hero-ginger-root { width: 115px; bottom: 55px; right: 175px; }
+      .hero-bottle-pineapple { height: 340px; right: 0; transform: rotate(-13.5deg); }
+      .hero-bottle-sorrel { height: 380px; right: 80px; transform: rotate(21deg); }
 
       .hero-soursop-cluster {
         width: 220px;
@@ -1246,7 +1261,7 @@
               <img src="/fruits/sorrel_calyx.png" alt="Fresh Sorrel Flowers" class="hero-sorrel-flowers"/>
 
               <!-- Fresh Ginger Root to the left of Sorrel bottle waist (copied from homepage) -->
-              <img src="/fruits/ginger_hero_flipped.png" alt="Fresh Ginger Root" class="hero-ginger-root"/>
+              <img src="/fruits/ginger_root.png" alt="Fresh Ginger Root" class="hero-ginger-root"/>
 
               <!-- Waddat Pineapple Sea Moss Bottle (leaning counter-clockwise -13.5deg) -->
               <img src="/pineapple-sea-moss-3f.png" alt="Waddat Pineapple Sea Moss" class="hero-bottle-pineapple"/>
