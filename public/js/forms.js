@@ -1,9 +1,14 @@
 (function () {
   'use strict';
 
+  // Web3Forms public access keys (designed for client-side API submission)
+  var WHOLESALE_KEY = '9e75e3c3-e0ff-475b-9d68-67e621ced028';
+  var NEWSLETTER_KEY = '39a22fee-235b-4cdf-b13e-b1cfb18175ff';
+  var WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
+
   function initForms() {
     // 1. Wholesale Form
-    const wholesaleForms = document.querySelectorAll(
+    var wholesaleForms = document.querySelectorAll(
       '#wf-form-Wholesale-Form, form[name="wf-form-Wholesale-Form"]'
     );
 
@@ -11,13 +16,11 @@
       if (form.dataset.waddatBound) return;
       form.dataset.waddatBound = 'true';
 
-      // Ensure form doesn't carry inline blocking or Webflow action
       form.removeAttribute('onsubmit');
       form.removeAttribute('action');
       form.removeAttribute('method');
 
-      // Re-enable submit button if it was disabled
-      const submitBtn = form.querySelector('button, input[type="submit"], .button-wrapper');
+      var submitBtn = form.querySelector('button, input[type="submit"], .button-wrapper');
       if (submitBtn) {
         submitBtn.removeAttribute('disabled');
         submitBtn.removeAttribute('aria-disabled');
@@ -35,19 +38,27 @@
           return;
         }
 
-        const nameInput = form.querySelector('#Wholesale-Name, [name="business_name"], [name="Business Name"], [name="name"]');
-        const emailInput = form.querySelector('#Wholesale-Email, [name="email"], [name="Email"]');
-        const messageInput = form.querySelector('#Wholesale-Message, [name="message"], [name="Message"]');
+        var nameInput = form.querySelector('#Wholesale-Name, [name="business_name"], [name="Business Name"], [name="name"]');
+        var emailInput = form.querySelector('#Wholesale-Email, [name="email"], [name="Email"]');
+        var messageInput = form.querySelector('#Wholesale-Message, [name="message"], [name="Message"]');
 
-        const payload = {
-          business_name: nameInput ? nameInput.value.trim() : '',
-          email: emailInput ? emailInput.value.trim() : '',
-          message: messageInput ? messageInput.value.trim() : ''
+        var businessName = nameInput ? nameInput.value.trim() : '';
+        var email = emailInput ? emailInput.value.trim() : '';
+        var message = messageInput ? messageInput.value.trim() : '';
+
+        var payload = {
+          access_key: WHOLESALE_KEY,
+          subject: 'New Wholesale Enquiry: ' + businessName,
+          from_name: 'Waddat Drinks Wholesale Enquiry',
+          business_name: businessName,
+          name: businessName,
+          email: email,
+          message: message
         };
 
         handleFormSubmit({
           form: form,
-          endpoint: '/api/wholesale.php',
+          endpoint: WEB3FORMS_ENDPOINT,
           payload: payload,
           successMessage: 'Thanks! We’ll be in touch about stocking Waddat.',
           errorMessage: 'Something went wrong. Please try again.'
@@ -56,7 +67,7 @@
     });
 
     // 2. Newsletter Form
-    const newsletterForms = document.querySelectorAll(
+    var newsletterForms = document.querySelectorAll(
       '#wf-form-Newsletter-Form, form[name="wf-form-Newsletter-Form"]'
     );
 
@@ -68,7 +79,7 @@
       form.removeAttribute('action');
       form.removeAttribute('method');
 
-      const submitBtn = form.querySelector('button, input[type="submit"], .button-wrapper');
+      var submitBtn = form.querySelector('button, input[type="submit"], .button-wrapper');
       if (submitBtn) {
         submitBtn.removeAttribute('disabled');
         submitBtn.removeAttribute('aria-disabled');
@@ -91,17 +102,23 @@
           return;
         }
 
-        const nameInput = form.querySelector('#Newsletter-Name, #Name, [name="name"], [name="Name"]');
-        const emailInput = form.querySelector('#Newsletter-Email, #Email, [name="email"], [name="Email"]');
+        var nameInput = form.querySelector('#Newsletter-Name, #Name, [name="name"], [name="Name"]');
+        var emailInput = form.querySelector('#Newsletter-Email, #Email, [name="email"], [name="Email"]');
 
-        const payload = {
-          name: nameInput ? nameInput.value.trim() : '',
-          email: emailInput ? emailInput.value.trim() : ''
+        var name = nameInput ? nameInput.value.trim() : '';
+        var email = emailInput ? emailInput.value.trim() : '';
+
+        var payload = {
+          access_key: NEWSLETTER_KEY,
+          subject: 'New Newsletter Signup: ' + name,
+          from_name: 'Waddat Drinks Newsletter Signup',
+          name: name,
+          email: email
         };
 
         handleFormSubmit({
           form: form,
-          endpoint: '/api/newsletter.php',
+          endpoint: WEB3FORMS_ENDPOINT,
           payload: payload,
           successMessage: 'You’re in! Watch out for new flavours and promos.',
           errorMessage: 'Something went wrong. Please try again.'
@@ -111,17 +128,16 @@
   }
 
   function handleFormSubmit(opts) {
-    const form = opts.form;
-    const endpoint = opts.endpoint;
-    const payload = opts.payload;
-    const successMessage = opts.successMessage;
-    const errorMessage = opts.errorMessage;
+    var form = opts.form;
+    var endpoint = opts.endpoint;
+    var payload = opts.payload;
+    var successMessage = opts.successMessage;
+    var errorMessage = opts.errorMessage;
 
-    const container = form.closest('.w-form') || form.parentElement;
-    let doneEl = container ? container.querySelector('.w-form-done, .form_message-success') : null;
-    let failEl = container ? container.querySelector('.w-form-fail, .form_message-error') : null;
+    var container = form.closest('.w-form') || form.parentElement;
+    var doneEl = container ? container.querySelector('.w-form-done, .form_message-success') : null;
+    var failEl = container ? container.querySelector('.w-form-fail, .form_message-error') : null;
 
-    // Create status containers dynamically if absent
     if (!doneEl && container) {
       doneEl = document.createElement('div');
       doneEl.className = 'form_message-success w-form-done';
@@ -137,12 +153,11 @@
       container.appendChild(failEl);
     }
 
-    const submitBtn = form.querySelector('button[type="submit"], input[type="submit"], .button-wrapper, .button.is-form-submit');
+    var submitBtn = form.querySelector('button[type="submit"], input[type="submit"], .button-wrapper, .button.is-form-submit');
 
     if (failEl) failEl.style.display = 'none';
     if (doneEl) doneEl.style.display = 'none';
 
-    // Disable button to prevent double-sends
     if (submitBtn) {
       submitBtn.disabled = true;
       submitBtn.style.pointerEvents = 'none';
@@ -172,7 +187,7 @@
           form.reset();
           form.style.display = 'none';
           if (doneEl) {
-            const textTarget = doneEl.querySelector('div, p, span') || doneEl;
+            var textTarget = doneEl.querySelector('div, p, span') || doneEl;
             textTarget.textContent = successMessage;
             doneEl.style.display = 'block';
           }
@@ -194,7 +209,7 @@
 
   function showFormError(failEl, msg) {
     if (failEl) {
-      const textTarget = failEl.querySelector('div, p, span') || failEl;
+      var textTarget = failEl.querySelector('div, p, span') || failEl;
       textTarget.textContent = msg;
       failEl.style.display = 'block';
     } else {
