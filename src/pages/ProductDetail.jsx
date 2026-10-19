@@ -34,25 +34,22 @@ export default function ProductDetail() {
         </div>
         <div className="product-info">
           <h1>{product.name}</h1>
-          <p className="price">${product.price.toFixed(2)} USD</p>
           <p className="description">{product.description}</p>
 
-          <div className="size-selector">
-            <label htmlFor="size">Size:</label>
-            <select
-              id="size"
-              value={selectedSize}
-              onChange={(e) => setSelectedSize(e.target.value)}
+          <div className="product-actions" style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginTop: '1.5rem' }}>
+            <a href="/#wholesale" className="btn-primary" style={{ textDecoration: 'none' }}>
+              Request Pricing
+            </a>
+            <a
+              href="/Waddat%20Beverage%20Trade%20Brochure%202.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary"
+              style={{ textDecoration: 'none' }}
             >
-              {product.sizes.map((size) => (
-                <option key={size} value={size}>{size}</option>
-              ))}
-            </select>
+              Trade Brochure
+            </a>
           </div>
-
-          <button type="button" className="btn-primary add-to-cart" onClick={handleAddToCart}>
-            {added ? '✓ Added!' : 'Add to Cart'}
-          </button>
         </div>
       </div>
     </main>

@@ -76,6 +76,22 @@
         flex-shrink: 0;
       }
       @media (max-width: 767px) {
+        .product-grid {
+          display: flex !important;
+          flex-flow: column !important;
+          padding-top: 5rem !important;
+          grid-column-gap: 2rem !important;
+          grid-row-gap: 2rem !important;
+        }
+        .hero-product-wrapper {
+          width: 100% !important;
+          max-width: 420px !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+        .hero-product-content {
+          width: 100% !important;
+        }
         .purchase-wrapper {
           display: flex !important;
           flex-direction: column !important;
@@ -93,16 +109,16 @@
           width: 100% !important;
           box-sizing: border-box !important;
           justify-content: center !important;
-          padding: 14px 20px !important;
+          padding: 15px 24px !important;
           gap: 12px !important;
           border-radius: 100px !important;
           height: auto !important;
-          min-height: 52px !important;
+          min-height: 56px !important;
           line-height: 1 !important;
           position: relative !important;
         }
         .purchase-wrapper .add-to-cart .add-to-cart-button {
-          font-size: 21px !important;
+          font-size: 22px !important;
           letter-spacing: 0.5px !important;
           line-height: 1 !important;
           z-index: 2 !important;
@@ -133,12 +149,12 @@
           width: 100% !important;
           box-sizing: border-box !important;
           justify-content: center !important;
-          font-size: 21px !important;
-          padding: 14px 20px !important;
+          font-size: 22px !important;
+          padding: 15px 24px !important;
           border-radius: 100px !important;
           box-shadow: 0 4px 0 #211509 !important;
           height: auto !important;
-          min-height: 52px !important;
+          min-height: 56px !important;
           line-height: 1 !important;
         }
       }
