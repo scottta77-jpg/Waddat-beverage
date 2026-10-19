@@ -1,4 +1,4 @@
-Waddat Beverage favicon pack
+Waddat Drinks favicon pack
 
 Files:
 - favicon.ico

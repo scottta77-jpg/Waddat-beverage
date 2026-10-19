@@ -30,7 +30,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <span>© {new Date().getFullYear()} Waddat Beverage</span>
+        <span>© {new Date().getFullYear()} Waddat Drinks</span>
 <span>Built by <a href="https://cornerstonedg.com" target="_blank" rel="noopener noreferrer">Cornerstone Digital</a></span>
       </div>
     </footer>
