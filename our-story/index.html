@@ -1232,6 +1232,37 @@
       position: relative;
       overflow: hidden;
     }
+    .next-chapter-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      align-items: center;
+      gap: 3.5rem;
+    }
+    .next-chapter-kicker {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--color-dark);
+      margin-bottom: 0.85rem;
+    }
+    .next-chapter-heading {
+      font-family: var(--font-display);
+      font-size: 3.85rem;
+      line-height: 1.04;
+      text-transform: uppercase;
+      color: var(--color-dark);
+      margin: 0 0 1.35rem;
+      letter-spacing: 0.5px;
+    }
+    .next-chapter-body {
+      font-size: 1.18rem;
+      line-height: 1.68;
+      color: var(--color-dark);
+      max-width: 520px;
+      margin-bottom: 0;
+    }
     .explore-drinks-btn {
       font-family: var(--font-display);
       font-size: 22px;
@@ -1262,60 +1293,73 @@
 
     .next-chapter-fruits-stage {
       position: relative;
-      height: 420px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      width: 100%;
+      height: 480px;
     }
     .next-splash-bg {
       position: absolute;
-      top: 50%;
-      right: 5%;
-      transform: translateY(-50%) scale(1.1);
-      width: 420px;
-      height: 420px;
+      left: 25px;
+      bottom: 25px;
+      width: 450px;
+      height: auto;
+      transform: rotate(182deg);
       z-index: 1;
-      opacity: 0.95;
+      filter: drop-shadow(0 15px 30px rgba(85, 65, 186, 0.22));
+      pointer-events: none;
     }
-    .next-leaf-bg {
+    .next-lime-leaves {
       position: absolute;
-      top: 15%;
-      right: 8%;
-      width: 70px;
-      transform: rotate(40deg);
+      top: 25px;
+      right: 40px;
+      width: 145px;
+      height: auto;
+      transform: rotate(24deg);
       z-index: 2;
-    }
-    .next-soursop-whole {
-      position: absolute;
-      top: 10%;
-      left: 12%;
-      width: 190px;
-      z-index: 4;
-      filter: drop-shadow(0 12px 20px rgba(0,0,0,0.18));
+      pointer-events: none;
     }
     .next-soursop-slice {
       position: absolute;
-      bottom: 22%;
-      left: 24%;
-      width: 170px;
+      top: 60px;
+      right: 55px;
+      width: 270px;
+      height: auto;
+      transform: rotate(14deg);
+      z-index: 3;
+      filter: drop-shadow(0 16px 28px rgba(0,0,0,0.18));
+      pointer-events: none;
+    }
+    .next-soursop-whole {
+      position: absolute;
+      top: 35px;
+      left: 55px;
+      width: 325px;
+      height: auto;
+      transform: rotate(-6deg);
+      z-index: 4;
+      filter: drop-shadow(0 18px 30px rgba(0,0,0,0.24));
+      pointer-events: none;
+    }
+    .next-green-leaves {
+      position: absolute;
+      bottom: 75px;
+      right: 5px;
+      width: 180px;
+      height: auto;
+      transform: rotate(14deg);
       z-index: 5;
       filter: drop-shadow(0 12px 20px rgba(0,0,0,0.18));
-    }
-    .next-guava-whole {
-      position: absolute;
-      top: 25%;
-      right: 12%;
-      width: 165px;
-      z-index: 4;
-      filter: drop-shadow(0 12px 20px rgba(0,0,0,0.18));
+      pointer-events: none;
     }
     .next-guava-slice {
       position: absolute;
-      bottom: 12%;
-      right: 25%;
-      width: 155px;
-      z-index: 5;
-      filter: drop-shadow(0 12px 20px rgba(0,0,0,0.18));
+      bottom: 50px;
+      right: 95px;
+      width: 235px;
+      height: auto;
+      transform: rotate(-14deg);
+      z-index: 6;
+      filter: drop-shadow(0 16px 28px rgba(0,0,0,0.26));
+      pointer-events: none;
     }
 
 
@@ -1336,7 +1380,15 @@
       .roots-top-grid, .roots-timeline-grid, .timeline-1995-grid, .timeline-2025-grid { gap: 2.5rem; }
       .roots-fruit-bowl-top { max-width: 380px; }
       .picture-frame-card, .picture-frame-card-1995 { max-width: 440px; }
-      .section-heading-lg, .timeline-heading, .timeline-1995-heading, .timeline-2025-heading { font-size: 2.8rem; }
+      .section-heading-lg, .timeline-heading, .timeline-1995-heading, .timeline-2025-heading, .next-chapter-heading { font-size: 2.8rem; }
+      .next-chapter-grid { gap: 2.5rem; }
+      .next-chapter-fruits-stage { height: 420px; }
+      .next-splash-bg { width: 390px; left: 10px; bottom: 20px; }
+      .next-soursop-whole { width: 280px; left: 35px; top: 25px; }
+      .next-soursop-slice { width: 235px; right: 35px; top: 45px; }
+      .next-lime-leaves { width: 125px; right: 25px; top: 20px; }
+      .next-guava-slice { width: 205px; right: 70px; bottom: 40px; }
+      .next-green-leaves { width: 155px; right: 0px; bottom: 60px; }
     }
 
     .trio-fruit-pine, .trio-fruit-soursop, .trio-fruit-ginger,
@@ -1455,7 +1507,15 @@
       .trio-fruit-pine, .trio-fruit-soursop { width: 115px; }
       .trio-fruit-ginger { width: 115px; }
 
-      .next-chapter-fruits-stage { height: 340px; }
+      .next-chapter-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .next-chapter-fruits-stage {
+        height: 420px;
+        max-width: 480px;
+        margin: 0 auto;
+      }
     }
 
     @media (max-width: 520px) {
@@ -1491,8 +1551,8 @@
       }
 
       .roots-heading { font-size: 2.4rem; }
-      .roots-timeline-heading, .timeline-1995-heading, .timeline-2025-heading { font-size: 2.15rem; }
-      .roots-body, .roots-timeline-body, .timeline-1995-body, .timeline-2025-body { font-size: 1.05rem; }
+      .roots-timeline-heading, .timeline-1995-heading, .timeline-2025-heading, .next-chapter-heading { font-size: 2.15rem; }
+      .roots-body, .roots-timeline-body, .timeline-1995-body, .timeline-2025-body, .next-chapter-body { font-size: 1.05rem; }
       .roots-fruit-bowl-top { max-width: 290px; }
       .picture-frame-card, .picture-frame-card-1995 { max-width: 320px; min-height: 240px; }
 
@@ -1535,6 +1595,18 @@
         height: 20px;
         bottom: 10px;
       }
+
+      .next-chapter-fruits-stage {
+        height: 330px;
+        max-width: 340px;
+        margin: 0 auto;
+      }
+      .next-splash-bg { width: 290px; left: 5px; bottom: 10px; }
+      .next-soursop-whole { width: 210px; left: 20px; top: 20px; }
+      .next-soursop-slice { width: 180px; right: 20px; top: 35px; }
+      .next-lime-leaves { width: 95px; right: 15px; top: 15px; }
+      .next-guava-slice { width: 155px; right: 50px; bottom: 30px; }
+      .next-green-leaves { width: 120px; right: -5px; bottom: 45px; }
     }
   </style>
 </head>
@@ -1841,15 +1913,15 @@
            ======================================================================== -->
       <section class="section-next-chapter" id="story-next-chapter">
         <div class="story-container">
-          <div class="roots-layout">
+          <div class="next-chapter-grid">
             <!-- Text Left -->
-            <div>
-              <div class="section-kicker">THE NEXT CHAPTER</div>
-              <h2 class="section-heading-lg">
+            <div class="next-chapter-text-col">
+              <div class="next-chapter-kicker">THE NEXT CHAPTER</div>
+              <h2 class="next-chapter-heading">
                 OUR ROOTS RUN DEEP.<br/>
                 OUR STORY KEEPS GROWING.
               </h2>
-              <p class="roots-body">
+              <p class="next-chapter-body">
                 From the farm to your local shop, the spirit stays the same: bold flavour, warm memories and something good to share. Whether you grew up with these tastes or are discovering them for the first time, there’s a place for you in the Waddat story.
               </p>
               <a href="/#products" class="explore-drinks-btn">EXPLORE OUR DRINKS</a>
@@ -1857,12 +1929,12 @@
 
             <!-- Tropical Fruit Cluster Right -->
             <div class="next-chapter-fruits-stage">
-              <img src="/story-splash-purple.svg" alt="" class="next-splash-bg"/>
-              <img src="/story-leaf-lime.svg" alt="" class="next-leaf-bg"/>
-              <img src="/fruits/soursop_hero_fruit.png" alt="Whole Soursop" class="next-soursop-whole"/>
-              <img src="/fruits/soursop_slice.png" alt="Cut Soursop" class="next-soursop-slice"/>
-              <img src="/fruits/green_guava.png" alt="Whole Guava" class="next-guava-whole"/>
-              <img src="/fruits/guava_slice.png" alt="Pink Guava" class="next-guava-slice"/>
+              <img src="/hero-splash-purple.svg" alt="" class="next-splash-bg" />
+              <img src="/hero-top-leaf.svg" alt="" class="next-lime-leaves" />
+              <img src="/fruits/soursop_slice.png" alt="Cut Soursop" class="next-soursop-slice" />
+              <img src="/fruits/soursop_hero_fruit.png" alt="Whole Soursop" class="next-soursop-whole" />
+              <img src="/story-hero/leaves-clean.png" alt="Tropical Green Leaves" class="next-green-leaves" />
+              <img src="/fruits/guava_slice.png" alt="Pink Guava" class="next-guava-slice" />
             </div>
           </div>
         </div>
