@@ -31,7 +31,7 @@ export default function Footer() {
       </div>
       <div className="footer-bottom">
         <span>© 2026 Waddat Beverage</span>
-<span>Built by <a href="https://conerstonedg.com" target="_blank" rel="noopener noreferrer">Cornerstone Digital</a></span>
+<span>Built by <a href="https://cornerstonedg.com" target="_blank" rel="noopener noreferrer">Cornerstone Digital</a></span>
       </div>
     </footer>
   );
