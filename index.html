@@ -341,6 +341,7 @@
         display: none !important;
       }
     </style>
+    <script src="/waddat-forms-v1.js" defer></script>
   </head>
   <body>
     <div class="page-wrapper">
@@ -1942,32 +1943,31 @@
               </div>
               <div class="spacer-large"></div>
               <div class="form_component max-width-large align-center w-form">
-                <form id="wf-form-Wholesale-Form" name="wf-form-Wholesale-Form" method="get" class="form_form">
+                <form id="wf-form-Wholesale-Form" name="wf-form-Wholesale-Form" action="https://api.web3forms.com/submit" method="post" class="form_form" data-web3forms data-success-message="Thank you! Your wholesale enquiry has been sent. We’ll be in touch soon.">
+                  <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
+                  <input type="hidden" name="subject" value="Waddat Drinks | Wholesale enquiry" />
+                  <input type="hidden" name="from_name" value="Waddat Drinks website" />
+                  <input type="checkbox" name="botcheck" tabindex="-1" aria-hidden="true" style="display: none;" />
                   <div class="form_field-wrapper">
                     <label for="Wholesale-Name" class="form_label">Business Name</label>
-                    <input class="form_input w-input" maxlength="256" name="Business Name" placeholder="Your Business Name" type="text" id="Wholesale-Name" required />
+                    <input class="form_input w-input" maxlength="256" name="business_name" placeholder="Your Business Name" type="text" id="Wholesale-Name" autocomplete="organization" required />
                   </div>
                   <div class="form_field-wrapper">
                     <label for="Wholesale-Email" class="form_label">Email</label>
-                    <input class="form_input w-input" maxlength="256" name="Email" placeholder="Your Email" type="email" id="Wholesale-Email" required />
+                    <input class="form_input w-input" maxlength="256" name="email" placeholder="Your Email" type="email" id="Wholesale-Email" autocomplete="email" required />
                   </div>
                   <div class="form_field-wrapper" id="contact">
                     <label for="Wholesale-Message" class="form_label">Message</label>
-                    <textarea class="form_input w-input" maxlength="5000" name="Message" placeholder="How can we help you?" id="Wholesale-Message" required style="min-height: 120px;"></textarea>
+                    <textarea class="form_input w-input" maxlength="5000" name="message" placeholder="How can we help you?" id="Wholesale-Message" required style="min-height: 120px;"></textarea>
                   </div>
                   <div class="button-group">
                     <button type="submit" class="button-wrapper align-center w-inline-block" style="background: transparent; border: none; cursor: pointer; padding: 0;">
-                      <div class="button is-form-submit align-center">Submit</div>
+                      <div class="button is-form-submit align-center" data-submit-label>Submit</div>
                       <div class="button-shadow"></div>
                     </button>
                   </div>
+                  <p data-form-status role="status" aria-live="polite" aria-atomic="true" tabindex="-1" class="text-color-white" style="margin-top: 1rem; margin-bottom: 0;"></p>
                 </form>
-                <div class="form_message-success w-form-done">
-                  <div>Thank you! Your submission has been received!</div>
-                </div>
-                <div class="form_message-error w-form-fail">
-                  <div>Oops! Something went wrong while submitting the form.</div>
-                </div>
               </div>
             </div>
           </div>
@@ -2000,76 +2000,34 @@
               </div>
               <div class="spacer-large"></div>
               <div class="form_component max-width-large align-center w-form">
-                <form
-                  id="wf-form-Newsletter-Form"
-                  name="wf-form-Newsletter-Form"
-                  data-name="Newsletter Form"
-                  method="get"
-                  class="form_form"
-                  data-wf-page-id="680aa12c0e13118b7b331d81"
-                  data-wf-element-id="add526f6-cd2a-19fc-4f20-772af538eeac"
-                >
+                <form id="wf-form-Newsletter-Form" name="wf-form-Newsletter-Form" action="https://api.web3forms.com/submit" method="post" class="form_form" data-web3forms data-success-message="Thank you! Your request for Waddat updates has been sent.">
+                  <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
+                  <input type="hidden" name="subject" value="Waddat Drinks | Newsletter signup" />
+                  <input type="hidden" name="from_name" value="Waddat Drinks website" />
+                  <input type="checkbox" name="botcheck" tabindex="-1" aria-hidden="true" style="display: none;" />
                   <div class="form_field-wrapper">
-                    <label for="Name" class="form_label">Name</label
-                    ><input
-                      class="form_input w-input"
-                      maxlength="256"
-                      name="Name"
-                      data-name="Name"
-                      placeholder="Your Name"
-                      type="text"
-                      id="Name"
-                    />
+                    <label for="Newsletter-Name" class="form_label">Name</label>
+                    <input class="form_input w-input" maxlength="256" name="name" placeholder="Your Name" type="text" id="Newsletter-Name" autocomplete="name" required />
                   </div>
                   <div class="form_field-wrapper">
-                    <label for="Email" class="form_label">Email</label
-                    ><input
-                      class="form_input w-input"
-                      maxlength="256"
-                      name="Email"
-                      data-name="Email"
-                      placeholder="Your Email"
-                      type="email"
-                      id="Email"
-                    />
+                    <label for="Newsletter-Email" class="form_label">Email</label>
+                    <input class="form_input w-input" maxlength="256" name="email" placeholder="Your Email" type="email" id="Newsletter-Email" autocomplete="email" required />
                   </div>
                   <div class="form_field-wrapper">
-                    <label for="email" class="form_label">Radio button</label
-                    ><label class="form_radio w-radio"
-                      ><input
-                        type="radio"
-                        name="Radio"
-                        id="radio-2"
-                        data-name="Radio 2"
-                        class="w-form-formradioinput form_radio-icon w-radio-input"
-                        value="Radio"
-                        style="display: none;"
-                      /><span
-                        class="form_radio-label w-form-label"
-                        for="radio-2"
-                        style="text-align: center; display: block;">By signing up you agree to the terms and conditions of WADDAT. Please see our privacy policy for more details.</span
-                      ></label
-                    >
+                    <label for="Newsletter-Consent" class="text-color-white" style="display: flex; align-items: flex-start; gap: 0.75rem; cursor: pointer;">
+                      <input type="checkbox" name="newsletter_consent" id="Newsletter-Consent" value="Yes, I would like to receive email updates from Waddat." required style="width: 18px; height: 18px; flex-shrink: 0; margin-top: 0.2rem; accent-color: #f0e226;" />
+                      <span>I’d like to receive email updates about Waddat drinks, promotions and stockists.</span>
+                    </label>
+                    <p class="text-color-white" style="font-size: 0.875rem; margin-top: 0.75rem;">By signing up you agree to the terms and conditions of WADDAT. Please see our privacy policy for more details.</p>
                   </div>
                   <div class="button-group">
-                    <a
-                      href="/category/drinks"
-                      class="button-wrapper align-center w-inline-block"
-                      ><div class="button is-form-submit align-center">
-                        Subscribe
-                      </div>
-                      <div class="button-shadow"></div
-                    ></a>
+                    <button type="submit" class="button-wrapper align-center w-inline-block" style="background: transparent; border: none; cursor: pointer; padding: 0;">
+                      <div class="button is-form-submit align-center" data-submit-label>Subscribe</div>
+                      <div class="button-shadow"></div>
+                    </button>
                   </div>
+                  <p data-form-status role="status" aria-live="polite" aria-atomic="true" tabindex="-1" class="text-color-white" style="margin-top: 1rem; margin-bottom: 0;"></p>
                 </form>
-                <div class="form_message-success w-form-done">
-                  <div>Thank you! Your submission has been received!</div>
-                </div>
-                <div class="form_message-error w-form-fail">
-                  <div>
-                    Oops! Something went wrong while submitting the form.
-                  </div>
-                </div>
               </div>
             </div>
           </div>
