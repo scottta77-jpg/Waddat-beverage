@@ -60,6 +60,7 @@
           form: form,
           endpoint: WEB3FORMS_ENDPOINT,
           payload: payload,
+          fallbackEndpoint: '/api/wholesale.php',
           successMessage: 'Thanks! We’ll be in touch about stocking Waddat.',
           errorMessage: 'Something went wrong. Please try again.'
         });
@@ -120,6 +121,7 @@
           form: form,
           endpoint: WEB3FORMS_ENDPOINT,
           payload: payload,
+          fallbackEndpoint: '/api/newsletter.php',
           successMessage: 'You’re in! Watch out for new flavours and promos.',
           errorMessage: 'Something went wrong. Please try again.'
         });
@@ -164,47 +166,55 @@
       submitBtn.style.opacity = '0.6';
     }
 
-    fetch(endpoint, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify(payload)
-    })
-      .then(function (res) {
-        return res.json().then(
-          function (json) {
-            return { ok: res.ok, status: res.status, data: json };
-          },
-          function () {
-            return { ok: res.ok, status: res.status, data: null };
-          }
-        );
+    function postJson(url, isFallback) {
+      return fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(payload)
       })
-      .then(function (res) {
-        if (res.ok && res.data && res.data.success !== false) {
-          form.reset();
-          form.style.display = 'none';
-          if (doneEl) {
-            var textTarget = doneEl.querySelector('div, p, span') || doneEl;
-            textTarget.textContent = successMessage;
-            doneEl.style.display = 'block';
+        .then(function (res) {
+          return res.json().then(
+            function (json) {
+              return { ok: res.ok, status: res.status, data: json };
+            },
+            function () {
+              return { ok: res.ok, status: res.status, data: null };
+            }
+          );
+        })
+        .then(function (res) {
+          if (res.ok && res.data && res.data.success !== false) {
+            form.reset();
+            form.style.display = 'none';
+            if (doneEl) {
+              var textTarget = doneEl.querySelector('div, p, span') || doneEl;
+              textTarget.textContent = successMessage;
+              doneEl.style.display = 'block';
+            }
+          } else if (!isFallback && opts.fallbackEndpoint) {
+            return postJson(opts.fallbackEndpoint, true);
+          } else {
+            showFormError(failEl, errorMessage);
           }
-        } else {
+        })
+        .catch(function () {
+          if (!isFallback && opts.fallbackEndpoint) {
+            return postJson(opts.fallbackEndpoint, true);
+          }
           showFormError(failEl, errorMessage);
-        }
-      })
-      .catch(function () {
-        showFormError(failEl, errorMessage);
-      })
-      .finally(function () {
-        if (submitBtn) {
-          submitBtn.disabled = false;
-          submitBtn.style.pointerEvents = '';
-          submitBtn.style.opacity = '';
-        }
-      });
+        });
+    }
+
+    postJson(endpoint, false).finally(function () {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.style.pointerEvents = '';
+        submitBtn.style.opacity = '';
+      }
+    });
   }
 
   function showFormError(failEl, msg) {

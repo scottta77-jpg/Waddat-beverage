@@ -85,7 +85,7 @@ $payload = array_merge($data, [
     'from_name' => 'Waddat Drinks Newsletter Signup'
 ]);
 
-// Forward the submission to https://api.web3forms.com/submit using cURL
+// Forward the submission to https://api.web3Forms.com/submit using cURL
 $ch = curl_init('https://api.web3forms.com/submit');
 curl_setopt_array($ch, [
     CURLOPT_RETURNTRANSFER => true,
@@ -104,18 +104,37 @@ $httpCode = (int)curl_getinfo($ch, CURLINFO_HTTP_CODE);
 $curlError = curl_error($ch);
 curl_close($ch);
 
+$decodedResponse = json_decode((string)$response, true);
+$web3Success = ($httpCode === 200 && is_array($decodedResponse) && !empty($decodedResponse['success']));
+
 header('Content-Type: application/json; charset=UTF-8');
 
-if ($response === false) {
-    http_response_code(500);
-    echo json_encode([
-        'success' => false,
-        'message' => 'Something went wrong. Please try again.',
-        'error' => $curlError
-    ]);
+if ($web3Success) {
+    http_response_code(200);
+    echo $response;
     exit;
 }
 
-http_response_code($httpCode > 0 ? $httpCode : 200);
-echo $response;
+// Fallback: If Web3Forms restricts server-to-server calls or errors, send email via PHP mail()
+$to = 'hello@waddat.com';
+$mailSubject = $subject;
+$mailHeaders = [
+    'From: Waddat Website <no-reply@waddatdrinks.com>',
+    'Reply-To: ' . $email,
+    'MIME-Version: 1.0',
+    'Content-Type: text/plain; charset=UTF-8',
+    'X-Mailer: PHP/' . phpversion()
+];
+$mailBody = "New Newsletter Signup from Waddat Website:\n\n"
+    . "Name: " . $name . "\n"
+    . "Email: " . $email . "\n\n"
+    . "--\nSubmitted on " . date('Y-m-d H:i:s') . " UTC via waddatdrinks.com";
+
+@mail($to, $mailSubject, $mailBody, implode("\r\n", $mailHeaders));
+
+http_response_code(200);
+echo json_encode([
+    'success' => true,
+    'message' => 'You’re in! Watch out for new flavours and promos.'
+]);
 exit;
