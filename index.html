@@ -341,7 +341,6 @@
         display: none !important;
       }
     </style>
-    <script src="/waddat-forms-v2.js" defer></script>
   </head>
   <body>
     <div class="page-wrapper">
@@ -1943,12 +1942,7 @@
               </div>
               <div class="spacer-large"></div>
               <div class="form_component max-width-large align-center w-form">
-                <form id="wf-form-Wholesale-Form" name="wf-form-Wholesale-Form" action="https://formsubmit.co/info@waddatbeverageltd.com" method="post" class="form_form" data-formsubmit data-success-message="Thank you! Your wholesale enquiry has been sent. We’ll be in touch soon.">
-                  <input type="hidden" name="_subject" value="Waddat | Wholesale Enquiry" />
-                  <input type="hidden" name="_template" value="table" />
-                  <input type="hidden" name="_captcha" value="false" />
-                  <input type="hidden" name="_url" value="https://waddatdrinks.com/" />
-                  <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display: none;" />
+                <form id="wf-form-Wholesale-Form" name="wf-form-Wholesale-Form" class="form_form" onsubmit="event.stopImmediatePropagation(); return false;">
                   <div class="form_field-wrapper">
                     <label for="Wholesale-Name" class="form_label">Business Name</label>
                     <input class="form_input w-input" maxlength="256" name="business_name" placeholder="Your Business Name" type="text" id="Wholesale-Name" autocomplete="organization" required />
@@ -1962,12 +1956,11 @@
                     <textarea class="form_input w-input" maxlength="5000" name="message" placeholder="How can we help you?" id="Wholesale-Message" required style="min-height: 120px;"></textarea>
                   </div>
                   <div class="button-group">
-                    <button type="submit" class="button-wrapper align-center w-inline-block" style="background: transparent; border: none; cursor: pointer; padding: 0;">
-                      <div class="button is-form-submit align-center" data-submit-label>Submit</div>
+                    <button type="button" disabled aria-disabled="true" class="button-wrapper align-center w-inline-block" style="background: transparent; border: none; cursor: pointer; padding: 0;">
+                      <div class="button is-form-submit align-center">Submit</div>
                       <div class="button-shadow"></div>
                     </button>
                   </div>
-                  <p data-form-status role="status" aria-live="polite" aria-atomic="true" tabindex="-1" class="text-color-white" style="margin-top: 1rem; margin-bottom: 0;"></p>
                 </form>
               </div>
             </div>
@@ -2001,12 +1994,7 @@
               </div>
               <div class="spacer-large"></div>
               <div class="form_component max-width-large align-center w-form">
-                <form id="wf-form-Newsletter-Form" name="wf-form-Newsletter-Form" action="https://formsubmit.co/info@waddatbeverageltd.com" method="post" class="form_form" data-formsubmit data-success-message="Thank you! Your request for Waddat updates has been sent.">
-                  <input type="hidden" name="_subject" value="Waddat | Newsletter Signup" />
-                  <input type="hidden" name="_template" value="table" />
-                  <input type="hidden" name="_captcha" value="false" />
-                  <input type="hidden" name="_url" value="https://waddatdrinks.com/" />
-                  <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display: none;" />
+                <form id="wf-form-Newsletter-Form" name="wf-form-Newsletter-Form" class="form_form" onsubmit="event.stopImmediatePropagation(); return false;">
                   <div class="form_field-wrapper">
                     <label for="Newsletter-Name" class="form_label">Name</label>
                     <input class="form_input w-input" maxlength="256" name="name" placeholder="Your Name" type="text" id="Newsletter-Name" autocomplete="name" required />
@@ -2023,12 +2011,11 @@
                     <p class="text-color-white" style="font-size: 0.875rem; margin-top: 0.75rem;">By signing up you agree to the terms and conditions of WADDAT. Please see our privacy policy for more details.</p>
                   </div>
                   <div class="button-group">
-                    <button type="submit" class="button-wrapper align-center w-inline-block" style="background: transparent; border: none; cursor: pointer; padding: 0;">
-                      <div class="button is-form-submit align-center" data-submit-label>Subscribe</div>
+                    <button type="button" disabled aria-disabled="true" class="button-wrapper align-center w-inline-block" style="background: transparent; border: none; cursor: pointer; padding: 0;">
+                      <div class="button is-form-submit align-center">Subscribe</div>
                       <div class="button-shadow"></div>
                     </button>
                   </div>
-                  <p data-form-status role="status" aria-live="polite" aria-atomic="true" tabindex="-1" class="text-color-white" style="margin-top: 1rem; margin-bottom: 0;"></p>
                 </form>
               </div>
             </div>
