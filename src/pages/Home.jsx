@@ -26,7 +26,7 @@ export default function Home() {
   ];
 
   const reviews = [
-    { text: 'I love how natural and refreshing it tastes. It’s not too sweet, just perfectly balanced! And I feel the difference in my digestion after just a few days.', author: 'Emma R.', role: 'nutritionist & wellness coach' },
+    { text: 'The sea moss drink gives me a boost to start the day. With 99 minerals, what more could I ask for? I feel energised and awake, my skin glows, and I sleep better at night.', author: 'Anonymous', role: '', image: '/fruits/avatar-pineapple.png' },
     { text: 'Zoooom gives me the perfect lift in the morning without relying on coffee. I love knowing that it’s packed with probiotics and actually good for me.', author: 'James L.', role: 'fitness trainer & entrepreneur' }
   ];
 
