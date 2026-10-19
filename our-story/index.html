@@ -627,6 +627,12 @@
       transform: translateY(-4px);
       box-shadow: 0 22px 42px rgba(0,0,0,0.18);
     }
+    .picture-frame-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
     .picture-frame-inner-border {
       position: absolute;
       inset: 16px;
@@ -1757,18 +1763,10 @@
 
           <!-- Part 2: 1985 / A Farm. A Grandad. A First Batch. -->
           <div class="roots-timeline-grid" id="story-1985">
-            <!-- Left: Picture frame ready for family photo to be inserted -->
+            <!-- Left: 1985 Family Photo -->
             <div class="picture-frame-wrapper">
               <div class="picture-frame-card">
-                <div class="picture-frame-inner-border">
-                  <svg class="picture-frame-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="3" y="3" width="18" height="18" rx="3" ry="3"/>
-                    <circle cx="8.5" cy="8.5" r="1.5"/>
-                    <polyline points="21 15 16 10 5 21"/>
-                  </svg>
-                  <div class="picture-frame-label">Family Photo</div>
-                  <div class="picture-frame-subtext">Original photo being added soon</div>
-                </div>
+                <img src="/1985.png" alt="Grandad and granddaughter with fresh sorrel on Jamaica farm, 1985" class="picture-frame-img" />
               </div>
             </div>
 
@@ -1834,17 +1832,9 @@
               <!-- Purple Splash Backdrop -->
               <img src="/story-splash-purple.svg" alt="" class="frame-1995-splash" />
 
-              <!-- Empty Picture Frame (Ready for user's photo) -->
+              <!-- 1995 Family Recipe Photo Frame -->
               <div class="picture-frame-card picture-frame-card-1995">
-                <div class="picture-frame-inner-border">
-                  <svg class="picture-frame-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="3" y="3" width="18" height="18" rx="3" ry="3"/>
-                    <circle cx="8.5" cy="8.5" r="1.5"/>
-                    <polyline points="21 15 16 10 5 21"/>
-                  </svg>
-                  <div class="picture-frame-label">Family Recipe Photo</div>
-                  <div class="picture-frame-subtext">Original photo being added soon</div>
-                </div>
+                <img src="/1995.png" alt="Family sharing homemade drinks in the kitchen, 1995" class="picture-frame-img" />
               </div>
 
               <!-- Tropical Assets from Homepage About Section (Guava Slice, Ginger Root, Sorrel Calyx) -->
