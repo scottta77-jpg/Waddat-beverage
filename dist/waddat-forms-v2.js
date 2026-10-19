@@ -1,9 +1,8 @@
-// Web3Forms access keys are public identifiers, not secret API credentials.
-// Configure the access_key hidden input on each form before publishing.
+// FormSubmit delivers both forms to the recipient in each form's action URL.
 (() => {
   const pending = new WeakSet();
 
-  document.querySelectorAll('form[data-web3forms]').forEach((form) => {
+  document.querySelectorAll('form[data-formsubmit]').forEach((form) => {
     const button = form.querySelector('button[type="submit"]');
     const label = button.querySelector('[data-submit-label]');
     const status = form.querySelector('[data-form-status]');
@@ -15,16 +14,17 @@
       status.focus({ preventScroll: true });
     };
 
-    // Capture the event before the inherited Webflow delegated form handler.
+    // Capture before the inherited Webflow delegated form handler.
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
       event.stopImmediatePropagation();
       if (pending.has(form) || !form.reportValidity()) return;
 
       const payload = Object.fromEntries(new FormData(form));
-      if (!payload.access_key || payload.access_key === 'YOUR_WEB3FORMS_ACCESS_KEY') {
-        showStatus('We couldn’t send your request. Please try again later.', true);
-        return;
+      if (payload._honey) return;
+      payload._replyto = payload.email;
+      if (payload.newsletter_consent) {
+        payload.consent_recorded_at = new Date().toISOString();
       }
 
       pending.add(form);
@@ -38,22 +38,29 @@
       const timeout = setTimeout(() => controller.abort(), 30000);
 
       try {
-        const response = await fetch('https://api.web3forms.com/submit', {
+        const endpoint = new URL(form.action);
+        endpoint.pathname = `/ajax${endpoint.pathname}`;
+        const response = await fetch(endpoint.href, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
           body: JSON.stringify(payload),
           signal: controller.signal,
         });
         const result = await response.json();
-        if (!response.ok || result.success !== true) throw new Error('Submission failed');
+        // FormSubmit can return HTTP 200 with success: "false".
+        // Activation is not confirmation that an enquiry reached the inbox.
+        if (!response.ok || (result.success !== true && result.success !== 'true')
+          || /activat/i.test(result.message || '')) {
+          throw new Error('Submission not confirmed');
+        }
 
         form.reset();
         showStatus(form.dataset.successMessage);
       } catch (error) {
         showStatus(
           error.name === 'AbortError'
-            ? 'We couldn’t confirm your request was sent. Please check your connection and try again.'
-            : 'We couldn’t send your request. Please try again in a moment.',
+            ? 'We couldn’t confirm your request was sent. Please email info@waddatbeverageltd.com if you need help.'
+            : 'We couldn’t send your request. Please try again or email info@waddatbeverageltd.com.',
           true,
         );
       } finally {
