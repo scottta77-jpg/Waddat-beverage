@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1200, height=630, initial-scale=1.0" />
+  <title>Waddat Drinks - Open Graph Rich Link Preview</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      background: #000;
+    }
+    .collage-grid {
+      display: grid;
+      width: 1200px;
+      height: 630px;
+      grid-template-columns: 360px 360px 480px;
+      grid-template-rows: 380px 250px;
+      gap: 0;
+    }
+    .collage-cell {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+    }
+    .collage-cell img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    /* 1. Primary large hero section (spans 2 columns on top) */
+    .cell-primary {
+      grid-column: 1 / 3;
+      grid-row: 1 / 2;
+    }
+    .cell-primary img {
+      object-position: center 45%;
+    }
+    /* 2. Meet The Drinks bottle lineup (top right) */
+    .cell-drinks {
+      grid-column: 3 / 4;
+      grid-row: 1 / 2;
+    }
+    .cell-drinks img {
+      object-position: center 25%;
+    }
+    /* 3. Natural Ingredients & Benefits with tropical fruit bowl (bottom left) */
+    .cell-benefits {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
+    .cell-benefits img {
+      object-position: 100% 40%;
+    }
+    /* 4. Where to Find Waddat store map (bottom middle) */
+    .cell-stores {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+    }
+    .cell-stores img {
+      object-position: center 30%;
+    }
+    /* 5. Keep Up With Waddat newsletter and footer (bottom right) */
+    .cell-footer {
+      grid-column: 3 / 4;
+      grid-row: 2 / 3;
+    }
+    .cell-footer img {
+      object-position: center 20%;
+    }
+  </style>
+</head>
+<body>
+  <div class="collage-grid">
+    <div class="collage-cell cell-primary">
+      <img src="./1.png" alt="Waddat Drinks Hero" />
+    </div>
+    <div class="collage-cell cell-drinks">
+      <img src="./2.png" alt="Meet The Drinks" />
+    </div>
+    <div class="collage-cell cell-benefits">
+      <img src="./3.png" alt="Natural Ingredients and Benefits" />
+    </div>
+    <div class="collage-cell cell-stores">
+      <img src="./4.png" alt="Where to Find Waddat" />
+    </div>
+    <div class="collage-cell cell-footer">
+      <img src="./5.png" alt="Keep Up With Waddat" />
+    </div>
+  </div>
+</body>
+</html>
