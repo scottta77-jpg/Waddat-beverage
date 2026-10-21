@@ -1,18 +1,43 @@
 # Custom 404 error page
 ErrorDocument 404 /404.html
 
-# Force plain text UTF-8 for llms.txt and llms-full.txt
+# UTF-8 Encoding
+AddDefaultCharset UTF-8
+
+<IfModule mod_mime.c>
+  AddCharset UTF-8 .html .css .js .xml .json .txt
+  AddType "text/plain; charset=utf-8" .txt
+  AddType "application/xml; charset=utf-8" .xml
+</IfModule>
+
+# Force text/plain UTF-8 for llms.txt and llms-full.txt
 <FilesMatch "^llms(-full)?\.txt$">
   ForceType "text/plain; charset=utf-8"
 </FilesMatch>
 
-<IfModule mod_mime.c>
-  AddType "text/plain; charset=utf-8" .txt
-</IfModule>
-
 <IfModule mod_headers.c>
   <FilesMatch "^llms(-full)?\.txt$">
     Header set Content-Type "text/plain; charset=utf-8"
+  </FilesMatch>
+
+  # Security Headers (standard, safe for integrations)
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # Caching: HTML revalidation
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+
+  # Caching: Long immutable cache for versioned assets
+  <FilesMatch "\.(js|css|woff2?|ttf|eot)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # Caching: Media & images
+  <FilesMatch "\.(png|jpe?g|gif|svg|webp|ico|pdf)$">
+    Header set Cache-Control "public, max-age=2592000, stale-while-revalidate=86400"
   </FilesMatch>
 </IfModule>
 
@@ -20,27 +45,42 @@ ErrorDocument 404 /404.html
   RewriteEngine On
   RewriteBase /
 
-  # 1. Canonical Hostname Redirection
-  # Redirect www.waddatdrinks.com and legacy domains to canonical https://waddatdrinks.com
+  # 1. Canonical Hostname Redirection (Single-hop 301)
+  # Redirect www.waddatdrinks.com and legacy domain to https://waddatdrinks.com
   RewriteCond %{HTTP_HOST} ^www\.waddatdrinks\.com$ [NC,OR]
   RewriteCond %{HTTP_HOST} ^(www\.)?waddatbeverageltd\.com$ [NC]
-  RewriteRule ^(.*)$ https://waddatdrinks.com/$1 [R=301,L]
+  RewriteRule ^(.*)$ https://waddatdrinks.com/$1 [R=301,L,QSA]
 
-  # 2. If direct file exists, serve it
+  # 2. HTTPS Enforcement (Single-hop 301)
+  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteCond %{HTTP_HOST} ^waddatdrinks\.com$ [NC]
+  RewriteRule ^(.*)$ https://waddatdrinks.com/$1 [R=301,L,QSA]
+
+  # 3. Direct Legacy Product Slugs (Prevent redirect chains)
+  RewriteRule ^product/ginger-shot/?$ /product/ginger/ [R=301,L]
+  RewriteRule ^product/irish-moss-guava-banana/?$ /product/Lemonade/ [R=301,L]
+  RewriteRule ^product/irish-moss-pineapple/?$ /product/Pineapple-Sea-Moss/ [R=301,L]
+  RewriteRule ^product/irish-moss-soursop/?$ /product/Soursop-Sea-Moss/ [R=301,L]
+  RewriteRule ^product/lemonade/?$ /product/Lemonade/ [R=301,L]
+  RewriteRule ^product/pineapple-sea-moss/?$ /product/Pineapple-Sea-Moss/ [R=301,L]
+  RewriteRule ^product/soursop-sea-moss/?$ /product/Soursop-Sea-Moss/ [R=301,L]
+
+  # 4. If direct file exists, serve it
   RewriteCond %{REQUEST_FILENAME} -f
   RewriteRule ^ - [L]
 
-  # 3. If direct directory exists, serve it
+  # 5. If direct directory exists, serve it
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
 
-  # 4. Clean product URLs without trailing slash (e.g. /product/sorrel-drink -> /product/sorrel-drink/index.html)
+  # 6. Clean product URLs without trailing slash
   RewriteCond %{DOCUMENT_ROOT}/product/$1/index.html -f
   RewriteRule ^product/([^/]+)/?$ /product/$1/index.html [L]
 
-  # 5. Clean 404 route
+  # 7. Clean 404 route
   RewriteRule ^404/?$ /404.html [L]
 
-  # 6. Fallback non-existent requests to custom 404 page
+  # 8. Fallback non-existent requests to custom 404 page
   RewriteRule . /404.html [L]
 </IfModule>

@@ -2,4 +2,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/corners6/public_html/waddatbeverageltd.com
-    - /bin/cp -R dist/* $DEPLOYPATH/
+    - /bin/cp -a dist/. $DEPLOYPATH/
+    - /bin/cp -f dist/.htaccess $DEPLOYPATH/.htaccess

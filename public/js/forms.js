@@ -194,6 +194,22 @@
               textTarget.textContent = successMessage;
               doneEl.style.display = 'block';
             }
+
+            // Dispatch privacy-safe conversion event (no form contents or PII collected)
+            try {
+              var formType = form.id === 'wf-form-Wholesale-Form' ? 'wholesale_inquiry' : 'newsletter_signup';
+              if (window.dataLayer && Array.isArray(window.dataLayer)) {
+                window.dataLayer.push({
+                  event: 'conversion',
+                  conversion_type: formType
+                });
+              }
+              if (typeof window.gtag === 'function') {
+                window.gtag('event', 'generate_lead', {
+                  lead_type: formType
+                });
+              }
+            } catch (ignore) {}
           } else if (!isFallback && opts.fallbackEndpoint) {
             return postJson(opts.fallbackEndpoint, true);
           } else {
