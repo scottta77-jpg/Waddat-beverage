@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://waddatdrinks.com/sitemap.xml

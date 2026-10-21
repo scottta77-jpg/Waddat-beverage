@@ -5,65 +5,21 @@ ErrorDocument 404 /404.html
   RewriteEngine On
   RewriteBase /
 
-  # 1. Redirect HTTP to HTTPS
-  RewriteCond %{HTTPS} off
-  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-  # 2. Redirect www.waddatdrinks.com to waddatdrinks.com
-  RewriteCond %{HTTP_HOST} ^www\.waddatdrinks\.com$ [NC]
-  RewriteRule ^(.*)$ https://waddatdrinks.com/$1 [L,R=301]
-
-  # 3. Redirect old domain waddatbeverageltd.com (and www) to waddatdrinks.com
-  RewriteCond %{HTTP_HOST} ^(www\.)?waddatbeverageltd\.com$ [NC]
-  RewriteRule ^(.*)$ https://waddatdrinks.com/$1 [L,R=301]
-
-  # 4. If direct file exists, serve it
+  # 1. If direct file exists, serve it
   RewriteCond %{REQUEST_FILENAME} -f
   RewriteRule ^ - [L]
 
-  # 5. If direct directory exists, serve it
+  # 2. If direct directory exists, serve it
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
 
-  # 6. Clean product URLs (e.g. /product/sorrel-drink -> /product/sorrel-drink/index.html)
+  # 3. Clean product URLs without trailing slash (e.g. /product/sorrel-drink -> /product/sorrel-drink/index.html)
   RewriteCond %{DOCUMENT_ROOT}/product/$1/index.html -f
   RewriteRule ^product/([^/]+)/?$ /product/$1/index.html [L]
 
-  # 7. Clean our-story route
-  RewriteCond %{DOCUMENT_ROOT}/our-story/index.html -f
-  RewriteRule ^our-story/?$ /our-story/index.html [L]
-
-  # 8. Clean 404 route
+  # 4. Clean 404 route
   RewriteRule ^404/?$ /404.html [L]
 
-  # 9. Fallback non-existent requests to custom 404 page
+  # 5. Fallback non-existent requests to custom 404 page
   RewriteRule . /404.html [L]
-</IfModule>
-
-# MIME Types & UTF-8
-<IfModule mod_mime.c>
-  AddType text/plain;charset=UTF-8 .txt
-  AddType application/xml;charset=UTF-8 .xml
-  AddType image/webp .webp
-</IfModule>
-
-<FilesMatch "^(llms|llms-full)\.txt$">
-  <IfModule mod_headers.c>
-    Header set Content-Type "text/plain; charset=UTF-8"
-  </IfModule>
-</FilesMatch>
-
-# Caching headers
-<IfModule mod_expires.c>
-  ExpiresActive On
-  ExpiresDefault "access plus 1 month"
-  ExpiresByType text/html "access plus 0 seconds"
-  ExpiresByType text/plain "access plus 1 day"
-  ExpiresByType application/xml "access plus 1 day"
-  ExpiresByType image/webp "access plus 1 year"
-  ExpiresByType image/png "access plus 1 year"
-  ExpiresByType image/jpeg "access plus 1 year"
-  ExpiresByType image/svg+xml "access plus 1 year"
-  ExpiresByType text/css "access plus 1 year"
-  ExpiresByType application/javascript "access plus 1 year"
 </IfModule>
