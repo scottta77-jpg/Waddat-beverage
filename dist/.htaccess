@@ -1,25 +1,46 @@
 # Custom 404 error page
 ErrorDocument 404 /404.html
 
+# Force plain text UTF-8 for llms.txt and llms-full.txt
+<FilesMatch "^llms(-full)?\.txt$">
+  ForceType "text/plain; charset=utf-8"
+</FilesMatch>
+
+<IfModule mod_mime.c>
+  AddType "text/plain; charset=utf-8" .txt
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "^llms(-full)?\.txt$">
+    Header set Content-Type "text/plain; charset=utf-8"
+  </FilesMatch>
+</IfModule>
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
 
-  # 1. If direct file exists, serve it
+  # 1. Canonical Hostname Redirection
+  # Redirect www.waddatdrinks.com and legacy domains to canonical https://waddatdrinks.com
+  RewriteCond %{HTTP_HOST} ^www\.waddatdrinks\.com$ [NC,OR]
+  RewriteCond %{HTTP_HOST} ^(www\.)?waddatbeverageltd\.com$ [NC]
+  RewriteRule ^(.*)$ https://waddatdrinks.com/$1 [R=301,L]
+
+  # 2. If direct file exists, serve it
   RewriteCond %{REQUEST_FILENAME} -f
   RewriteRule ^ - [L]
 
-  # 2. If direct directory exists, serve it
+  # 3. If direct directory exists, serve it
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
 
-  # 3. Clean product URLs without trailing slash (e.g. /product/sorrel-drink -> /product/sorrel-drink/index.html)
+  # 4. Clean product URLs without trailing slash (e.g. /product/sorrel-drink -> /product/sorrel-drink/index.html)
   RewriteCond %{DOCUMENT_ROOT}/product/$1/index.html -f
   RewriteRule ^product/([^/]+)/?$ /product/$1/index.html [L]
 
-  # 4. Clean 404 route
+  # 5. Clean 404 route
   RewriteRule ^404/?$ /404.html [L]
 
-  # 5. Fallback non-existent requests to custom 404 page
+  # 6. Fallback non-existent requests to custom 404 page
   RewriteRule . /404.html [L]
 </IfModule>

@@ -1,32 +1,32 @@
 # Waddat Drinks
 
-> Waddat Drinks is a premium beverage brand handcrafting authentic Jamaican-inspired bottled fruit drinks and wildcrafted sea moss tonics. Rooted in Caribbean family heritage, our recipes use 100% natural ingredients, real tropical fruit, fresh spices, and zero artificial preservatives.
+> Waddat Drinks is a beverage brand crafting authentic Jamaican-inspired bottled fruit drinks and sea moss tonics. Rooted in Caribbean family heritage, our recipes use natural ingredients, real fruits, citrus, herbs, and spices, with zero artificial preservatives.
 
-Waddat Drinks brings traditional Caribbean refreshment to modern lifestyles. From fiery Jamaican Ginger and spiced Sorrel to nutrient-dense Pineapple and Soursop Sea Moss tonics, every drink is brewed with authentic recipes passed down through generations.
+Waddat Drinks brings traditional Caribbean refreshment to modern lifestyles. From bold Ginger and spiced Sorrel to refreshing Lemonade, Pineapple Sea Moss, and Soursop Sea Moss tonics, every drink is made with recipes inspired by Jamaican family heritage.
 
 ## Product Range
 
-- [Jamaican Ginger Beer](https://waddatbeverageltd.com/product/ginger/): Fiery, authentic Jamaican ginger drink crafted with real ginger root, citrus, and traditional aromatic spices.
-- [Jamaican Sorrel Drink](https://waddatbeverageltd.com/product/sorrel-drink/): Deep ruby spiced hibiscus infusion brewed with fragrant cloves, ginger, and pimento (allspice).
-- [Island Lemonade](https://waddatbeverageltd.com/product/Lemonade/): Crisp, refreshing tropical lemonade made with real lemons and balanced sweetness.
-- [Pineapple Sea Moss Tonic](https://waddatbeverageltd.com/product/Pineapple-Sea-Moss/): Nutrient-rich tonic combining wildcrafted ocean sea moss with sweet, tropical pineapple juice, delivering 92 of the body's 102 essential minerals.
-- [Soursop Sea Moss Tonic](https://waddatbeverageltd.com/product/Soursop-Sea-Moss/): Nutrient-packed blend of wildcrafted sea moss and creamy, aromatic tropical soursop (guanábana) fruit pulp.
+- [Ginger](https://waddatdrinks.com/product/ginger/): Bold warmth of real ginger paired with bright lemon and a mellow touch of honey.
+- [Sorrel](https://waddatdrinks.com/product/sorrel-drink/): Lively twist on a Jamaican favourite with tangy sorrel (hibiscus), warming ginger, and bright lemon. Sweet, tart, and spiced.
+- [Lemonade](https://waddatdrinks.com/product/Lemonade/): Vibrant island lemonade pairing the lively tang of lemon with mellow honey.
+- [Pineapple Sea Moss](https://waddatdrinks.com/product/Pineapple-Sea-Moss/): Tropical pineapple sweetness blended with ocean-harvested sea moss, lemon, and honey for a smooth, refreshing drink.
+- [Soursop Sea Moss](https://waddatdrinks.com/product/Soursop-Sea-Moss/): Mellow tropical sweetness of real soursop paired with sea moss, lifted by bright lemon and honey.
 
 ## Brand & Company
 
-- [Homepage](https://waddatbeverageltd.com/): Official homepage featuring our full drink collection, health benefits, customer reviews, and stockist information.
-- [Our Story](https://waddatbeverageltd.com/our-story/): The Jamaican family heritage, generational recipes, and values behind Waddat Drinks.
-- [Wholesale & Stockist Inquiries](https://waddatbeverageltd.com/#wholesale-section): Information and trade inquiry form for retailers, cafes, restaurants, and distributors.
-- [Trade Brochure](https://waddatbeverageltd.com/Waddat%20Beverage%20Trade%20Brochure%202.pdf): Official downloadable PDF brochure detailing bottle specs, packaging, and wholesale trade info.
+- [Homepage](https://waddatdrinks.com/): Official homepage featuring our full drink collection, brand story, stockist information, and trade enquiries.
+- [Our Story](https://waddatdrinks.com/our-story/): Jamaican family heritage, generational recipes, and values behind Waddat Drinks.
+- [Wholesale & Stockist Enquiries](https://waddatdrinks.com/#wholesale): Trade enquiry form and wholesale information for retailers, cafes, restaurants, and distributors.
+- [Trade Brochure](https://waddatdrinks.com/Waddat%20Beverage%20Trade%20Brochure%202.pdf): Official downloadable PDF brochure detailing bottle specs, packaging, and wholesale trade info.
 
-## Key Attributes & Benefits
+## Key Product Information
 
-- 100% natural ingredients with real roots, flowers, and fruit purees
-- Wildcrafted sea moss rich in 92 essential minerals (iron, magnesium, calcium, iodine, zinc)
-- Natural digestive and immunity support
-- Free from artificial preservatives, colorings, and synthetic flavorings
-- Authentic Jamaican family recipes
+- Natural ingredients: real ginger root, sorrel (hibiscus flowers), real lemons, pineapple juice, soursop fruit, and wildcrafted sea moss
+- Naturally sweetened with honey or raw cane sugar depending on the recipe
+- Ready to drink in 330ml bottles; best enjoyed chilled (shake well before drinking)
+- Free from artificial preservatives, artificial colors, and synthetic flavorings
+- Vegan friendly options (Sorrel) and honey-sweetened varieties (Ginger, Lemonade, Pineapple Sea Moss, Soursop Sea Moss)
 
 ## Optional
 
-- [Full LLM Context (llms-full.txt)](https://waddatbeverageltd.com/llms-full.txt): Comprehensive detailed context including full ingredient profiles, brand history, FAQs, and trade specifications.
+- [Full LLM Context (llms-full.txt)](https://waddatdrinks.com/llms-full.txt): Comprehensive context including full ingredient profiles, brand history, trade specifications, and FAQs.
