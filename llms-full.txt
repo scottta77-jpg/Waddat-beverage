@@ -13,7 +13,7 @@
 ---
 
 ## 1. About Waddat Drinks
-Waddat Drinks (operated as Waddat Beverage Ltd, website: https://waddatbeverageltd.com) is an artisanal beverage maker dedicated to preserving and sharing authentic Caribbean drink recipes with modern health-conscious consumers. Each bottle reflects genuine Jamaican culinary roots, featuring premium ingredients such as wildcrafted Caribbean sea moss, cold-pressed ginger root, dried sorrel (hibiscus calyces), ripe soursop fruit, and tropical pineapples.
+Waddat Drinks (website: https://waddatdrinks.com) is an artisanal beverage maker dedicated to preserving and sharing authentic Caribbean drink recipes with modern health-conscious consumers. Each bottle reflects genuine Jamaican culinary roots, featuring premium ingredients such as wildcrafted Caribbean sea moss, cold-pressed ginger root, dried sorrel (hibiscus calyces), ripe soursop fruit, and tropical pineapples.
 
 ---
 
@@ -30,35 +30,35 @@ Our core philosophy:
 ## 3. Complete Product Directory
 
 ### Jamaican Ginger Beer
-- **URL**: https://waddatbeverageltd.com/product/ginger/
+- **URL**: https://waddatdrinks.com/product/ginger/
 - **Description**: A fiery, authentic Jamaican ginger drink crafted with real fresh ginger root, refreshing lemon/lime citrus notes, and traditional aromatic Caribbean spices.
 - **Taste Profile**: Spicy, warming ginger kick balanced by crisp citrus sweetness.
 - **Key Ingredients**: Fresh ginger root, purified water, raw cane sugar, lemon juice, spices.
 - **Benefits**: Natural digestive aid, anti-inflammatory properties, throat soothing, natural energy.
 
 ### Jamaican Sorrel Drink
-- **URL**: https://waddatbeverageltd.com/product/sorrel-drink/
+- **URL**: https://waddatdrinks.com/product/sorrel-drink/
 - **Description**: Deep ruby-red Caribbean spiced hibiscus brew, celebrated across Jamaica during the festive season and cherished year-round for its rich flavor.
 - **Taste Profile**: Tart and tangy hibiscus flower harmonized with sweet cane sugar and spiced with warming cloves, pimento (allspice), and ginger.
 - **Key Ingredients**: Jamaican sorrel (hibiscus sabdariffa flowers), ginger, cloves, pimento berry, cane sugar, purified water.
 - **Benefits**: High in vitamin C and antioxidants, supports healthy blood pressure and cardiovascular wellness.
 
 ### Island Lemonade
-- **URL**: https://waddatbeverageltd.com/product/Lemonade/
+- **URL**: https://waddatdrinks.com/product/Lemonade/
 - **Description**: A vibrant, thirst-quenching lemonade made with real sun-ripened lemons and balanced sweetness inspired by Caribbean island summers.
 - **Taste Profile**: Zesty, clean, invigorating citrus with a smooth, lingering tropical finish.
 - **Key Ingredients**: Lemon juice, purified water, cane sugar, natural citrus extracts.
 - **Benefits**: Hydrating, vitamin C boost, alkaline-forming in the body.
 
 ### Pineapple Sea Moss Tonic
-- **URL**: https://waddatbeverageltd.com/product/Pineapple-Sea-Moss/
+- **URL**: https://waddatdrinks.com/product/Pineapple-Sea-Moss/
 - **Description**: A smooth, nutrient-dense wellness tonic blending wildcrafted ocean sea moss with sweet, tropical golden pineapple juice.
 - **Taste Profile**: Sweet, exotic pineapple with a rich, silky texture.
 - **Key Ingredients**: Wildcrafted sea moss (mineral-rich macroalgae), fresh pineapple juice, natural botanical extracts.
 - **Benefits**: Provides 92 of the 102 essential minerals required by the human body (calcium, magnesium, iodine, potassium, iron, zinc), supports thyroid health, healthy joints, and gut microbiome.
 
 ### Soursop Sea Moss Tonic
-- **URL**: https://waddatbeverageltd.com/product/Soursop-Sea-Moss/
+- **URL**: https://waddatdrinks.com/product/Soursop-Sea-Moss/
 - **Description**: An exotic, creamy wellness tonic pairing wildcrafted sea moss with aromatic, tangy-sweet tropical soursop (guanábana) fruit.
 - **Taste Profile**: Velvety, tropical notes blending strawberry, pineapple, and citrus custard undertones.
 - **Key Ingredients**: Wildcrafted sea moss, pure soursop fruit pulp, purified water, natural spices.
@@ -77,20 +77,20 @@ Our core philosophy:
 ## 5. Wholesale, Trade & Stockist Information
 Waddat Drinks partners with leading retailers, independent health food stores, delis, restaurants, cafes, bars, and food service operators across the UK and internationally.
 
-- **Trade Brochure**: Downloadable directly at https://waddatbeverageltd.com/Waddat%20Beverage%20Trade%20Brochure%202.pdf
-- **Wholesale Contact Form**: Accessible at https://waddatbeverageltd.com/#wholesale-section
+- **Trade Brochure**: Downloadable directly at https://waddatdrinks.com/Waddat%20Beverage%20Trade%20Brochure%202.pdf
+- **Wholesale Contact Form**: Accessible at https://waddatdrinks.com/#wholesale
 - **Packaging**: Ready-to-drink glass bottles suitable for ambient or chilled display.
 - **Inquiries**: Direct commercial trade inquiries can be submitted via the online wholesale form.
 
 ---
 
 ## 6. Official Links & Resources
-- **Homepage**: https://waddatbeverageltd.com/
-- **Our Story**: https://waddatbeverageltd.com/our-story/
-- **Jamaican Ginger Beer**: https://waddatbeverageltd.com/product/ginger/
-- **Jamaican Sorrel Drink**: https://waddatbeverageltd.com/product/sorrel-drink/
-- **Island Lemonade**: https://waddatbeverageltd.com/product/Lemonade/
-- **Pineapple Sea Moss**: https://waddatbeverageltd.com/product/Pineapple-Sea-Moss/
-- **Soursop Sea Moss**: https://waddatbeverageltd.com/product/Soursop-Sea-Moss/
-- **Trade Brochure (PDF)**: https://waddatbeverageltd.com/Waddat%20Beverage%20Trade%20Brochure%202.pdf
-- **Short LLM Summary**: https://waddatbeverageltd.com/llms.txt
+- **Homepage**: https://waddatdrinks.com/
+- **Our Story**: https://waddatdrinks.com/our-story/
+- **Jamaican Ginger Beer**: https://waddatdrinks.com/product/ginger/
+- **Jamaican Sorrel Drink**: https://waddatdrinks.com/product/sorrel-drink/
+- **Island Lemonade**: https://waddatdrinks.com/product/Lemonade/
+- **Pineapple Sea Moss**: https://waddatdrinks.com/product/Pineapple-Sea-Moss/
+- **Soursop Sea Moss**: https://waddatdrinks.com/product/Soursop-Sea-Moss/
+- **Trade Brochure (PDF)**: https://waddatdrinks.com/Waddat%20Beverage%20Trade%20Brochure%202.pdf
+- **Short LLM Summary**: https://waddatdrinks.com/llms.txt

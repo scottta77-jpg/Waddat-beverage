@@ -6,18 +6,18 @@ Waddat Drinks brings traditional Caribbean refreshment to modern lifestyles. Fro
 
 ## Product Range
 
-- [Jamaican Ginger Beer](https://waddatbeverageltd.com/product/ginger/): Fiery, authentic Jamaican ginger drink crafted with real ginger root, citrus, and traditional aromatic spices.
-- [Jamaican Sorrel Drink](https://waddatbeverageltd.com/product/sorrel-drink/): Deep ruby spiced hibiscus infusion brewed with fragrant cloves, ginger, and pimento (allspice).
-- [Island Lemonade](https://waddatbeverageltd.com/product/Lemonade/): Crisp, refreshing tropical lemonade made with real lemons and balanced sweetness.
-- [Pineapple Sea Moss Tonic](https://waddatbeverageltd.com/product/Pineapple-Sea-Moss/): Nutrient-rich tonic combining wildcrafted ocean sea moss with sweet, tropical pineapple juice, delivering 92 of the body's 102 essential minerals.
-- [Soursop Sea Moss Tonic](https://waddatbeverageltd.com/product/Soursop-Sea-Moss/): Nutrient-packed blend of wildcrafted sea moss and creamy, aromatic tropical soursop (guanábana) fruit pulp.
+- [Jamaican Ginger Beer](https://waddatdrinks.com/product/ginger/): Fiery, authentic Jamaican ginger drink crafted with real ginger root, citrus, and traditional aromatic spices.
+- [Jamaican Sorrel Drink](https://waddatdrinks.com/product/sorrel-drink/): Deep ruby spiced hibiscus infusion brewed with fragrant cloves, ginger, and pimento (allspice).
+- [Island Lemonade](https://waddatdrinks.com/product/Lemonade/): Crisp, refreshing tropical lemonade made with real lemons and balanced sweetness.
+- [Pineapple Sea Moss Tonic](https://waddatdrinks.com/product/Pineapple-Sea-Moss/): Nutrient-rich tonic combining wildcrafted ocean sea moss with sweet, tropical pineapple juice, delivering 92 of the body's 102 essential minerals.
+- [Soursop Sea Moss Tonic](https://waddatdrinks.com/product/Soursop-Sea-Moss/): Nutrient-packed blend of wildcrafted sea moss and creamy, aromatic tropical soursop (guanábana) fruit pulp.
 
 ## Brand & Company
 
-- [Homepage](https://waddatbeverageltd.com/): Official homepage featuring our full drink collection, health benefits, customer reviews, and stockist information.
-- [Our Story](https://waddatbeverageltd.com/our-story/): The Jamaican family heritage, generational recipes, and values behind Waddat Drinks.
-- [Wholesale & Stockist Inquiries](https://waddatbeverageltd.com/#wholesale-section): Information and trade inquiry form for retailers, cafes, restaurants, and distributors.
-- [Trade Brochure](https://waddatbeverageltd.com/Waddat%20Beverage%20Trade%20Brochure%202.pdf): Official downloadable PDF brochure detailing bottle specs, packaging, and wholesale trade info.
+- [Homepage](https://waddatdrinks.com/): Official homepage featuring our full drink collection, health benefits, customer reviews, and stockist information.
+- [Our Story](https://waddatdrinks.com/our-story/): The Jamaican family heritage, generational recipes, and values behind Waddat Drinks.
+- [Wholesale & Stockist Inquiries](https://waddatdrinks.com/#wholesale): Information and trade inquiry form for retailers, cafes, restaurants, and distributors.
+- [Trade Brochure](https://waddatdrinks.com/Waddat%20Beverage%20Trade%20Brochure%202.pdf): Official downloadable PDF brochure detailing bottle specs, packaging, and wholesale trade info.
 
 ## Key Attributes & Benefits
 
@@ -29,4 +29,4 @@ Waddat Drinks brings traditional Caribbean refreshment to modern lifestyles. Fro
 
 ## Optional
 
-- [Full LLM Context (llms-full.txt)](https://waddatbeverageltd.com/llms-full.txt): Comprehensive detailed context including full ingredient profiles, brand history, FAQs, and trade specifications.
+- [Full LLM Context (llms-full.txt)](https://waddatdrinks.com/llms-full.txt): Comprehensive detailed context including full ingredient profiles, brand history, FAQs, and trade specifications.
