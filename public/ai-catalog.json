@@ -1,0 +1,16 @@
+{
+  "name": "Waddat Beverage",
+  "description": "Natural Jamaican-inspired bottled drinks available in the UK",
+  "url": "https://waddatdrinks.com",
+  "version": "1.0",
+  "resources": [
+    { "name": "Homepage", "url": "/", "description": "Waddat Beverage homepage" },
+    { "name": "Products", "url": "/products", "description": "All Waddat drinks" },
+    { "name": "Our Story", "url": "/our-story/", "description": "About Waddat Beverage" },
+    { "name": "Sorrel", "url": "/product/sorrel-drink/", "description": "Waddat Sorrel drink" },
+    { "name": "Soursop Sea Moss", "url": "/product/Soursop-Sea-Moss/", "description": "Waddat Soursop Sea Moss drink" },
+    { "name": "Ginger", "url": "/product/ginger/", "description": "Waddat Ginger drink" },
+    { "name": "Lemonade", "url": "/product/Lemonade/", "description": "Waddat Lemonade drink" },
+    { "name": "Pineapple Sea Moss", "url": "/product/Pineapple-Sea-Moss/", "description": "Waddat Pineapple Sea Moss drink" }
+  ]
+}
