@@ -56,32 +56,6 @@
       .navbar {
         z-index: 99 !important;
       }
-      .visually-hidden {
-        position: absolute !important;
-        width: 1px !important;
-        height: 1px !important;
-        padding: 0 !important;
-        margin: -1px !important;
-        overflow: hidden !important;
-        clip: rect(0, 0, 0, 0) !important;
-        white-space: nowrap !important;
-        border: 0 !important;
-      }
-      .hero-heading-mobile {
-        display: none;
-      }
-      @media screen and (max-width: 767px) {
-        .hero-heading-mobile {
-          font-size: 200px;
-          line-height: 0.8;
-          display: block;
-        }
-      }
-      @media screen and (max-width: 479px) {
-        .hero-heading-mobile {
-          font-size: 170px;
-        }
-      }
       .top-bottle, .hero-bottle-img {
         z-index: 1 !important;
         position: absolute !important;
@@ -394,13 +368,11 @@
                   <div class="nav-wrapper">
                     <a
                       href="/"
-                      aria-label="Waddat Drinks Home"
                       aria-current="page"
                       class="brand w-nav-brand w--current"
                       style="text-decoration: none;"
                       >
                       <img src="/waddat-nav-logo.png" alt="Waddat" style="height: 40px; width: auto; display: block;" />
-                      <span class="visually-hidden">Waddat Drinks Home</span>
                     </a>
                     <nav role="navigation" class="nav-menu w-nav-menu">
                       <div class="menu-wrapper">
@@ -448,11 +420,8 @@
             </div>
             <div class="container-large">
               <div class="hero-section_wrapper">
-                <h1 class="hero-heading" style="font-size: 9vw;">
-                  <span class="hero-heading-desktop hide-mobile-landscape">Waddat<br/>Drinks</span>
-                  <span class="hero-heading-mobile mobile-version" aria-hidden="true"><span class="waddat-span">WADDAT</span><br /><span class="drinks-span beverage-span">DRINKS</span></span>
-                  <span class="visually-hidden"> - Natural Jamaican-Inspired Fruit Drinks &amp; Sea Moss</span>
-                </h1>
+                <h1 class="hero-heading hide-mobile-landscape" style="font-size: 9vw;">Waddat<br/>Drinks</h1>
+                <h1 class="hero-heading mobile-version"><span class="waddat-span">WADDAT</span><br /><span class="drinks-span beverage-span">DRINKS</span></h1>
                 <h2
                   style="
                     -webkit-transform: translate3d(0, -100px, 0)
@@ -606,11 +575,10 @@
                       class="product-card w-dyn-item"
                     >
                       <a
-                        title="Sorrel - View drink details"
-                        aria-label="Sorrel - View drink details"
+                        title="Go to product"
                         href="/product/sorrel-drink/"
                         class="product-link-wrapper w-inline-block"
-                        ><span class="visually-hidden">Sorrel Drink</span><div
+                        ><div
                           style="
                             background-image: url('/sorrel-background-2.jpeg');
                             background-color: #5541ba;
@@ -691,7 +659,17 @@
                             href="#map"
                             class="button is-secondary with-arrow"
                             style="display:block; text-align:center; text-decoration:none;"
-                          >WHERE TO BUY<span class="visually-hidden"> - Sorrel</span></a>
+                          >WHERE TO BUY</a><a
+                            data-node-type="commerce-buy-now-button"
+                            aria-busy="false"
+                            aria-haspopup="false"
+                            data-default-text="Buy now"
+                            data-subscription-text="Subscribe now"
+                            style="display: none"
+                            class="w-commerce-commercebuynowbutton"
+                            href="/checkout"
+                            >Buy now</a
+                          >
                         </form>
                         <div
                           style="display: none"
@@ -726,11 +704,10 @@
                       class="product-card w-dyn-item"
                     >
                       <a
-                        title="Soursop Sea Moss - View drink details"
-                        aria-label="Soursop Sea Moss - View drink details"
+                        title="Go to product"
                         href="/product/Soursop-Sea-Moss/"
                         class="product-link-wrapper w-inline-block"
-                        ><span class="visually-hidden">Soursop Sea Moss Drink</span><div
+                        ><div
                           style="
                             background-image: url('/irish-moss-soursop-background-2.jpeg');
                             background-color: #f6ede4;
@@ -811,7 +788,17 @@
                             href="#map"
                             class="button is-secondary with-arrow"
                             style="display:block; text-align:center; text-decoration:none;"
-                          >WHERE TO BUY<span class="visually-hidden"> - Soursop Sea Moss</span></a>
+                          >WHERE TO BUY</a><a
+                            data-node-type="commerce-buy-now-button"
+                            aria-busy="false"
+                            aria-haspopup="false"
+                            data-default-text="Buy now"
+                            data-subscription-text="Subscribe now"
+                            style="display: none"
+                            class="w-commerce-commercebuynowbutton"
+                            href="/checkout"
+                            >Buy now</a
+                          >
                         </form>
                         <div
                           style="display: none"
@@ -846,11 +833,10 @@
                       class="product-card w-dyn-item"
                     >
                       <a
-                        title="Ginger - View drink details"
-                        aria-label="Ginger - View drink details"
-                        href="/product/ginger/"
+                        title="Go to product"
+                        href="/product/ginger"
                         class="product-link-wrapper w-inline-block"
-                        ><span class="visually-hidden">Ginger Drink</span><div
+                        ><div
                           style="
                             background-image: url('/ginger-shot-background-2.jpeg');
                             background-color: #e1f532;
@@ -866,7 +852,7 @@
                             class="product-picture"
                           /></div></a
                       ><a
-                        href="/product/ginger/"
+                        href="/product/ginger"
                         class="product-meta-wrapper w-inline-block"
                         ><h3 class="product-name">Ginger</h3></a
                       >
@@ -931,7 +917,17 @@
                             href="#map"
                             class="button is-secondary with-arrow"
                             style="display:block; text-align:center; text-decoration:none;"
-                          >WHERE TO BUY<span class="visually-hidden"> - Ginger</span></a>
+                          >WHERE TO BUY</a><a
+                            data-node-type="commerce-buy-now-button"
+                            aria-busy="false"
+                            aria-haspopup="false"
+                            data-default-text="Buy now"
+                            data-subscription-text="Subscribe now"
+                            style="display: none"
+                            class="w-commerce-commercebuynowbutton"
+                            href="/checkout"
+                            >Buy now</a
+                          >
                         </form>
                         <div
                           style="display: none"
@@ -966,11 +962,10 @@
                       class="product-card w-dyn-item"
                     >
                       <a
-                        title="Lemonade - View drink details"
-                        aria-label="Lemonade - View drink details"
+                        title="Go to product"
                         href="/product/Lemonade/"
                         class="product-link-wrapper w-inline-block"
-                        ><span class="visually-hidden">Lemonade Drink</span><div
+                        ><div
                           style="
                             background-image: url('/lemonade-background.jpeg');
                             background-color: #215132;
@@ -998,7 +993,7 @@
                             href="#map"
                             class="button is-secondary with-arrow"
                             style="display:block; text-align:center; text-decoration:none;"
-                          >WHERE TO BUY<span class="visually-hidden"> - Lemonade</span></a>
+                          >WHERE TO BUY</a>
                         </form>
                       </div>
                     </div>
@@ -1008,11 +1003,10 @@
                       class="product-card w-dyn-item"
                     >
                       <a
-                        title="Pineapple Sea Moss - View drink details"
-                        aria-label="Pineapple Sea Moss - View drink details"
-                        href="/product/Pineapple-Sea-Moss/"
+                        title="Go to product"
+                        href="/product/Pineapple-Sea-Moss"
                         class="product-link-wrapper w-inline-block"
-                        ><span class="visually-hidden">Pineapple Sea Moss Drink</span><div
+                        ><div
                           style="
                             background-image: url('/irish-moss-pineapple-background-2.png');
                             background-color: #ffd700;
@@ -1027,7 +1021,7 @@
                             class="product-picture"
                           /></div></a
                       ><a
-                        href="/product/Pineapple-Sea-Moss/"
+                        href="/product/Pineapple-Sea-Moss"
                         class="product-meta-wrapper w-inline-block"
                         ><h3 class="product-name">Pineapple Sea Moss</h3></a
                       >
@@ -1040,7 +1034,7 @@
                             href="#map"
                             class="button is-secondary with-arrow"
                             style="display:block; text-align:center; text-decoration:none;"
-                          >WHERE TO BUY<span class="visually-hidden"> - Pineapple Sea Moss</span></a>
+                          >WHERE TO BUY</a>
                         </form>
                         <div
                           style="display: none"
@@ -1157,7 +1151,7 @@
                     />
                   </div>
                 </div>
-                <p
+                <h3
                   data-w-id="6adf7715-308b-711d-6a65-537d9369dc83"
                   style="
                     -webkit-transform: translate3d(0, 20px, 0) scale3d(1, 1, 1)
@@ -1173,7 +1167,7 @@
                   class="heading-style-h4 z-index-1"
                 >
                   Each sip brings the authentic taste of the Caribbean directly to you.
-                </p>
+                </h3>
                 <div class="button-group">
                   <a
                     id="how-it-works"
@@ -1314,7 +1308,7 @@
                   </div>
                 </div>
                 <div class="note-cta">
-                  <div class="heading-style-h4 text-style-allcaps">Authentic Taste</div>
+                  <h4 class="text-style-allcaps">Authentic Taste</h4>
                   <p class="max-width-large">
                     Our drinks are made following traditional Jamaican recipes, ensuring an authentic and natural flavor profile.
                   </p>
@@ -1366,9 +1360,9 @@
                   <div class="w-slide">
                     <div class="testimonial-slide">
                       <div class="testimonial-content">
-                        <div class="testimonial-title">
+                        <h3 class="testimonial-title">
                           The best drink I’ve ever tried!
-                        </div>
+                        </h3>
                         <div class="spacer-small"></div>
                         <p>
                           The sea moss drink gives me a boost to start the day.
@@ -1385,7 +1379,7 @@
                           class="author-avatar"
                         />
                         <div class="text-style-italic">
-                          <div class="author-name">Anonymous</div>
+                          <h4 class="author-name">Anonymous</h4>
                         </div>
                       </div>
                     </div>
@@ -1393,9 +1387,9 @@
                   <div class="w-slide">
                     <div class="testimonial-slide">
                       <div class="testimonial-content">
-                        <div class="testimonial-title">
+                        <h3 class="testimonial-title">
                           Energy boost without the crash!
-                        </div>
+                        </h3>
                         <div class="spacer-small"></div>
                         <p>
                           Waddat gives me the perfect lift in the morning
@@ -1411,7 +1405,7 @@
                           class="author-avatar"
                         />
                         <div class="text-style-italic">
-                          <div class="author-name">James L.</div>
+                          <h4 class="author-name">James L.</h4>
                           <div class="text-size-small">
                             fitness trainer &amp; entrepreneur
                           </div>
@@ -1422,9 +1416,9 @@
                   <div class="w-slide">
                     <div class="testimonial-slide">
                       <div class="testimonial-content">
-                        <div class="testimonial-title">
+                        <h3 class="testimonial-title">
                           The best drink I’ve ever tried!
-                        </div>
+                        </h3>
                         <div class="spacer-small"></div>
                         <p>
                           The sea moss drink gives me a boost to start the day.
@@ -1441,7 +1435,7 @@
                           class="author-avatar"
                         />
                         <div class="text-style-italic">
-                          <div class="author-name">Anonymous</div>
+                          <h4 class="author-name">Anonymous</h4>
                         </div>
                       </div>
                     </div>
@@ -1449,9 +1443,9 @@
                   <div class="w-slide">
                     <div class="testimonial-slide">
                       <div class="testimonial-content">
-                        <div class="testimonial-title">
+                        <h3 class="testimonial-title">
                           Energy boost without the crash!
-                        </div>
+                        </h3>
                         <div class="spacer-small"></div>
                         <p>
                           Waddat gives me the perfect lift in the morning
@@ -1467,7 +1461,7 @@
                           class="author-avatar"
                         />
                         <div class="text-style-italic">
-                          <div class="author-name">James L.</div>
+                          <h4 class="author-name">James L.</h4>
                           <div class="text-size-small">
                             fitness trainer &amp; entrepreneur
                           </div>
@@ -1912,10 +1906,10 @@
                   <span class="text-color-yellow">Wholesale</span> ENQUIRIES
                 </h2>
                 <div class="spacer-medium"></div>
-                <p class="heading-style-h5 text-color-white">
+                <h3 class="heading-style-h5 text-color-white">
                   Interested in stocking Waddat Drinks? <br />
                   <span class="text-color-yellow">Contact us</span> today!
-                </p>
+                </h3>
               </div>
               <div class="spacer-large"></div>
               <div class="form_component max-width-large align-center w-form">
@@ -1971,9 +1965,9 @@
                   KEEP UP WITH <span class="text-color-yellow">WADDAT</span>
                 </h2>
                 <div class="spacer-medium"></div>
-                <p class="heading-style-h5 text-color-white">
+                <h3 class="heading-style-h5 text-color-white">
                   Sign up for updates on <span class="text-color-yellow">new flavours</span>, promotions and places to find Waddat.
-                </p>
+                </h3>
               </div>
               <div class="spacer-large"></div>
               <div class="form_component max-width-large align-center w-form">
@@ -2175,13 +2169,13 @@
                 class="w-commerce-commercecartcontainer cart-container"
               >
                 <div class="w-commerce-commercecartheader cart-header">
-                  <div class="w-commerce-commercecartheading">Shopping Bag</div>
+                  <h5 class="w-commerce-commercecartheading">Shopping Bag</h5>
                   <a
                     class="w-commerce-commercecartcloselink close-button w-inline-block"
                     role="button"
                     aria-label="Close cart"
                     data-node-type="commerce-cart-close-link"
-                    ><span class="visually-hidden">Close cart</span><svg width="16px" height="16px" viewBox="0 0 16 16">
+                    ><svg width="16px" height="16px" viewBox="0 0 16 16">
                       <g
                         stroke="none"
                         stroke-width="1"
@@ -2227,7 +2221,7 @@
                             data-wf-bindings="%5B%7B%22dataWHref%22%3A%7B%22type%22%3A%22FullSlug%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.product.fullSlug%22%7D%7D%5D"
                             href="#"
                             class="w-inline-block"
-                            ><span class="visually-hidden">Cart product</span><div
+                            ><div
                               data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22PlainText%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.product.f_name_%22%7D%7D%5D"
                               class="w-commerce-commercecartproductname w-dyn-bind-empty"
                             ></div
@@ -2322,7 +2316,7 @@
                             "
                             class="w-commerce-commercecartapplepaybutton apple-pay"
                             tabindex="0"
-                            ><span class="visually-hidden">Apple Pay</span><div></div></a
+                            ><div></div></a
                           ><a
                             data-node-type="commerce-cart-quick-checkout-button"
                             role="button"
@@ -2448,13 +2442,12 @@
             <div class="container-large">
               <div class="footer-wrapper">
                 <a
-                  title="Waddat Drinks Homepage"
-                  aria-label="Waddat Drinks Homepage"
+                  title="Homepage"
                   href="/"
                   aria-current="page"
                   class="footer-logo w-inline-block w--current"
                   style="font-family: 'Londrina Solid', sans-serif; font-size: 32px; font-weight: 700; color: #111; text-decoration: none;"
-                  >WADDAT<span class="visually-hidden"> Drinks Homepage</span></a>
+                  >WADDAT</a>
                 <div class="footer-nav-links">
                   <div class="footer-column">
                     <a href="#products" class="nav-link lowercase">DRINKS</a
@@ -2470,19 +2463,15 @@
                     <a
                       href="https://www.instagram.com/waddatbeverage/"
                       target="_blank"
-                      aria-label="Follow Waddat Drinks on Instagram"
-                      title="Follow Waddat Drinks on Instagram"
                       class="social-media-link w-inline-block"
                       style="display: flex; align-items: center; justify-content: center;"
-                      ><span class="visually-hidden">Follow Waddat Drinks on Instagram</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a
+                      ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a
                     ><a
                       href="https://www.tiktok.com/@waddatbevarage"
                       target="_blank"
-                      aria-label="Follow Waddat Drinks on TikTok"
-                      title="Follow Waddat Drinks on TikTok"
                       class="social-media-link w-inline-block"
                       style="display: flex; align-items: center; justify-content: center;"
-                      ><span class="visually-hidden">Follow Waddat Drinks on TikTok</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z"/></svg></a
+                      ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z"/></svg></a
                     >
                   </div>
                   <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
@@ -2493,10 +2482,11 @@
               </div>
               <div class="spacer-medium"></div>
               <div class="footer-wrapper align-flex">
-                <span
+                <a
                   id="w-node-b32f2486-3bb1-1bab-5d05-d1138574e4a2-0f3e225c"
+                  href="#"
                   class="text-size-small text-color-black"
-                  >© <span id="footer-year"></span> Waddat Drinks</span
+                  >© <span id="footer-year"></span> Waddat Drinks</a
                   >Built by <a href="https://cornerstonedg.com" target="_blank" rel="noopener noreferrer" class="text-color-black">Cornerstone Digital</a></span>
               </div>
             </div>
