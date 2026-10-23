@@ -41,7 +41,7 @@ export default function ProductDetail() {
               Request Pricing
             </a>
             <a
-              href="/Waddat%20Beverage%20Trade%20Brochure%202.pdf"
+              href="/Waddat%20Drinks%20Trade%20Brochure%203.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary"
