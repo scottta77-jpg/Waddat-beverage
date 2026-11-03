@@ -78,7 +78,7 @@ Our core principles:
 ## 5. Wholesale, Trade & Stockist Information
 Waddat Drinks partners with retailers, independent delis, health food stores, restaurants, cafes, bars, and food service operators across the UK and internationally.
 
-- **Trade Brochure**: Downloadable directly at https://waddatdrinks.com/Waddat%20Beverage%20Trade%20Brochure%202.pdf
+- **Trade Brochure**: Downloadable directly at https://waddatdrinks.com/Waddat%20Drinks%20Trade%20Brochure%202026.pdf
 - **Wholesale Contact Form**: Accessible at https://waddatdrinks.com/#wholesale
 - **Bottle Format**: 330ml bottles suitable for ambient or chilled display.
 - **Trade Inquiries**: Direct wholesale enquiries can be submitted online via the website wholesale enquiry form.
@@ -93,6 +93,6 @@ Waddat Drinks partners with retailers, independent delis, health food stores, re
 - **Lemonade**: https://waddatdrinks.com/product/Lemonade/
 - **Pineapple Sea Moss**: https://waddatdrinks.com/product/Pineapple-Sea-Moss/
 - **Soursop Sea Moss**: https://waddatdrinks.com/product/Soursop-Sea-Moss/
-- **Trade Brochure (PDF)**: https://waddatdrinks.com/Waddat%20Beverage%20Trade%20Brochure%202.pdf
+- **Trade Brochure (PDF)**: https://waddatdrinks.com/Waddat%20Drinks%20Trade%20Brochure%202026.pdf
 - **Short LLM Summary**: https://waddatdrinks.com/llms.txt
 - **Full LLM Context**: https://waddatdrinks.com/llms-full.txt
