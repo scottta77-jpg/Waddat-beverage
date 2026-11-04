@@ -23,6 +23,11 @@ jobs:
 
       - run: npm run build
 
+      - name: Verify deployed brochure configuration
+        run: |
+          cmp public/.htaccess dist/.htaccess
+          test -s "dist/Waddat Drinks Trade Brochure 2026.pdf"
+
       - name: Commit dist
         run: |
           git config user.name "github-actions"

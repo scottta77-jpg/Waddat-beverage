@@ -45,6 +45,10 @@ AddDefaultCharset UTF-8
   RewriteEngine On
   RewriteBase /
 
+  # Exact legacy brochure redirect, before canonical/file/fallback rules.
+  # Match decoded spaces; the quoted destination is URL-encoded by the redirect.
+  RewriteRule "^Waddat Beverage Trade Brochure 2\.pdf$" "https://waddatdrinks.com/Waddat Drinks Trade Brochure 2026.pdf" [R=301,L]
+
   # 1. Canonical Hostname Redirection (Single-hop 301)
   # Redirect www.waddatdrinks.com and legacy domain to https://waddatdrinks.com
   RewriteCond %{HTTP_HOST} ^www\.waddatdrinks\.com$ [NC,OR]
