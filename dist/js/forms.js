@@ -250,7 +250,7 @@
   function initWhatsApp() {
     if (document.querySelector('.whatsapp-float')) return;
     var a = document.createElement('a');
-    a.href = 'https://wa.me/447841907091';
+    a.href = 'https://wa.me/447759816498';
     a.className = 'whatsapp-float';
     a.target = '_blank';
     a.rel = 'noopener noreferrer';
