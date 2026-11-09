@@ -31,3 +31,4 @@ This repository (`Waddat-beverage` for **waddatdrinks.com**) is actively worked 
   - Verifies `cmp public/.htaccess dist/.htaccess`
   - Verifies `test -s "dist/Waddat Drinks Trade Brochure 2026.pdf"`
 - See `docs/brochure-redirect.md` and `scripts/check-brochure-redirect.py` for details on the trade brochure 301 redirect and live verification.
+
